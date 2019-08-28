@@ -4,6 +4,7 @@
 #include <fstream>
 #include <sstream>
 #include <listaCircular.h>
+#include <cuboDisperso.h>;
 using namespace std;
 
 void Menu::insertImage(){ //Metodo para obtener los archivos config y capas.
@@ -37,15 +38,41 @@ void Menu::insertImage(){ //Metodo para obtener los archivos config y capas.
 
         }
        cout << "Tamaño: " << archivos->getSize() << endl;
-       archivos->imprimir();
+       //archivos->imprimir();
 
     }else{
         cout << "Enter a valid File or path\n" << endl;
         insertImage();
     }
 
+    //Insertar Capa 0;
+    cout << "Minion/"+archivos->head->next->info;
+    ifstream capa("Minion/"+archivos->head->next->info);
+    cuboDisperso *mat = new cuboDisperso();
+    if(capa){                     //Checks if the file exists
+        string line = "";
+        int x = 0;
+        int y = 0;
+        while(getline(capa,line)){
+            stringstream strstr(line);
+            string word = "";
+            int numero = 0;
+            string info = "";
+            x = 0;
+            while (getline(strstr,word,',')){
+                if(word != "x"){
+                    mat->insert_element(word,x,y);
+                }
+                x++;
+            }
+            y++;
+        }
+        mat->graficarMatriz("testing");
+    }else{
+        cout << "No encontrado";
+    }
 
-
+    cout << "got out?" << endl;
 
     //system("clear"); //Cleans Console.
     //Menu();

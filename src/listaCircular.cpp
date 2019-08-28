@@ -1,6 +1,6 @@
 #include "listaCircular.h"
 #include <iostream>
-Nodo::Nodo(int numero, string info){
+NodoL::NodoL(int numero, string info){
     this->numero = numero;
     this->info = info;
     this->next = NULL;
@@ -18,7 +18,7 @@ int listaCircular::getSize(){
 }
 
 void listaCircular::insertar(int numero, string info){
-    Nodo* nuevo = new Nodo(numero,info);
+    NodoL* nuevo = new NodoL(numero,info);
 
     if(listSize == 0){
         head = nuevo;
@@ -27,7 +27,7 @@ void listaCircular::insertar(int numero, string info){
         listSize++;
     }else{
         if(head->numero >= nuevo->numero){
-            Nodo* last = head->prev;
+            NodoL* last = head->prev;
             nuevo->next = head;
             nuevo->prev = last;
             last->next = nuevo;
@@ -35,7 +35,7 @@ void listaCircular::insertar(int numero, string info){
             head = nuevo;
             listSize++;
         }else{
-            Nodo* tmp = head->next;
+            NodoL* tmp = head->next;
             while(tmp != head){
                 if(tmp->numero > nuevo->numero){ // 1 4 5 7 8 -9- 10
                     break;
@@ -53,7 +53,7 @@ void listaCircular::insertar(int numero, string info){
 }
 
 void listaCircular::imprimir(){
-    Nodo* aux = head;
+    NodoL* aux = head;
     while(aux->next != head){
         cout << aux->numero << " - " << aux->info << endl;
         aux = aux->next;

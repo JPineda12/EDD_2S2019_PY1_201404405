@@ -3,16 +3,16 @@
 #include <string>
 using namespace std;
 
-struct Nodo{
-    public:
+struct NodoCubo{
          string info;
          int x;
          int y;
-         Nodo* prev;
-         Nodo* next;
-         Nodo* up;
-         Nodo* down;
-         Nodo(string info,int x, int y);
+         NodoCubo* prev;
+         NodoCubo* next;
+         NodoCubo* up;
+         NodoCubo* down;
+    public:
+         NodoCubo(string info,int x, int y);
 
 };
 
@@ -20,16 +20,17 @@ class cuboDisperso
 {
     public:
         int tamano;
-        Nodo *root;
+        NodoCubo *root;
         cuboDisperso();
+
         void insert_element(string info, int x, int y);
-        Nodo *insert_sorted_col(Nodo* new_node, Nodo* head_col);
-        Nodo *insert_sorted_row(Nodo* new_node, Nodo* head_row);
-        Nodo *create_row(int y);
-        Nodo *create_column(int x);
-        Nodo *findRow(int y);
-        Nodo *findColumn(int x);
-        void graficarMatriz();
+        NodoCubo *insert_sorted_col(NodoCubo* new_node, NodoCubo* head_col);
+        NodoCubo *insert_sorted_row(NodoCubo* new_node, NodoCubo* head_row);
+        NodoCubo *create_row(int y);
+        NodoCubo *create_column(int x);
+        NodoCubo *findRow(int y);
+        NodoCubo *findColumn(int x);
+        void graficarMatriz(string nombreCapa);
 
 
     protected:

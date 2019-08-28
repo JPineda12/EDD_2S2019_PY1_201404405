@@ -2,14 +2,14 @@
 #define LISTACIRCULAR_H
 #include <string>
 using namespace std;
-struct Nodo{
+struct NodoL{
     string info;
     int numero;
-    Nodo *next;
-    Nodo *prev;
+    NodoL *next;
+    NodoL *prev;
 
     public:
-        Nodo(int numero, string info);
+        NodoL(int numero, string info);
 
 };
 
@@ -22,7 +22,7 @@ class listaCircular
         void insertar(int numero, string info);
         int getSize();
         void imprimir();
-        Nodo *head;
+        NodoL *head;
 
 
     protected:
