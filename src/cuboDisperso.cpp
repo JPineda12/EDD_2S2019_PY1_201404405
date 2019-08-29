@@ -173,164 +173,137 @@ void cuboDisperso::graficarMatriz(string nombreCapa){
     // WRITING THE .DOT FILE
     ofstream archivo;
     archivo.open("SparseMatrix_"+nombreCapa+".dot");
-    archivo << "digraph Sparse_Matrix {\n";
+    archivo << "digraph Sparse_Matrix{\n";
     archivo << "node [shape=box]\n";
-    archivo << "graph [ranksep=\"0.55\", nodesep=\"0.6\"];\n";
-    archivo << "//Vertical Alignment for the ROOT - Group 0\n";
-    archivo << root->info+"[ label = \""+root->info+"\", width = 1.5, style = filled, fillcolor = coral, group = 0 ];\n";
-    archivo << "/* Filas Nodes HEADERS */\n";
-    archivo << "// Filas with GROUP = 0 thus they are aligned with the ROOT Header\n";
-    //ESCRITURA DE LAS FILAS DESDE LA PRIMERA DESPUES DE LA RAIZ HASTA QUE YA NO HAYAN FILAS (NULL)
+    archivo << "graph [ranksep=\"0.5\", nodesep=\"0.6\"];\n";
+    archivo << "/* Group 0 para alinear verticalmente RAIZ*/ \n";
+    archivo << root->info+"[ label = \""+root->info+"\", width = 1.5," +
+                " style = filled, fillcolor = coral, group = 0 ];\n\n";
+
+    //EMPIEZA CREACION DE NODOS FILAS
+    archivo << "// Filas \n";
     NodoCubo* fila = root->down;
-    while(fila != NULL){
-        //Escribir: Fila2 [label = "Fila 2"    width = 1.5 style = filled, fillcolor = bisque1, group = 1 ];
-        archivo << fila->info+"[label = \""+fila->info+"\"" +
-        " width = 1.5 style = filled, fillcolor = bisque1, group = 0 ];\n";
-        fila = fila->down;
+    while (fila != NULL){
+            //Escribir ej: Hora2[label = "Miercoles" width = 1.5 style = filled, fillcolor = bisque1, group = 1 ];
+            archivo << "Fila"+to_string(fila->y)+" [label = \""+fila->info+"\" width = 1.5";
+            archivo << " style = filled, fillcolor = bisque1, group = 0 ];\n";
+            fila = fila->down;
     }
-    //ESCRITURA DE LOS ENLACES PARA CADA CABECERA DE LAS FILAS
+
+    //EMPIEZA CREACION DE ENLACES DE FILAS
+    archivo << "\n //Enlaces de Filas\n";
     fila = root->down;
-    archivo << "//ROWS LINKS\n";
-    while(fila != NULL){
-        //Escribir: Fila0->Fila1[dir = both];
+    while (fila != NULL){
+        //Escribir ej: Hora0->Hora1[dir = both];
         if(fila->down != NULL){
-            //Si existe una fila abajo, enlazarla con fila actual.
-            string valor = to_string(fila->down->y);
-            archivo << fila->info+"->Fila"+valor+" [dir = both];\n";
+            archivo << "Fila"+to_string(fila->y)+"->Fila"+to_string(fila->down->y)+" [dir = both];\n";
         }
         fila = fila->down;
     }
 
-    //ESCRITURA DE LA CREACION DE LOS NODOS DE LAS CABECERAS DE LAS COLUMNAS
-    NodoCubo *columna = root->next;
-    int group = 0;
-    string valorgroup = "";
-    archivo << "//Columns Nodes HEADERS\n";
-    archivo << "//Each Column with diferent GROUP = n to align the nodes with these headers\n";
-    while(columna != NULL){
-        //Escribir: A0 [label = "Columna 1"   width = 1.5 style = filled, fillcolor = pink2, group = 2 ];
-        group = columna->x+1; //Sums 1 to the x value so group = 1 belongs to column0;
-        valorgroup = to_string(group);
-        archivo << columna->info+"[label = \""+columna->info+"\"  width = 1.5"
-                    +" style = filled, fillcolor = pink2, group = "+valorgroup+"];\n";
-        columna = columna->next;
+    //EMPIEZA CREACION DE COLUMNAS
+    archivo << "\n //Columnas\n";
+    archivo <<"//Cada una con diferente group para alinear verticalmente con los nodos\n";
+    NodoCubo* col = root->next;
+    while (col != NULL){
+        //Escribir ej: Dia0[label = "Dia 0" width = 1.5 style = filled, fillcolor = pink2, group = 2 ];
+        archivo << "Column"+to_string(col->x)+"[label = \""+col->info+"\" width = 1.5";
+        archivo << " style = filled, fillcolor = pink2, group = "+to_string(col->x+1)+"];\n";
+        col = col->next;
     }
+    //EMPIEZA CREACION DE ENLACES DE COLUMNAS
 
-    //ESCRITURA DE LOS ENLACES PARA CADA CABECERA DE LAS COLUMNAS
-    columna = root->next;
-    archivo << "//COLUMNS LINKS\n";
-    while(columna != NULL){
-        //Escribir: A0->A1[dir = both];
-        if(columna->next != NULL){
-            //Si existe una columna a la derecha, enlazarla la actual columna con esa
-            archivo << columna->info+"->"+columna->next->info+" [dir = both];\n";
+    archivo << "\n //Enlaces de Columnas\n";
+    col = root->next;
+    while(col != NULL){
+        if(col->next != NULL){
+            archivo << "Column"+to_string(col->x)+"->Column"+to_string(col->next->x)+" [dir = both];\n";
         }
-        columna = columna->next;
+        col = col->next;
     }
-
-    archivo << "// \"rank = same\" so the columns are alligned with the ROOT header\n";
-    columna = root;
-    archivo << "{rank = same; ";
-    while(columna != NULL){
-        //Escribir: {rank = same ; Mt; A0; A1; A2; A3; A4};
-        archivo << columna->info+"; ";
-        columna = columna->next;
+    //Alineacion Horizontal de Raiz con columnas
+    col = root->next;
+    archivo << "\n // Alinear Raiz con Columnas\n";
+    archivo << "{rank = same; "+root->info+";";
+    while(col != NULL){
+        archivo << " Column"+to_string(col->x)+"; ";
+        col = col->next;
     }
     archivo << "};\n";
+    archivo << "\n // Enlaces Raiz con primera fila y columna\n";
+    archivo << root->info+"->Column"+to_string(root->next->x)+";\n";
+    archivo << root->info+"->Fila"+to_string(root->down->y)+";\n";
 
-    //ENLACES DE LA RAIZ CON LA PRIMER COLUMNA Y PRIMERA FILA
-    archivo <<"// ROOT links with the first column and row header\n";
-    //Escribir     matrix->Fila0;    \n      Matrix->Column0;
-    archivo <<root->info+"->"+root->down->info+";\n"+root->info+"->"+root->next->info;
-
-    //EMPIEZA CREACION DE NODOS
-    archivo <<"//NODES CREATION \n";
-    int level = 0;
-    NodoCubo* filaActual = root->down; //Level 0 belongs to the first row (the one linked to the root)
-    NodoCubo* celdaActual;
-    while(filaActual != NULL){
-    archivo <<"//.....................L E V E L "+to_string(level)+" \n";
-    //Now i'm gonna move actual to the right to create the nodes
-    celdaActual = filaActual->next;
-        while(celdaActual != NULL){
-        //Escribir: C0_L0 [label = "153-204-255" width = 1.5, group = 2 style = filled, fillcolor = lavenderblush1];
-            valorgroup = to_string(celdaActual->up->x+1); //Group equivale a la x+1 del nodo de arriba.
-            archivo << "C"+to_string(celdaActual->x)+"_L"+to_string(level)
-                    +" [label = \""+celdaActual->info+"\" width = 1.5, "
-                    +"group = "+valorgroup+" style = filled, fillcolor = lavenderblush1];\n";
-            celdaActual = celdaActual->next;
+    //Empieza Creacion de Nodos
+    archivo << "\n //Creacion de nodos\n";
+    fila = root->down;
+    string group= "";
+    while(fila != NULL){
+        archivo << "//(^<---------------------- F I L A   "+to_string(fila->y)+"---------------------->\n";
+        col = fila->next;
+        while(col != NULL){
+        //Escribir ej: A0_F0 [label = "153-204-255" width = 1.5, group = 2 style = filled, fillcolor = lavenderblush1];
+        group = to_string(col->x+1); //El group siempre es la coordenada X osea, la columna.
+        archivo << "N"+to_string(col->x)+"_F"+to_string(fila->y)+" [label = ";
+        archivo << "\""+col->info+"\" width = 1.5 group = "+group+" style = filled, fillcolor = lavenderblush1];\n";
+        col = col->next;
         }
-        filaActual = filaActual->down;
-        level++;
+        fila = fila->down;
         archivo << "\n";
     }
 
-    //EMPIEZA ESCRITURA DE LOS ENLACES DE LAS CELDAS
-    archivo << "\n";
-    filaActual = root->down;
-    level = 0;
-    while(filaActual != NULL){
-    archivo << "//............... LINKS LEVEL "+to_string(level)+"\n";
-    celdaActual = filaActual->next;
-        while(celdaActual != NULL){
-            if(level == 0){
-                if(celdaActual == filaActual->next){
-                //Si es el primer Nodo, Enlazar con CABECERA de fila
-                    //Escribir: Fila2->C0_L0[dir = both];//Fila->Derecha
-                    archivo << filaActual->info+"->C"+to_string(celdaActual->x)+"_L"+to_string(level)+
-                                " [dir = both];\n";
-                }
-                //Enlazar con su nodo de arriba (Cabecera columna)
-                archivo << celdaActual->up->info+"->C"+to_string(celdaActual->x)+"_L"+to_string(level)
-                                +" [dir = both];\n";
-                if(celdaActual->next != NULL){
-                    //Si la celda actual tiene uno a la derecha enlazarlo
-                    archivo << "C"+to_string(celdaActual->x)+"_L"+to_string(level)+"->C"
-                            +to_string(celdaActual->next->x)+"_L"+to_string(level)+"[dir = both];\n";
-                }
+    //EMPIEZA CREACION DE ENLACES DE NODOS
+    archivo << "\n //Creacion de enlaces de nodos\n";
+    fila = root->down;
+    while (fila != NULL){
+        archivo << "//E N L A C E S  F I L A   "+to_string(fila->y)+"\n";
+        col = fila->next;
+        while(col != NULL){
+            //escribir ej: fila0->A0_F0[dir = both];
+            if(fila->up == root){ //Si es la primera fila
+                //El nodo de arriba es un HEADER de columna, se enlaza.
+                archivo << "Column"+to_string(col->x)+"->N"+to_string(col->x)+"_F"+to_string(fila->y);
+                archivo << " [dir = both];\n";
             }else{
-            //A partir de LEVEL 1 >
-                if(celdaActual == filaActual->next){
-                //Si es el primer Nodo, Enlazar con CABECERA de fila
-                    //Escribir: Fila2->C0_L0[dir = both];//Fila->Derecha
-                    archivo << filaActual->info+"->C"+to_string(celdaActual->x)+"_L"+to_string(level)
-                                +" [dir = both];\n";
-
-                }
-                if(celdaActual->up->y == -1 ) //Si la y de arriba es -1 entonces es una CABECERA de COLUMNA
-                {
-                    //Enlazar con la cabecera de arriba de columna.
-                    archivo << celdaActual->up->info+"->C"
-                            +to_string(celdaActual->x)+"_L"+to_string(level)+"[dir = both];\n";
+                //Enlaza con el Nodo de arriba
+                if(col->up->y == -1){
+                    archivo << "Column"+to_string(col->x)+"->N"+to_string(col->x)+"_F"+to_string(fila->y);
+                    archivo << " [dir = both];\n";
                 }else{
-                    //Enlazar con su nodo de arriba (Celda arriba del LEVEL anterior)
-                    archivo << "C"+to_string(celdaActual->x)+"_L"+to_string(level)+"->C"
-                            +to_string(celdaActual->up->x)+"_L"+to_string(level-1)+"[dir = both];\n";
-                }
-                if(celdaActual->next != NULL){
-                //Enlazar con su nodo de la derecha.
-                    archivo << "C"+to_string(celdaActual->x)+"_L"+to_string(level)+"->C"
-                            +to_string(celdaActual->next->x)+"_L"+to_string(level)+"[dir = both];\n";
+                    archivo << "N"+to_string(col->x)+"_F"+to_string(fila->y)+
+                        "->N"+to_string(col->up->x)+"_F"+to_string(col->up->y);
+                    archivo << " [dir = both];\n";
                 }
             }
-            celdaActual = celdaActual->next;
+            if(col->prev == fila){ //Si es el primer nodo
+                //Enlazar con cabecera de fila
+                //escribir ej: Hora6->A0_F6[dir = both];
+                archivo << "Fila"+to_string(fila->y)+"->N"+to_string(col->x)+"_F"+to_string(fila->y);
+                archivo << " [dir = both];\n";
+            }
+            if(col->next != NULL){
+                //Si existe un nodo a la derecha, Enlazarlo con el actual.
+                //escribir ej: N1_L0->N2_L0[dir = both]; //Derecha
+                archivo << "N"+to_string(col->x)+"_F"+to_string(fila->y)+
+                        "->N"+to_string(col->next->x)+"_F"+to_string(fila->y);
+                archivo << " [dir = both];\n";
+            }
+            col = col->next;
         }
+        archivo << "//Alineacion vertical de nodos con la fila\n";
+        col = fila->next;
+        archivo << "{rank = same; Fila"+to_string(fila->y)+"; ";
+        while(col != NULL){
+            archivo << "N"+to_string(col->x)+"_F"+to_string(fila->y)+"; ";
+            col = col->next;
+        }
+        archivo << " };\n\n";
+        fila = fila->down;
+    }
 
-        //iterar para escribir el RANK = SAME
-        celdaActual = filaActual->next;
-        archivo << "{rank = same; "+filaActual->info+";";
-        while(celdaActual != NULL){
-            archivo << " C"+to_string(celdaActual->x)+"_L"+to_string(level)+";";
-            celdaActual = celdaActual->next;
-        }
-        filaActual = filaActual->down;
-        level++;
-        archivo << "};\n\n";
-        }
-    archivo << "//END OF THE FILE! :')";
-    archivo <<"\n}";
+    archivo << "}\n";
+
     archivo.close();
-    //ARCHIVO TERMINADO.
 
     //ESCRIBIR EN TERMINAL PARA GENERAR EL .png SparseMatrix_"+nombreCapa+".dot"
     string comando = "dot SparseMatrix_"+nombreCapa+".dot -Tpng -o Matriz_"+nombreCapa+".png";
