@@ -7,31 +7,37 @@ struct NodoCubo{
          string info;
          int x;
          int y;
+         int z;
          NodoCubo* prev;
          NodoCubo* next;
          NodoCubo* up;
          NodoCubo* down;
+         NodoCubo* lower;
+         NodoCubo* upper;
     public:
-         NodoCubo(string info,int x, int y);
+         NodoCubo(string info,int x, int y, int z);
 
 };
 
 class cuboDisperso
 {
     public:
-        int tamano;
+        int layerCount;
         NodoCubo *root;
         cuboDisperso();
-
-        void insert_element(string info, int x, int y);
+        void insert_element(string info, int x, int y, int z);
         NodoCubo *insert_sorted_col(NodoCubo* new_node, NodoCubo* head_col);
         NodoCubo *insert_sorted_row(NodoCubo* new_node, NodoCubo* head_row);
-        NodoCubo *create_row(int y);
-        NodoCubo *create_column(int x);
-        NodoCubo *findRow(int y);
-        NodoCubo *findColumn(int x);
-        void graficarMatriz(string nombreCapa);
-
+        NodoCubo *insert_sorted_layer(NodoCubo* new_node, NodoCubo* head_layer);
+        NodoCubo *create_row(int y, NodoCubo* layer);
+        NodoCubo *create_column(int x, NodoCubo* layer);
+        NodoCubo *create_layer(int z);
+        NodoCubo *findRow(int y, int z);
+        NodoCubo *findColumn(int x, int z);
+        NodoCubo *findLayer(int z);
+        int layerSize();
+        void graficarMatriz(string nombreCapa, int z);
+        void imprimir(int z);
 
     protected:
 

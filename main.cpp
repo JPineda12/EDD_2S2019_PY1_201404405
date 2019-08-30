@@ -7,18 +7,18 @@ using namespace std;
 int main()
 {
     Menu *m = new Menu();
-   /* cuboDisperso *matriz = new cuboDisperso();
-    matriz->insert_element("100-150-9",0,0);
-    matriz->insert_element("200-400-300",0,1);
-    matriz->insert_element("300-200-300",0,2);
-    matriz->insert_element("400-200-340",0,3);
-    matriz->insert_element("500-200-300",4,5);
-    matriz->insert_element("300-200-300",2,3);
-    matriz->insert_element("100-200-300",16,16);
-    matriz->insert_element("40-4-85",2,2);
-    matriz->insert_element("7-200-37",1,0);
+    //cuboDisperso *matriz = new cuboDisperso();
+    /*matriz->insert_element("roaatt",3,3,1);
+    matriz->insert_element("el10",0,1,1);
+    matriz->insert_element("what",1,2,2);
+    matriz->insert_element("xd",10,1,4);
+    matriz->insert_element("qwewqe",2,2,10);
+    matriz->insert_element("weee",2,2,11);
+    matriz->insert_element("wutjeje",2,13,3);
+    cout << "Layer Count: " << matriz->layerSize() << endl;
+    //matriz->imprimir(1);
 
-    matriz->graficarMatriz("Capa0");*/
+    matriz->graficarMatriz("Layer10", 10);*/
     return 0;
 
 }
