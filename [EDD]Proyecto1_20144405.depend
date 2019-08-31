@@ -37,11 +37,13 @@
 1566900588 /home/brest12/Desktop/Proyecto1/[EDD]Proyecto1_20144405/include/cuboDisperso.h
 	<string>
 
-1567198676 source:/home/brest12/Desktop/Proyecto1/EDD_2S2019_PY1_201404405/main.cpp
+1567233127 source:/home/brest12/Desktop/Proyecto1/EDD_2S2019_PY1_201404405/main.cpp
 	"Menu.h"
 	"listaCircular.h"
 	<iostream>
 	"cuboDisperso.h"
+	<string>
+	"ArbolB.h"
 
 1566691054 /home/brest12/Desktop/Proyecto1/EDD_2S2019_PY1_201404405/include/Menu.h
 	<listaCircular.h>
@@ -56,7 +58,7 @@
 	"listaCircular.h"
 	<iostream>
 
-1567201742 source:/home/brest12/Desktop/Proyecto1/EDD_2S2019_PY1_201404405/src/Menu.cpp
+1567202493 source:/home/brest12/Desktop/Proyecto1/EDD_2S2019_PY1_201404405/src/Menu.cpp
 	"Menu.h"
 	<iostream>
 	<string>
@@ -65,8 +67,15 @@
 	<listaCircular.h>
 	<cuboDisperso.h>
 
-1567198457 source:/home/brest12/Desktop/Proyecto1/EDD_2S2019_PY1_201404405/src/cuboDisperso.cpp
+1567202326 source:/home/brest12/Desktop/Proyecto1/EDD_2S2019_PY1_201404405/src/cuboDisperso.cpp
 	"cuboDisperso.h"
 	<fstream>
 	<iostream>
+
+1567233217 source:/home/brest12/Desktop/Proyecto1/EDD_2S2019_PY1_201404405/src/ArbolB.cpp
+	"ArbolB.h"
+	<bits/stdc++.h>
+
+1567233156 /home/brest12/Desktop/Proyecto1/EDD_2S2019_PY1_201404405/include/ArbolB.h
+	"cuboDisperso.h"
 

@@ -2,11 +2,31 @@
 #include "listaCircular.h"
 #include <iostream>
 #include "cuboDisperso.h"
+#include <string>
+#include "ArbolB.h"
 using namespace std;
 
+bool comparar(string a, string b){
+    return a<b;
+}
 int main()
 {
-    Menu *m = new Menu();
+    //Menu *m = new Menu();
+    cuboDisperso *cb = new cuboDisperso();
+    ArbolB *tree = new ArbolB();
+    tree->insertar("Mario1", cb);
+    tree->insertar("Pickachu", cb);
+    tree->insertar("Boo", cb);
+    tree->insertar("Geoff", cb);
+    tree->insertar("Mario2", cb);
+    tree->insertar("Mushroom", cb);
+    tree->insertar("Geoff", cb);
+    tree->inorder(tree->raiz);
+    cout << endl;
+    tree->preorder(tree->raiz);
+    cout << endl;
+    tree->posorder(tree->raiz);
+    cout << endl;
     //cuboDisperso *matriz = new cuboDisperso();
     /*matriz->insert_element("roaatt",3,3,1);
     matriz->insert_element("el10",0,1,1);
@@ -17,6 +37,7 @@ int main()
     matriz->insert_element("wutjeje",2,13,3);
     cout << "Layer Count: " << matriz->layerSize() << endl;
     //matriz->imprimir(1);
+
 
     matriz->graficarMatriz("Layer10", 10);*/
     return 0;
