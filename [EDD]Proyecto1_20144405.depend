@@ -79,3 +79,47 @@
 1567233156 /home/brest12/Desktop/Proyecto1/EDD_2S2019_PY1_201404405/include/ArbolB.h
 	"cuboDisperso.h"
 
+1567239195 source:/home/brest12/Desktop/Estructuras de Datos/Laboratorio/Proyecto 1/EDD_2S2019_PY1_201404405/main.cpp
+	"Menu.h"
+	"listaCircular.h"
+	<iostream>
+	"cuboDisperso.h"
+	<string>
+	"ArbolB.h"
+
+1567240217 /home/brest12/Desktop/Estructuras de Datos/Laboratorio/Proyecto 1/EDD_2S2019_PY1_201404405/include/Menu.h
+	"listaCircular.h"
+	"ArbolB.h"
+	"cuboDisperso.h"
+
+1567239117 /home/brest12/Desktop/Estructuras de Datos/Laboratorio/Proyecto 1/EDD_2S2019_PY1_201404405/include/listaCircular.h
+	<string>
+
+1567239117 /home/brest12/Desktop/Estructuras de Datos/Laboratorio/Proyecto 1/EDD_2S2019_PY1_201404405/include/cuboDisperso.h
+	<string>
+
+1567241541 /home/brest12/Desktop/Estructuras de Datos/Laboratorio/Proyecto 1/EDD_2S2019_PY1_201404405/include/ArbolB.h
+	"cuboDisperso.h"
+
+1567239117 source:/home/brest12/Desktop/Estructuras de Datos/Laboratorio/Proyecto 1/EDD_2S2019_PY1_201404405/src/cuboDisperso.cpp
+	"cuboDisperso.h"
+	<fstream>
+	<iostream>
+
+1567239117 source:/home/brest12/Desktop/Estructuras de Datos/Laboratorio/Proyecto 1/EDD_2S2019_PY1_201404405/src/listaCircular.cpp
+	"listaCircular.h"
+	<iostream>
+
+1567241457 source:/home/brest12/Desktop/Estructuras de Datos/Laboratorio/Proyecto 1/EDD_2S2019_PY1_201404405/src/Menu.cpp
+	"Menu.h"
+	<iostream>
+	<string>
+	<fstream>
+	<sstream>
+	<listaCircular.h>
+	<cuboDisperso.h>
+
+1567241563 source:/home/brest12/Desktop/Estructuras de Datos/Laboratorio/Proyecto 1/EDD_2S2019_PY1_201404405/src/ArbolB.cpp
+	"ArbolB.h"
+	<bits/stdc++.h>
+

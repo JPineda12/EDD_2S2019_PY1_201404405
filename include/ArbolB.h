@@ -19,12 +19,15 @@ class ArbolB
         ArbolB();
         NodoArbol *raiz;
         bool esVacio();
-        void insertar(string nombre,cuboDisperso* imagen);
-        void insertar_recursivo(NodoArbol *actual, NodoArbol *imagen);
+        bool insertar(string nombre,cuboDisperso* imagen);
+        bool insertar_recursivo(NodoArbol *actual, NodoArbol *imagen);
         int comparar(string palabraNueva, string palabraArbol);
-        void inorder(NodoArbol *actual);
-        void posorder(NodoArbol *actual);
-        void preorder(NodoArbol *actual);
+        void inorder(NodoArbol *actual, int n);
+        void getinOrder();
+        void getposOrder();
+        void getpreOrder();
+        void posorder(NodoArbol *actual, int n);
+        void preorder(NodoArbol *actual, int n);
 
     protected:
 

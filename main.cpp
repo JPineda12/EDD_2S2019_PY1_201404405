@@ -11,8 +11,8 @@ bool comparar(string a, string b){
 }
 int main()
 {
-    //Menu *m = new Menu();
-    cuboDisperso *cb = new cuboDisperso();
+    Menu *m = new Menu();
+ /*   cuboDisperso *cb = new cuboDisperso();
     ArbolB *tree = new ArbolB();
     tree->insertar("Mario1", cb);
     tree->insertar("Pickachu", cb);

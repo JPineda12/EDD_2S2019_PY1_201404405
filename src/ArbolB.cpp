@@ -49,16 +49,17 @@ int ArbolB::comparar(string palabraNueva,string palabraArbol){
     }
 }
 
-void ArbolB::insertar(string nombre,cuboDisperso *imagen){
+bool ArbolB::insertar(string nombre,cuboDisperso *imagen){
     NodoArbol *nuevo =new NodoArbol(nombre, imagen);
     if(raiz == NULL){
         raiz = nuevo;
     }else{
-        insertar_recursivo(raiz, nuevo);
+        bool success = insertar_recursivo(raiz, nuevo);
+        return success;
     }
 }
 
-void ArbolB::insertar_recursivo(NodoArbol *actual, NodoArbol *nuevo){
+bool ArbolB::insertar_recursivo(NodoArbol *actual, NodoArbol *nuevo){
     string palabraNueva = nuevo->nombre;
     string palabraArbol = actual->nombre;
     int menor = comparar(palabraNueva, palabraArbol);
@@ -79,54 +80,68 @@ void ArbolB::insertar_recursivo(NodoArbol *actual, NodoArbol *nuevo){
     }else if(menor == 0){
         //Si es igual.......
         cout << "Ya existe una imagen: \""<< nuevo->nombre <<  "\"" << endl;
+        return false;
     }
+    return true;
 }
-void ArbolB::inorder(NodoArbol *actual){
+void ArbolB::inorder(NodoArbol *actual, int n){
         // LEFT - ROOT - RIGHT
         // left
         if(actual->left != NULL){
-            inorder(actual->left);
+            inorder(actual->left,n);
         }
         // ROOT = PRINT
-        cout << actual->nombre;
-        cout << "->";
+        cout << n << ".- " <<actual->nombre << endl;
+        n++;
 
         // RIGHT
         if(actual->right != NULL){
-            inorder(actual->right);
+            inorder(actual->right,n);
         }
 }
 
-void ArbolB::preorder(NodoArbol *actual){
+void ArbolB::preorder(NodoArbol *actual, int n){
         // ROOT - LEFT - RIGHT
         // ROOT = PRINT
-        cout << actual->nombre;
-        cout << "->";
-
+        cout << n << ".- " <<actual->nombre << endl;
+        n++;
             // left
         if(actual->left != NULL){
-            preorder(actual->left);
+            preorder(actual->left,n);
         }
 
         // RIGHT
         if(actual->right != NULL){
-            preorder(actual->right);
+            preorder(actual->right,n);
         }
 }
 
-void ArbolB::posorder(NodoArbol *actual){
+void ArbolB::posorder(NodoArbol *actual, int n){
         // left - right  - Rroot
             // left
         if(actual->left != NULL){
-            posorder(actual->left);
+            posorder(actual->left,n);
         }
         // RIGHT
         if(actual->right != NULL){
-            posorder(actual->right);
+            posorder(actual->right,n);
         }
          // ROOT = PRINT
-        cout << actual->nombre;
-        cout << "->";
+        cout << n << ".- " <<actual->nombre << endl;
+        n++;
+}
+void ArbolB::getinOrder(){
+    int n = 1;
+    inorder(raiz,n);
 }
 
+void ArbolB::getpreOrder(){
+    int n = 1;
+    preorder(raiz,n);
+}
+
+void ArbolB::getposOrder(){
+    int n = 1;
+    posorder(raiz,n);
+}
 

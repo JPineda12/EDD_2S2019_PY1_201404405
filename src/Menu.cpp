@@ -7,7 +7,47 @@
 #include <cuboDisperso.h>;
 using namespace std;
 
-void Menu::insertImage(){ //Metodo para obtener los archivos config y capas.
+cuboDisperso* Menu::createImage(string nombreCarpeta,listaCircular *listaCSV){
+//Crea el Cubo con las capas y nodos
+    cuboDisperso *imagen = new cuboDisperso();
+    NodoL *layercsv = listaCSV->head->next; //Obtiene el nombre del primer csv
+    int x = 0;
+    int y = 0;
+    int z = 0; //Coordenadas para los nodos del cubo
+    int layercount = 0;
+    while(layercsv != listaCSV->head){
+        ifstream capa(nombreCarpeta+"/"+layercsv->info);
+        if(capa){                     //Checks if the file exists
+            string line = "";
+            //El numero de layercsv corresponde a la capa donde se insertara x,y.
+            z = layercsv->numero;
+            while(getline(capa,line)){
+                stringstream strstr(line);
+                string word = "";
+                int numero = 0;
+                string info = "";
+                x = 0;
+                while (getline(strstr,word,',')){
+                    if(word != "x"){
+                        imagen->insert_element(word,x,y,z);
+                    }
+                    x++;
+                }
+                y++;
+            }
+            layercount++;
+        }else{
+            cout << " Archivo de capa " << layercsv->info << " inexistente\n";
+            return NULL;
+        }
+        layercsv = layercsv->next;
+    }
+    cout << layercount << " capas ingresadas a un cubo con exito!" << endl;
+    return imagen;
+
+}
+
+void Menu::insertImage(ArbolB *arbolImagenes){ //Metodo para obtener los archivos config y capas.
     cout << "----------- Insert Image -----------  " << endl;
     cout << "Nombre del archivo: ";
     string nombreArchivo;
@@ -31,51 +71,38 @@ void Menu::insertImage(){ //Metodo para obtener los archivos config y capas.
                     info = word;
                     n = 0;
                     archivos->insertar(numero, info);
-
                 }
             }
             y++;
-
         }
     }else{
         cout << "Enter a valid File or path\n" << endl;
-        insertImage();
+        insertImage(arbolImagenes);
     }
-    //Crea el Cubo con las capas y nodos
-    cuboDisperso *imagen = new cuboDisperso();
-    NodoL *layercsv = archivos->head->next; //Obtiene el nombre del primer csv
-    int x = 0;
-    int y = 0;
-    int z = 0; //Coordenadas para los nodos del cubo
-    int layercount = 0;
-    while(layercsv != archivos->head){
-        ifstream capa(nombreArchivo.substr(0,nombreArchivo.length()-4)+"/"+layercsv->info);
-        if(capa){                     //Checks if the file exists
-            string line = "";
-            //El numero de layercsv corresponde a la capa donde se insertara x,y.
-            z = layercsv->numero;
-            while(getline(capa,line)){
-                stringstream strstr(line);
-                string word = "";
-                int numero = 0;
-                string info = "";
-                x = 0;
-                while (getline(strstr,word,',')){
-                    if(word != "x"){
-                        imagen->insert_element(word,x,y,z);
-                    }
-                    x++;
-                }
-                y++;
-            }
-            layercount++;
+
+    //Nombre de la imagen y de la carpeta donde estan los csv.
+    string imageName = nombreArchivo.substr(0,nombreArchivo.length()-4);
+    //Crea la matriz con la imagen por capas
+    cuboDisperso* imagen = createImage(imageName, archivos);
+    //Inserta la imagen en el arbol Binario de imagenes
+    if(imagen != NULL){
+        bool success = arbolImagenes->insertar(imageName, imagen);
+        if(success){
+            cout << "La imagen  \"" << imageName << "\" fue insertada al arbol!" << endl;
+            cout << "\nPresiona cualquiera tecla para volver...." << endl;
         }else{
-            cout << " Archivo de capa" << layercsv->info << "inexistente\n";
+            cout << "La insercion al arbol fue cancelada......" << endl;
         }
-        layercsv = layercsv->next;
+        cin.ignore();
+        cin.ignore();
+        return;
     }
-    cout << layercount << " capas ingresadas con exito!" << endl;
-    NodoCubo* test = imagen->root->upper;
+    cout << "Check CSV's files." << endl;
+    cin.ignore();
+    cin.ignore();
+    insertImage(arbolImagenes);
+    //Graph method for matriz
+    /*NodoCubo* test = imagen->root->upper;
     int nambar = 0;
     string salida;
     while(true){
@@ -91,49 +118,63 @@ void Menu::insertImage(){ //Metodo para obtener los archivos config y capas.
         }else{
             break;
         }
-    }
-
-    //system("clear"); //Cleans Console.
-    //Menu();
+    }*/
 
 }
 
+cuboDisperso* Menu::selectImage(ArbolB *arbolImagenes){
+    cout << "----------- Select Image -----------  " << endl;
+    arbolImagenes->getinOrder();
+}
+
+listaCircular* Menu::filters(cuboDisperso* selectedImage){
+    return NULL;
+}
+
+
 Menu::Menu()
 {
-    int opcion;
-    cout << "---------------- MENU ----------------" << endl;
-    cout << "1 - Insert Image." << endl;
-    cout << "2 - Select Image." << endl;
-    cout << "3 - Apply Filters." << endl;
-    cout << "4 - Manual Editing." << endl;
-    cout << "5 - Export Image." << endl;
-    cout << "6 - Reports." << endl;
-    cout << "7 - Exit." << endl;
-    cin >> opcion;
-    switch(opcion){
-    case 1:
-        system("clear");
-        insertImage();
-        break;
-    case 2:
-        cout << "2" << endl;
-        break;
-    case 3:
-        cout << "Apply Filters" << endl;
-        break;
-    case 4:
-        break;
-    case 5:
-        break;
-    case 6:
-        break;
-    case 7:
-        break;
-    default:
-        cout << "Opcion invalida!" << endl;
-        Menu();
+    ArbolB *arbolImagenes = new ArbolB();
+    cuboDisperso *selectedImage = new cuboDisperso();
+    listaCircular *filtros = new listaCircular();
+
+    int opcion = 0;
+    while(opcion != 7){
+        cout << "---------------- MENU ----------------" << endl;
+        cout << "1 - Insert Image." << endl;
+        cout << "2 - Select Image." << endl;
+        cout << "3 - Apply Filters." << endl;
+        cout << "4 - Manual Editing." << endl;
+        cout << "5 - Export Image." << endl;
+        cout << "6 - Reports." << endl;
+        cout << "7 - Exit." << endl;
+        cin >> opcion;
+        switch(opcion){
+        case 1:
+            system("clear");
+            insertImage(arbolImagenes);
+            system("clear");
+            break;
+        case 2:
+            selectedImage = selectImage(arbolImagenes);
+            break;
+        case 3:
+            if(selectedImage->layerSize() > 0){
+                filtros = filters(selectedImage);
+            }else{
+                cout << "No hay imagen seleccionada!" << endl;;
+            }
+            break;
+        case 4:
+            break;
+        case 5:
+            break;
+        case 6:
+            break;
+        case 7:
+            break;
+        default:
+            cout << "Opcion invalida!" << endl;
+        }
     }
-
-
-
 }
