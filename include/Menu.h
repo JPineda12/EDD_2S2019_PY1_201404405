@@ -13,10 +13,12 @@ class Menu
     private:
         void insertImage(ArbolB *tree);
         cuboDisperso* selectImage(ArbolB *tree);
+        void printImageMenu(ArbolB *tree);
         listaCircular* filters(cuboDisperso *selectedimage);
         void manualEdit(cuboDisperso *selectedimage, listaCircular *filtros);
         void imageExport(cuboDisperso *selectedimage, listaCircular *filtros);
-        void *reports(ArbolB *tree, listaCircular *filtros);
+        void reports(ArbolB *arbolImagenes, listaCircular *filtros);
+        void repImageLayer(ArbolB *arbolImagenes);
         cuboDisperso *createImage(string nombreCarpeta, listaCircular *listaCsv);
 
 };

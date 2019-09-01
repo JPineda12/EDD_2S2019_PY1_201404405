@@ -6,12 +6,13 @@
 #include "ArbolB.h"
 using namespace std;
 
-bool comparar(string a, string b){
-    return a<b;
+void prueba(cuboDisperso *cb){
+    cuboDisperso *palomita = cb;
 }
 int main()
 {
-    Menu *m = new Menu();
+   Menu *m = new Menu();
+    //cb->imprimir(0);
  /*   cuboDisperso *cb = new cuboDisperso();
     ArbolB *tree = new ArbolB();
     tree->insertar("Mario1", cb);

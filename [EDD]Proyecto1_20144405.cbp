@@ -35,11 +35,13 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="include/ArbolB.h" />
+		<Unit filename="include/GenerarPagina.h" />
 		<Unit filename="include/Menu.h" />
 		<Unit filename="include/cuboDisperso.h" />
 		<Unit filename="include/listaCircular.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/ArbolB.cpp" />
+		<Unit filename="src/GenerarPagina.cpp" />
 		<Unit filename="src/Menu.cpp" />
 		<Unit filename="src/cuboDisperso.cpp" />
 		<Unit filename="src/listaCircular.cpp" />

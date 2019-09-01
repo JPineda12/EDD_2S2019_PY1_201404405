@@ -1,8 +1,13 @@
 #include "ArbolB.h"
 #include <bits/stdc++.h>
-NodoArbol::NodoArbol(string nombre, cuboDisperso *imagen){
+
+NodoArbol::NodoArbol(string nombre, int width, int height, int pxWidth, int pxHeight, cuboDisperso *imagen){
     this->imagen = imagen;
     this->nombre = nombre;
+    this->height = height;
+    this->width = width;
+    this->pxWidth = pxWidth;
+    this->pxHeight = pxHeight;
     left = NULL;
     right = NULL;
 }
@@ -49,8 +54,8 @@ int ArbolB::comparar(string palabraNueva,string palabraArbol){
     }
 }
 
-bool ArbolB::insertar(string nombre,cuboDisperso *imagen){
-    NodoArbol *nuevo =new NodoArbol(nombre, imagen);
+bool ArbolB::insertar(string nombre, int width, int height, int pxWidth, int pxHeight, cuboDisperso *imagen){
+    NodoArbol *nuevo =new NodoArbol(nombre, width, height, pxWidth, pxHeight, imagen);
     if(raiz == NULL){
         raiz = nuevo;
     }else{
@@ -84,6 +89,28 @@ bool ArbolB::insertar_recursivo(NodoArbol *actual, NodoArbol *nuevo){
     }
     return true;
 }
+
+NodoArbol *ArbolB::obtener(string nombre){
+    return obtener(raiz, nombre);
+}
+
+NodoArbol *ArbolB::obtener(NodoArbol *actual, string nombre){
+    if(actual == NULL){
+        return NULL;
+    }
+    string palabraNueva = nombre;
+    string palabraArbol = actual->nombre;
+    int menor = comparar(palabraNueva, palabraArbol);
+
+    if(actual->nombre == nombre){
+        return actual;
+    }else if(menor == 1){
+        return obtener(actual->left, nombre);
+    }else if(menor == -1){
+        return obtener(actual->right, nombre);
+    }
+}
+
 void ArbolB::inorder(NodoArbol *actual, int n){
         // LEFT - ROOT - RIGHT
         // left

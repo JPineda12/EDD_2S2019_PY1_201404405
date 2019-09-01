@@ -1,8 +1,9 @@
 #include "cuboDisperso.h"
 #include <fstream>
 #include <iostream>
-NodoCubo::NodoCubo(string info, int x, int y, int z){
+NodoCubo::NodoCubo(string info, string layerName, int x, int y, int z){
     this->info = info;
+    this->layerName = layerName;
     this->x = x;
     this->y = y;
     this->z = z;
@@ -16,7 +17,7 @@ NodoCubo::NodoCubo(string info, int x, int y, int z){
 
 cuboDisperso::cuboDisperso()
 {
-    this->root = new NodoCubo("Matrix", -1, -1,0);
+    this->root = new NodoCubo("Matrix", "Layer0", -1, -1,0);
     layerCount = 0;
 }
 
@@ -174,10 +175,10 @@ NodoCubo* cuboDisperso::insert_sorted_layer(NodoCubo* new_node, NodoCubo* head_l
     return new_node;
 }
 
-NodoCubo* cuboDisperso::create_layer(int z){
+NodoCubo* cuboDisperso::create_layer(int z, string layerName){
     NodoCubo *head_layer = root;
     string name = "Layer"+to_string(z);
-    NodoCubo *layer = new NodoCubo(name, -1,-1,z);
+    NodoCubo *layer = new NodoCubo(name, layerName, -1,-1,z);
     layer = insert_sorted_layer(layer, head_layer);
     layerCount++;
     return layer;
@@ -186,7 +187,7 @@ NodoCubo* cuboDisperso::create_layer(int z){
 NodoCubo* cuboDisperso::create_column(int x, NodoCubo* layer){
     NodoCubo *head_column = layer;
     string name = "Columna"+to_string(x); //Name of the column
-    NodoCubo *column = new NodoCubo(name,x,-1, layer->z);
+    NodoCubo *column = new NodoCubo(name, "-",x,-1, layer->z);
     column = insert_sorted_col(column, layer);
     return column;
 }
@@ -194,7 +195,7 @@ NodoCubo* cuboDisperso::create_column(int x, NodoCubo* layer){
 NodoCubo* cuboDisperso::create_row(int y, NodoCubo* layer){
     NodoCubo* head_row = layer;
     string name = "Fila"+to_string(y); //Name of the row
-    NodoCubo *row = new NodoCubo(name,-1,y, layer->z);
+    NodoCubo *row = new NodoCubo(name,"-", -1,y, layer->z);
     row = insert_sorted_row(row, layer);
     return row;
 }
@@ -202,14 +203,14 @@ int cuboDisperso::layerSize(){
     return layerCount;
 }
 
-void cuboDisperso::insert_element(string info, int x, int y, int z){
-    NodoCubo* new_node = new NodoCubo(info, x, y, z);
+void cuboDisperso::insert_element(string info, string layerName, int x, int y, int z){
+    NodoCubo* new_node = new NodoCubo(info, layerName, x, y, z);
     //Look for the row & column where the element is gonna be inserted.
     NodoCubo* layerNode = findLayer(z);
     NodoCubo* rowNode = findRow(y, z);
     NodoCubo* columnNode = findColumn(x, z);
     if(layerNode == NULL){
-        layerNode = create_layer(z);
+        layerNode = create_layer(z, layerName);
     }
     //Case row & column does NOT exist
     if(columnNode == NULL && rowNode == NULL){
@@ -250,6 +251,31 @@ void cuboDisperso::insert_element(string info, int x, int y, int z){
         //Step 2: Insert the new node in the existing column
             new_node = insert_sorted_col(new_node, rowNode);
     }
+}
+
+NodoCubo *cuboDisperso::obtener(int x, int y, int z){
+    NodoCubo* tempz = root;
+    NodoCubo* tempx = root;
+    NodoCubo* tempy = root;
+    while(tempz != NULL){
+        if(tempz->z == z){
+            tempy = tempz->down;
+            while(tempy != NULL){
+                if(tempy->y == y){
+                    tempx = tempy->next;
+                    while(tempx != NULL){
+                        if(tempx->x == x){
+                            return tempx;
+                        }
+                        tempx = tempx->next;
+                    }
+                }
+                tempy = tempy->down;
+            }
+        }
+        tempz = tempz->upper;
+    }
+    return NULL;
 }
 
 void cuboDisperso::imprimir(int z){
@@ -429,7 +455,11 @@ void cuboDisperso::graficarMatriz(string nombreCapa, int numeroCapa){
 
 }
 
+listaCircular* cuboDisperso::linearMap_byRow(int width, int height){
+    //SUPONIENDO QUE LA MATRIZ DE COLORES RGB ESTA LLENA
+    //FORMULA (ixn)*j;
 
+}
 
 
 
