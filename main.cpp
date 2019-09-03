@@ -5,6 +5,7 @@
 #include <string>
 #include "ArbolB.h"
 #include <fstream>
+#include "listaEnlazada.h"
 using namespace std;
 
 
@@ -12,23 +13,28 @@ using namespace std;
 int main()
 {
 
-    Menu *m = new Menu();
+    //Menu *m = new Menu();
+
     //cb->imprimir(0);
- /*   cuboDisperso *cb = new cuboDisperso();
+    cuboDisperso *cb = new cuboDisperso();
     ArbolB *tree = new ArbolB();
-    tree->insertar("Mario1", cb);
-    tree->insertar("Pickachu", cb);
-    tree->insertar("Boo", cb);
-    tree->insertar("Geoff", cb);
-    tree->insertar("Mario2", cb);
-    tree->insertar("Mushroom", cb);
-    tree->insertar("Geoff", cb);
-    tree->inorder(tree->raiz);
+    tree->insertar("Mario1",0,0,0,0, cb);
+    tree->insertar("Pickachu",0,0,0,0,cb);
+    tree->insertar("Boo",0,0,0,0,cb);
+    tree->insertar("Geoff",0,0,0,0,cb);
+    tree->insertar("Mario2",0,0,0,0,cb);
+    tree->insertar("Mushroom",0,0,0,0,cb);
+    //tree->insertar("Geoff", cb);
+    tree->inorder(tree->raiz,0);
     cout << endl;
-    tree->preorder(tree->raiz);
+    tree->preorder(tree->raiz,0);
     cout << endl;
-    tree->posorder(tree->raiz);
+    tree->posorder(tree->raiz,0);
     cout << endl;
+
+    tree->graficarInorder();
+    tree->graficarPosorder();
+    tree->graficarPreorder();
     //cuboDisperso *matriz = new cuboDisperso();
     /*matriz->insert_element("roaatt",3,3,1);
     matriz->insert_element("el10",0,1,1);

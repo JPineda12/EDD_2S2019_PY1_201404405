@@ -228,10 +228,174 @@ void ArbolB::graficar(){
     string comando = "dot binaryTree.dot -Tpng -o binaryTree.png";
     const char *cmd = comando.c_str();
     system(cmd);
+}
 
+listaEnlazada *ArbolB::escribirInorder(NodoArbol *treenode,listaEnlazada *ls){
+        // LEFT - ROOT - RIGHT
+
+            // left
+        if(treenode->left != NULL){
+            escribirInorder(treenode->left, ls);
+        }
+
+                //ROOT
+         // ROOT = Write the file name into the list
+         ls->insertar(treenode->nombre);
+
+
+        // RIGHT
+        if(treenode->right != NULL){
+            escribirInorder(treenode->right, ls);
+        }
+
+        return ls;
+}
+
+listaEnlazada *ArbolB::escribirPreorder(NodoArbol *treenode, listaEnlazada *ls){
+        // ROOT - LEFT - RIGHT
+
+         //ROOT
+         // ROOT = Write the file name into the list
+         ls->insertar(treenode->nombre);
+
+            // left
+        if(treenode->left != NULL){
+            escribirPreorder(treenode->left, ls);
+        }
+
+
+
+        // RIGHT
+        if(treenode->right != NULL){
+            escribirPreorder(treenode->right, ls);
+        }
+
+        return ls;
 }
 
 
+listaEnlazada *ArbolB::escribirPosorder(NodoArbol *treenode, listaEnlazada *ls){
+        // LEFT - RIGHT - ROOT
+
+            // left
+        if(treenode->left != NULL){
+            escribirPosorder(treenode->left, ls);
+        }
+
+        // RIGHT
+        if(treenode->right != NULL){
+            escribirPosorder(treenode->right, ls);
+        }
+
+         //ROOT
+         // ROOT = Write the file name into the list
+         ls->insertar(treenode->nombre);
+
+        return ls;
+}
+
+void ArbolB::graficarInorder(){
+    ofstream archivo;
+    archivo.open("Reports/inorder_Tree.dot");
+    archivo << "digraph arbol_inorder\n{\n";
+    archivo << "    rankdir=LR;\n";
+    archivo << "    node [width = 1, height = 0.25];\n";
+    //Empieza creacion de NODOS y sus ENLACES
+    //ej: ndnombreImagen[label="Mario",]
+    archivo << "    //Nodes and links creation\n";
+    //LLama al metodo escribir que se encarga de escribir los nodos y sus hijos
+    // de manera recursiva.
+    listaEnlazada *ls= new listaEnlazada();
+    ls = escribirInorder(raiz,ls); //Empezando desde la raiz del arbol.
+    //Escribir los nodos y sus links a partir de la lista (recorriendola)
+    for(int i=0; i<ls->getSize(); i++){
+        //Ej: nodo[label="Mario"];
+        archivo << "\nnd"+ls->obtener(i)->nombre+"[label=\""+ls->obtener(i)->nombre+"\"];\n";
+        //Ahora escribir su link
+        if(ls->obtener(i)->next != NULL){
+            //ej: a->b
+            archivo << "nd"+ls->obtener(i)->nombre+"->nd"+ls->obtener(i+1)->nombre;";\n";
+        }
+    }
+    archivo << "}";
+    //ARCHIVO TERMINADO!
+     archivo.close();
+
+    //ESCRIBIR EN TERMINAL PARA GENERAR EL .png BinaryTree.dot"
+    string comando = "dot Reports/inorder_Tree.dot -Tpng -o Reports/inorder_Tree.png";
+    const char *cmd = comando.c_str();
+    system(cmd);
+
+
+}
+
+void ArbolB::graficarPosorder(){
+    ofstream archivo;
+    archivo.open("Reports/posorder_Tree.dot");
+    archivo << "digraph arbol_inorder\n{\n";
+    archivo << "    rankdir=LR;\n";
+    archivo << "    node [width = 1, height = 0.25];\n";
+    //Empieza creacion de NODOS y sus ENLACES
+    //ej: ndnombreImagen[label="Mario",]
+    archivo << "    //Nodes and links creation\n";
+    //LLama al metodo escribir que se encarga de escribir los nodos y sus hijos
+    // de manera recursiva.
+    listaEnlazada *ls= new listaEnlazada();
+    ls = escribirPosorder(raiz,ls); //Empezando desde la raiz del arbol.
+    //Escribir los nodos y sus links a partir de la lista (recorriendola)
+    for(int i=0; i<ls->getSize(); i++){
+        //Ej: nodo[label="Mario"];
+        archivo << "\nnd"+ls->obtener(i)->nombre+"[label=\""+ls->obtener(i)->nombre+"\"];\n";
+        //Ahora escribir su link
+        if(ls->obtener(i)->next != NULL){
+            //ej: a->b
+            archivo << "nd"+ls->obtener(i)->nombre+"->nd"+ls->obtener(i+1)->nombre;"\n";
+        }
+    }
+    archivo << "}";
+    //ARCHIVO TERMINADO!
+     archivo.close();
+
+    //ESCRIBIR EN TERMINAL PARA GENERAR EL .png BinaryTree.dot"
+    string comando = "dot Reports/posorder_Tree.dot -Tpng -o Reports/posorder_Tree.png";
+    const char *cmd = comando.c_str();
+    system(cmd);
+
+
+}
+
+void ArbolB::graficarPreorder(){
+    ofstream archivo;
+    archivo.open("Reports/preorder_Tree.dot");
+    archivo << "digraph arbol_inorder\n{\n";
+    archivo << "    rankdir=LR;\n";
+    archivo << "    node [width = 1, height = 0.25];\n";
+    //Empieza creacion de NODOS y sus ENLACES
+    //ej: ndnombreImagen[label="Mario",]
+    archivo << "    //Nodes and links creation\n";
+    //LLama al metodo escribir que se encarga de escribir los nodos y sus hijos
+    // de manera recursiva.
+    listaEnlazada *ls= new listaEnlazada();
+    ls = escribirPreorder(raiz,ls); //Empezando desde la raiz del arbol.
+    //Escribir los nodos y sus links a partir de la lista (recorriendola)
+    for(int i=0; i<ls->getSize(); i++){
+        //Ej: nodo[label="Mario"];
+        archivo << "\nnd"+ls->obtener(i)->nombre+"[label=\""+ls->obtener(i)->nombre+"\"];\n";
+        //Ahora escribir su link
+        if(ls->obtener(i)->next != NULL){
+            //ej: a->b
+            archivo << "nd"+ls->obtener(i)->nombre+"->nd"+ls->obtener(i+1)->nombre;"\n";
+        }
+    }
+    archivo << "}";
+    //ARCHIVO TERMINADO!
+     archivo.close();
+
+    //ESCRIBIR EN TERMINAL PARA GENERAR EL .png BinaryTree.dot"
+    string comando = "dot Reports/preorder_Tree.dot -Tpng -o Reports/preorder_Tree.png";
+    const char *cmd = comando.c_str();
+    system(cmd);
+}
 
 
 

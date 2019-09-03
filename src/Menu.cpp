@@ -250,6 +250,36 @@ void Menu::repImageLayer(ArbolB *arbolImagenes){
 
 }
 
+void Menu::repTrasversal(ArbolB *arbolImagenes){
+    int opcion = 0;
+    string st = "";
+    string comando;
+    while(opcion != 4){
+        system("clear");
+        cout << "1. Inorder Traversal" << endl;
+        cout << "2. Postorder Traversal" << endl;
+        cout << "3. Preorder Traversal" << endl;
+        cout << "4. Volver" << endl;
+        cin >> opcion;
+        switch(opcion){
+            case 1:
+                arbolImagenes->graficarInorder();
+                break;
+            case 2:
+                arbolImagenes->graficarPosorder();
+                break;
+            case 3:
+                arbolImagenes->graficarPreorder();
+                break;
+            case 4:
+                break;
+            default:
+                cout << "Opcion Invalida!\n";
+                break;
+        }
+    }
+}
+
 void Menu::reports(ArbolB *arbolImagenes, listaCircular *filtros){
     int opcion = 0;
     string st = "";
@@ -283,6 +313,7 @@ void Menu::reports(ArbolB *arbolImagenes, listaCircular *filtros){
             case 3:
                 break;
             case 4:
+                repTrasversal(arbolImagenes);
                 break;
             case 5:
                 break;

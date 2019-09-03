@@ -19,6 +19,7 @@ class Menu
         void imageExport(cuboDisperso *selectedimage, listaCircular *filtros);
         void reports(ArbolB *arbolImagenes, listaCircular *filtros);
         void repImageLayer(ArbolB *arbolImagenes);
+        void repTrasversal(ArbolB *arbolImagenes);
         cuboDisperso *createImage(string nombreCarpeta, listaCircular *listaCsv);
 
 };

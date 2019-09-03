@@ -1,6 +1,7 @@
 #ifndef ARBOLB_H
 #define ARBOLB_H
 #include "cuboDisperso.h"
+#include "listaEnlazada.h"
 struct NodoArbol{
 
     public:
@@ -23,9 +24,7 @@ class ArbolB
         NodoArbol *raiz;
         bool esVacio();
         bool insertar(string nombre, int width, int height, int pxWidth,int pxHeigth, cuboDisperso* imagen);
-        bool insertar_recursivo(NodoArbol *actual, NodoArbol *imagen);
         NodoArbol *obtener(string nombre);
-        NodoArbol *obtener(NodoArbol *actual, string nombre);
         int comparar(string palabraNueva, string palabraArbol);
         void inorder(NodoArbol *actual, int n);
         void getinOrder();
@@ -34,11 +33,20 @@ class ArbolB
         void posorder(NodoArbol *actual, int n);
         void preorder(NodoArbol *actual, int n);
         void graficar();
-        string escribirArbol(NodoArbol *treenode);
+        void graficarInorder();
+        void graficarPosorder();
+        void graficarPreorder();
+
 
     protected:
 
     private:
+        bool insertar_recursivo(NodoArbol *actual, NodoArbol *imagen);
+        NodoArbol *obtener(NodoArbol *actual, string nombre);
+        listaEnlazada *escribirInorder(NodoArbol *tree, listaEnlazada *ls);
+        listaEnlazada *escribirPosorder(NodoArbol *tree, listaEnlazada *ls);
+        listaEnlazada *escribirPreorder(NodoArbol *tree, listaEnlazada *ls);
+        string escribirArbol(NodoArbol *treenode);
 };
 
 #endif // ARBOLB_H
