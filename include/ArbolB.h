@@ -33,6 +33,8 @@ class ArbolB
         void getpreOrder();
         void posorder(NodoArbol *actual, int n);
         void preorder(NodoArbol *actual, int n);
+        void graficar();
+        string escribirArbol(NodoArbol *treenode);
 
     protected:
 

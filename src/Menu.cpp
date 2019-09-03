@@ -231,10 +231,15 @@ void Menu::repImageLayer(ArbolB *arbolImagenes){
         cin >> capa;
         string salida = nombre+"Layer"+capa;
         hoja->imagen->graficarMatriz(salida,stoi(capa));
+        //Abrir grafica.
+        string comando = "eog Matrix_"+salida+".png";
+        const char *cmd2 = comando.c_str();
+        system(cmd2);
         cout << "\n¿Desea Graficar otra imagen? (y/n): ";
         cin >> capa;
         if(capa == "y"){
             repImageLayer(arbolImagenes);
+
         }
     }else{
         cout << "Seleccione una imagen valida" << endl;
@@ -247,6 +252,8 @@ void Menu::repImageLayer(ArbolB *arbolImagenes){
 
 void Menu::reports(ArbolB *arbolImagenes, listaCircular *filtros){
     int opcion = 0;
+    string st = "";
+    string comando;
     while(opcion != 6){
         system("clear");
         cout << "1. Imported Images Report" << endl;
@@ -259,6 +266,15 @@ void Menu::reports(ArbolB *arbolImagenes, listaCircular *filtros){
         switch(opcion){
 
             case 1:
+                arbolImagenes->graficar();
+                cout << "¿Desea abrir la grafica? (y/n): ";
+                cin >> st;
+                if(st == "y"){
+                    //Abrir grafica.
+                    comando = "eog binaryTree.png";
+                    const char *cmd2 = comando.c_str();
+                    system(cmd2);
+                }
                 break;
             case 2:
                 repImageLayer(arbolImagenes);

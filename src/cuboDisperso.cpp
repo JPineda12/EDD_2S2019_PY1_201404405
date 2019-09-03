@@ -448,10 +448,7 @@ void cuboDisperso::graficarMatriz(string nombreCapa, int numeroCapa){
     string comando = "dot Matrix_"+nombreCapa+".dot -Tpng -o Matrix_"+nombreCapa+".png";
     const char *cmd = comando.c_str();
     system(cmd);
-    //Abrir grafica.
-    comando = "eog Matrix_"+nombreCapa+".png";
-    const char *cmd2 = comando.c_str();
-    system(cmd2);
+
 
 }
 

@@ -4,14 +4,15 @@
 #include "cuboDisperso.h"
 #include <string>
 #include "ArbolB.h"
+#include <fstream>
 using namespace std;
 
-void prueba(cuboDisperso *cb){
-    cuboDisperso *palomita = cb;
-}
+
+
 int main()
 {
-   Menu *m = new Menu();
+
+    Menu *m = new Menu();
     //cb->imprimir(0);
  /*   cuboDisperso *cb = new cuboDisperso();
     ArbolB *tree = new ArbolB();

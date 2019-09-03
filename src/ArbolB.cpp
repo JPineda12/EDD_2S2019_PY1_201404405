@@ -1,6 +1,6 @@
 #include "ArbolB.h"
 #include <bits/stdc++.h>
-
+#include <fstream>
 NodoArbol::NodoArbol(string nombre, int width, int height, int pxWidth, int pxHeight, cuboDisperso *imagen){
     this->imagen = imagen;
     this->nombre = nombre;
@@ -27,7 +27,7 @@ int ArbolB::comparar(string palabraNueva,string palabraArbol){
     //Retorna si es menor = true
     string smallest = palabraNueva;
     bool flag = false;
-    bool iguales = true;
+    bool iguales = false;
     if (palabraNueva.length() > palabraArbol.length()){
             smallest = palabraArbol;
             flag = true;
@@ -48,9 +48,9 @@ int ArbolB::comparar(string palabraNueva,string palabraArbol){
         return 0;
     }
     if(flag){
-        return false;
+        return -1;
     }else{
-        return true;
+        return 1;
     }
 }
 
@@ -109,6 +109,8 @@ NodoArbol *ArbolB::obtener(NodoArbol *actual, string nombre){
     }else if(menor == -1){
         return obtener(actual->right, nombre);
     }
+
+    return NULL;
 }
 
 void ArbolB::inorder(NodoArbol *actual, int n){
@@ -171,4 +173,66 @@ void ArbolB::getposOrder(){
     int n = 1;
     posorder(raiz,n);
 }
+
+string ArbolB::escribirArbol(NodoArbol *treenode){
+        string archivo = "";
+        // ROOT - LEFT - RIGHT
+        // ROOT = Write the file
+        archivo += "    nd"+treenode->nombre+"[label=\"<left> | "+treenode->nombre;
+        archivo += " \\n"+to_string(treenode->width)+"x"
+                    +to_string(treenode->height)+"\\n"+to_string(treenode->pxWidth)
+                    +"x"+to_string(treenode->pxHeight)+" | <right>\"];\n";
+        archivo += "    //Links nd"+treenode->nombre+"\n";
+         //Si estos existen, enlaza con su nodo hijo izquierda o derecha.
+        if(treenode->left != NULL){
+            archivo += "    nd"+treenode->nombre+" : left->nd"+treenode->left->nombre;
+            archivo += "\n";
+
+        }
+        if(treenode->right != NULL){
+            archivo += "    nd"+treenode->nombre+" : right->nd"+treenode->right->nombre;
+            archivo += "\n";
+        }
+            // left
+        if(treenode->left != NULL){
+            archivo += escribirArbol(treenode->left);
+        }
+
+        // RIGHT
+        if(treenode->right != NULL){
+            archivo += escribirArbol(treenode->right);
+        }
+
+        return archivo;
+}
+
+void ArbolB::graficar(){
+    ofstream archivo;
+    archivo.open("binaryTree.dot");
+    archivo << "digraph arbolBinario\n{\n";
+    archivo << "    rankdir=TB;\n";
+    archivo << "    graph [pad=\".25\", ranksep=\"1.0\", nodesep=\"1\"];\n";
+    archivo << "    node [shape=record, style = rounded, color = forestgreen];\n";
+    archivo << "    node [width = 2, height = 0.7, fixedsize=\"true\"];\n";
+    //Empieza creacion de NODOS y sus ENLACES
+    //ej: ndnombreimagen[label="<left> | Random\n16px16px\n30px| <right>"];
+    archivo << "    //Nodes and links creation\n";
+    //LLama al metodo escribir que se encarga de escribir los nodos y sus hijos
+    // de manera recursiva.
+    archivo << escribirArbol(raiz); //Empezando desde la raiz del arbol.
+    archivo << "}";
+    //ARCHIVO TERMINADO!
+     archivo.close();
+
+    //ESCRIBIR EN TERMINAL PARA GENERAR EL .png BinaryTree.dot"
+    string comando = "dot binaryTree.dot -Tpng -o binaryTree.png";
+    const char *cmd = comando.c_str();
+    system(cmd);
+
+}
+
+
+
+
+
 

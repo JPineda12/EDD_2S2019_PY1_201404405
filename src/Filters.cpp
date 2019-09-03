@@ -50,6 +50,7 @@ cuboDisperso *Filters::grayscaleAll(cuboDisperso *imagen){
     NodoCubo* tempz = imagen->root;
     NodoCubo* tempx;
     NodoCubo* tempy;
+
     string R = "";
     string G = "";
     string B = "";

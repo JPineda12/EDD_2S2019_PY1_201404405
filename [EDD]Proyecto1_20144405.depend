@@ -79,39 +79,40 @@
 1567233156 /home/brest12/Desktop/Proyecto1/EDD_2S2019_PY1_201404405/include/ArbolB.h
 	"cuboDisperso.h"
 
-1567321975 source:/home/brest12/Desktop/Estructuras de Datos/Laboratorio/Proyecto 1/EDD_2S2019_PY1_201404405/main.cpp
+1567480458 source:/home/brest12/Desktop/Estructuras de Datos/Laboratorio/Proyecto 1/EDD_2S2019_PY1_201404405/main.cpp
 	"Menu.h"
 	"listaCircular.h"
 	<iostream>
 	"cuboDisperso.h"
 	<string>
 	"ArbolB.h"
+	<fstream>
 
-1567321241 /home/brest12/Desktop/Estructuras de Datos/Laboratorio/Proyecto 1/EDD_2S2019_PY1_201404405/include/Menu.h
+1567463134 /home/brest12/Desktop/Estructuras de Datos/Laboratorio/Proyecto 1/EDD_2S2019_PY1_201404405/include/Menu.h
 	"listaCircular.h"
 	"ArbolB.h"
 	"cuboDisperso.h"
 
-1567239117 /home/brest12/Desktop/Estructuras de Datos/Laboratorio/Proyecto 1/EDD_2S2019_PY1_201404405/include/listaCircular.h
+1567463134 /home/brest12/Desktop/Estructuras de Datos/Laboratorio/Proyecto 1/EDD_2S2019_PY1_201404405/include/listaCircular.h
 	<string>
 
-1567323571 /home/brest12/Desktop/Estructuras de Datos/Laboratorio/Proyecto 1/EDD_2S2019_PY1_201404405/include/cuboDisperso.h
+1567463134 /home/brest12/Desktop/Estructuras de Datos/Laboratorio/Proyecto 1/EDD_2S2019_PY1_201404405/include/cuboDisperso.h
 	<string>
 	"listaCircular.h"
 
-1567300993 /home/brest12/Desktop/Estructuras de Datos/Laboratorio/Proyecto 1/EDD_2S2019_PY1_201404405/include/ArbolB.h
+1567476340 /home/brest12/Desktop/Estructuras de Datos/Laboratorio/Proyecto 1/EDD_2S2019_PY1_201404405/include/ArbolB.h
 	"cuboDisperso.h"
 
-1567321964 source:/home/brest12/Desktop/Estructuras de Datos/Laboratorio/Proyecto 1/EDD_2S2019_PY1_201404405/src/cuboDisperso.cpp
+1567479064 source:/home/brest12/Desktop/Estructuras de Datos/Laboratorio/Proyecto 1/EDD_2S2019_PY1_201404405/src/cuboDisperso.cpp
 	"cuboDisperso.h"
 	<fstream>
 	<iostream>
 
-1567239117 source:/home/brest12/Desktop/Estructuras de Datos/Laboratorio/Proyecto 1/EDD_2S2019_PY1_201404405/src/listaCircular.cpp
+1567463134 source:/home/brest12/Desktop/Estructuras de Datos/Laboratorio/Proyecto 1/EDD_2S2019_PY1_201404405/src/listaCircular.cpp
 	"listaCircular.h"
 	<iostream>
 
-1567327272 source:/home/brest12/Desktop/Estructuras de Datos/Laboratorio/Proyecto 1/EDD_2S2019_PY1_201404405/src/Menu.cpp
+1567479723 source:/home/brest12/Desktop/Estructuras de Datos/Laboratorio/Proyecto 1/EDD_2S2019_PY1_201404405/src/Menu.cpp
 	"Menu.h"
 	<iostream>
 	<string>
@@ -121,21 +122,22 @@
 	<cuboDisperso.h>
 	"Filters.h"
 
-1567301014 source:/home/brest12/Desktop/Estructuras de Datos/Laboratorio/Proyecto 1/EDD_2S2019_PY1_201404405/src/ArbolB.cpp
+1567480468 source:/home/brest12/Desktop/Estructuras de Datos/Laboratorio/Proyecto 1/EDD_2S2019_PY1_201404405/src/ArbolB.cpp
 	"ArbolB.h"
 	<bits/stdc++.h>
+	<fstream>
 
-1567288625 source:/home/brest12/Desktop/Estructuras de Datos/Laboratorio/Proyecto 1/EDD_2S2019_PY1_201404405/src/GenerarPagina.cpp
+1567463134 source:/home/brest12/Desktop/Estructuras de Datos/Laboratorio/Proyecto 1/EDD_2S2019_PY1_201404405/src/GenerarPagina.cpp
 	"GenerarPagina.h"
 	<fstream>
 
-1567294028 /home/brest12/Desktop/Estructuras de Datos/Laboratorio/Proyecto 1/EDD_2S2019_PY1_201404405/include/GenerarPagina.h
+1567463134 /home/brest12/Desktop/Estructuras de Datos/Laboratorio/Proyecto 1/EDD_2S2019_PY1_201404405/include/GenerarPagina.h
 	<string>
 
-1567327172 source:/home/brest12/Desktop/Estructuras de Datos/Laboratorio/Proyecto 1/EDD_2S2019_PY1_201404405/src/Filters.cpp
+1567466182 source:/home/brest12/Desktop/Estructuras de Datos/Laboratorio/Proyecto 1/EDD_2S2019_PY1_201404405/src/Filters.cpp
 	"Filters.h"
 	<iostream>
 
-1567322844 /home/brest12/Desktop/Estructuras de Datos/Laboratorio/Proyecto 1/EDD_2S2019_PY1_201404405/include/Filters.h
+1567463134 /home/brest12/Desktop/Estructuras de Datos/Laboratorio/Proyecto 1/EDD_2S2019_PY1_201404405/include/Filters.h
 	"cuboDisperso.h"
 
