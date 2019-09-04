@@ -1,6 +1,7 @@
 #include "cuboDisperso.h"
 #include <fstream>
 #include <iostream>
+#include "listaCubo.h";
 NodoCubo::NodoCubo(string info, string layerName, int x, int y, int z){
     this->info = info;
     this->layerName = layerName;
@@ -452,11 +453,68 @@ void cuboDisperso::graficarMatriz(string nombreCapa, int numeroCapa){
 
 }
 
-listaCircular* cuboDisperso::linearMap_byRow(int width, int height){
+listaCubo* cuboDisperso::linearMap_byRow(int z){
     //SUPONIENDO QUE LA MATRIZ DE COLORES RGB ESTA LLENA
-    //FORMULA (ixn)*j;
+    //FORMULA (ixn)+j;
+    listaCubo *linealizado = new listaCubo();
 
+    NodoCubo *tempz = root;
+    NodoCubo *tempy = root;
+    NodoCubo *tempx = root;
+    while( tempz != NULL){
+        if(tempz->z == z){
+            break;
+        }
+        tempz = tempz->upper;
+    }
+    tempy = tempz->down;
+    tempx;
+    string coords = "";
+    while(tempy != NULL){
+        tempx = tempy->next;
+        while(tempx != NULL){
+            coords = "("+to_string(tempx->x)+","+to_string(tempx->y)+")";
+                linealizado->insertar(tempx->info,coords);
+            tempx = tempx->next;
+        }
+        tempy = tempy->down;
+
+    }
+    cout << to_string(linealizado->getSize()) << endl;
+    return linealizado;
 }
+
+listaCubo* cuboDisperso::linearMap_byCol(int z){
+    //SUPONIENDO QUE LA MATRIZ DE COLORES RGB ESTA LLENA
+    //FORMULA (jxn)+i;
+    listaCubo *linealizado = new listaCubo();
+
+    NodoCubo *tempz = root;
+    NodoCubo *tempy = root;
+    NodoCubo *tempx = root;
+    while( tempz != NULL){
+        if(tempz->z == z){
+            break;
+        }
+        tempz = tempz->upper;
+    }
+    tempy;
+    tempx = tempz->next;
+    string coords = "";
+    while(tempx != NULL){
+        tempy = tempx->down;
+        while(tempy != NULL){
+            coords = "("+to_string(tempy->x)+","+to_string(tempy->y)+")";
+                linealizado->insertar(tempy->info,coords);
+            tempy = tempy->down;
+        }
+        tempx = tempx->next;
+
+    }
+    cout << to_string(linealizado->getSize()) << endl;
+    return linealizado;
+}
+
 
 
 

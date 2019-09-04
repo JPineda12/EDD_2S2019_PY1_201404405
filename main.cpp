@@ -6,6 +6,7 @@
 #include "ArbolB.h"
 #include <fstream>
 #include "listaEnlazada.h"
+#include "listaCubo.h"
 using namespace std;
 
 
@@ -13,10 +14,10 @@ using namespace std;
 int main()
 {
 
-    //Menu *m = new Menu();
+    Menu *m = new Menu();
 
     //cb->imprimir(0);
-    cuboDisperso *cb = new cuboDisperso();
+    /*cuboDisperso *cb = new cuboDisperso();
     ArbolB *tree = new ArbolB();
     tree->insertar("Mario1",0,0,0,0, cb);
     tree->insertar("Pickachu",0,0,0,0,cb);

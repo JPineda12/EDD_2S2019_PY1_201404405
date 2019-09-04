@@ -2,6 +2,7 @@
 #define CUBODISPERSO_H
 #include <string>
 #include "listaCircular.h"
+#include "listaCubo.h"
 using namespace std;
 
 struct NodoCubo{
@@ -41,8 +42,8 @@ class cuboDisperso
         int layerSize();
         void graficarMatriz(string nombreCapa, int z);
         void imprimir(int z);
-        listaCircular *linearMap_byRow(int width, int height);
-        listaCircular *linearMap_byCol(int width, int height);
+        listaCubo *linearMap_byRow(int capa);
+        listaCubo *linearMap_byCol(int capa);
 
     protected:
 

@@ -280,6 +280,62 @@ void Menu::repTrasversal(ArbolB *arbolImagenes){
     }
 }
 
+void Menu::repLinearMatrix(ArbolB *arbolImagenes){
+    printImageMenu(arbolImagenes);
+    string nombre = "";
+    cout << "Escriba el nombre de imagen a seleccionar: ";
+    cin >> nombre;
+    NodoArbol *hoja = arbolImagenes->obtener(nombre);
+    if(hoja){
+        system("clear");
+        cout << "------ " << hoja->nombre << " ------" << endl;
+        cout << "Numero      Capa" << endl;
+        NodoCubo *temp = hoja->imagen->root->upper;
+        while (temp != NULL){
+            cout << "  " << temp->z << "    " << temp->layerName << endl;
+            temp = temp->upper;
+        }
+        cout << "\nNumero de capa a reportar: ";
+        string capa = "";
+        cin >> capa;
+        system("clear");
+        listaCubo *linealizado = new listaCubo();
+        int op = 0;
+        while(op != 3){
+            cout << "Linear Report para la capa no."+capa << endl;
+            cout << "1. Linealizacion por Columnas\n";
+            cout << "2. Linealizacion por filas\n";
+            cin >> op;
+
+            switch(op){
+            case 1:
+                cout << "\nGenerating linear map by Column\n";
+                linealizado = hoja->imagen->linearMap_byCol(stoi(capa));
+                op = 3;
+                cout << to_string(linealizado->getSize());
+                linealizado->graficar("LinearMatrix_bycol");
+                cin.ignore();
+                cin.ignore();
+                break;
+            case 2:
+                cout << "\nGenerating linear map by row\n";
+                //hoja->imagen->linearMap_byRow(1);
+                linealizado = hoja->imagen->linearMap_byRow(stoi(capa));
+                cout << to_string(linealizado->getSize());
+                linealizado->graficar("LinearMatrix_byrow");
+                op = 3;
+                cin.ignore();
+                cin.ignore();
+                break;
+            default:
+                cout << "Opcion invalida!\n\n";
+            //    cin.ignore();
+            }
+        }
+    }
+
+}
+
 void Menu::reports(ArbolB *arbolImagenes, listaCircular *filtros){
     int opcion = 0;
     string st = "";
@@ -311,6 +367,7 @@ void Menu::reports(ArbolB *arbolImagenes, listaCircular *filtros){
                 break;
 
             case 3:
+                repLinearMatrix(arbolImagenes);
                 break;
             case 4:
                 repTrasversal(arbolImagenes);

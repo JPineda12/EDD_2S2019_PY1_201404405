@@ -7,16 +7,4 @@ digraph arbolBinario
     //Nodes and links creation
     ndminion[label="<left> | minion \n18x12\n30x30 | <right>"];
     //Links ndminion
-    ndminion : left->ndDonkey
-    ndminion : right->ndminion2
-    ndDonkey[label="<left> | Donkey \n18x12\n30x30 | <right>"];
-    //Links ndDonkey
-    ndDonkey : right->ndLink
-    ndLink[label="<left> | Link \n18x12\n30x30 | <right>"];
-    //Links ndLink
-    ndminion2[label="<left> | minion2 \n18x12\n30x30 | <right>"];
-    //Links ndminion2
-    ndminion2 : right->ndwonder
-    ndwonder[label="<left> | wonder \n18x12\n30x30 | <right>"];
-    //Links ndwonder
 }

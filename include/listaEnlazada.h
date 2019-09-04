@@ -13,6 +13,7 @@ struct NodoLista{
 
 };
 
+
 class listaEnlazada
 {
     public:
