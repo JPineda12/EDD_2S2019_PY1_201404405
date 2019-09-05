@@ -16,7 +16,7 @@ class Menu
         void printImageMenu(ArbolB *tree);
         listaCircular* filters(cuboDisperso *selectedimage);
         void manualEdit(cuboDisperso *selectedimage, listaCircular *filtros);
-        void imageExport(cuboDisperso *selectedimage, listaCircular *filtros);
+        void imageExport(cuboDisperso *selectedimage, listaCircular *filtros, ArbolB *arbolImagenes);
         void reports(ArbolB *arbolImagenes, listaCircular *filtros);
         void repImageLayer(ArbolB *arbolImagenes);
         void repTrasversal(ArbolB *arbolImagenes);

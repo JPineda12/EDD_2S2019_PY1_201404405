@@ -5,6 +5,9 @@ digraph arbolBinario
     node [shape=record, style = rounded, color = forestgreen];
     node [width = 2, height = 0.7, fixedsize="true"];
     //Nodes and links creation
-    ndminion[label="<left> | minion \n18x12\n30x30 | <right>"];
+    ndYoda[label="<left> | Yoda \n30x30\n20x20 | <right>"];
+    //Links ndYoda
+    ndYoda : right->ndminion
+    ndminion[label="<left> | minion \n12x18\n30x30 | <right>"];
     //Links ndminion
 }

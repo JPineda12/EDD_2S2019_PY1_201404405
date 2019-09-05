@@ -16,9 +16,9 @@ NodoCubo::NodoCubo(string info, string layerName, int x, int y, int z){
     lower = NULL;
 }
 
-cuboDisperso::cuboDisperso()
+cuboDisperso::cuboDisperso(string nombreImagen)
 {
-    this->root = new NodoCubo("Matrix", "Layer0", -1, -1,0);
+    this->root = new NodoCubo(nombreImagen, "Layer0", -1, -1,0);
     layerCount = 0;
 }
 
@@ -513,6 +513,15 @@ listaCubo* cuboDisperso::linearMap_byCol(int z){
     }
     cout << to_string(linealizado->getSize()) << endl;
     return linealizado;
+}
+
+int cuboDisperso::indiceReal(int x, int y, int width){
+    //SUPONIENDO QUE LA MATRIZ DE COLORES RGB ESTA LLENA
+    //FORMULA (ixn)+j;
+
+    return (y*width)+x;
+
+
 }
 
 

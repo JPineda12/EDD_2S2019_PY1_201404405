@@ -27,7 +27,7 @@ class cuboDisperso
     public:
         int layerCount;
         NodoCubo *root;
-        cuboDisperso();
+        cuboDisperso(string nombreImagen);
         void insert_element(string info, string layerName, int x, int y, int z);
         NodoCubo *insert_sorted_col(NodoCubo* new_node, NodoCubo* head_col);
         NodoCubo *insert_sorted_row(NodoCubo* new_node, NodoCubo* head_row);
@@ -44,6 +44,7 @@ class cuboDisperso
         void imprimir(int z);
         listaCubo *linearMap_byRow(int capa);
         listaCubo *linearMap_byCol(int capa);
+        int indiceReal(int x, int y, int width);
 
     protected:
 

@@ -7,5 +7,6 @@ Juan Antonio Pineda Espino - Proyecto 1 - Estructuras de Datos
 - [x] Select Images
 - [ ] Apply Filters (3/5 done)
 - [ ] Manual Editing
-- [ ] Export Image
+- [x] Export Image
 - [ ] Reports (4/5 done)
+

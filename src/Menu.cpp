@@ -6,11 +6,12 @@
 #include <listaCircular.h>
 #include <cuboDisperso.h>;
 #include "Filters.h"
+#include <GenerarPagina.h>
 using namespace std;
 
 cuboDisperso* Menu::createImage(string nombreCarpeta,listaCircular *listaCSV){
 //Crea el Cubo con las capas y nodos
-    cuboDisperso *imagen = new cuboDisperso();
+    cuboDisperso *imagen = new cuboDisperso(nombreCarpeta);
     NodoL *layercsv = listaCSV->head->next; //Obtiene el nombre del primer csv
     int x = 0;
     int y = 0;
@@ -23,6 +24,7 @@ cuboDisperso* Menu::createImage(string nombreCarpeta,listaCircular *listaCSV){
             string line = "";
             //El numero de layercsv corresponde a la capa donde se insertara x,y.
             z = layercsv->numero;
+            y = 0;
             while(getline(capa,line)){
                 stringstream strstr(line);
                 string word = "";
@@ -31,6 +33,7 @@ cuboDisperso* Menu::createImage(string nombreCarpeta,listaCircular *listaCSV){
                 x = 0;
                 while (getline(strstr,word,',')){
                     if(word != "x"){
+                        cout << "("+to_string(x)+","+to_string(y)+")" << endl;
                         imagen->insert_element(word, layerName, x,y,z);
                     }
                     x++;
@@ -99,10 +102,10 @@ void Menu::insertImage(ArbolB *arbolImagenes){ //Metodo para obtener los archivo
             string word = "";
             while (getline(strstr,word,',')){
                 if(n == 0){
-                    imageHeight = stoi(word);
+                    imageWidth = stoi(word);
                     n = -1;
                 }else if(n == 1){
-                    imageWidth = stoi(word);
+                    imageHeight = stoi(word);
                     n = -1;
                 }else if(n == 2){
                     pxWidth = stoi(word);
@@ -132,6 +135,7 @@ void Menu::insertImage(ArbolB *arbolImagenes){ //Metodo para obtener los archivo
     cuboDisperso* imagen = createImage(carpeta, archivos);
     //Inserta la imagen en el arbol Binario de imagenes
     if(imagen != NULL){
+
         bool success = arbolImagenes->insertar(carpeta, imageWidth, imageHeight, pxWidth, pxHeight, imagen);
         if(success){
             cout << "La imagen  \"" << carpeta << "\" fue insertada al arbol!" << endl;
@@ -384,10 +388,36 @@ void Menu::reports(ArbolB *arbolImagenes, listaCircular *filtros){
     }
 }
 
+void Menu::imageExport(cuboDisperso *selectedImage, listaCircular *filtros, ArbolB *arbolImagenes){
+    cout << "Exportando imagen...." << endl;
+    listaCubo *ls = new listaCubo();
+    listaCubo *aux = new listaCubo();
+    NodoArbol *hoja = arbolImagenes->obtener(selectedImage->root->info);
+    NodoLineal *l;
+    int layers = hoja->imagen->layerCount;
+    cout << "Layers : " << layers;
+    for(int i = 1; i <= layers ; i++){
+        aux = selectedImage->linearMap_byCol(i);
+        l = aux->inicio;
+        while( l != NULL){
+            ls->insertar(l->info,l->coords);
+            l = l->next;
+        }
+    }
+    //ls = selectedImage->linearMap_byCol(2);
+    //ls = selectedImage->linearMap_byCol(3);
+    GenerarPagina *pagina = new GenerarPagina("Yoda");
+    pagina->crearCSS(ls,hoja);
+    pagina->crearHTMl(ls,hoja);
+    cin.ignore();
+    cin.ignore();
+
+}
+
 Menu::Menu()
 {
     ArbolB *arbolImagenes = new ArbolB();
-    cuboDisperso *selectedImage = new cuboDisperso();
+    cuboDisperso *selectedImage = new cuboDisperso("select");
     listaCircular *filtros = new listaCircular();
 
     int opcion = 0;
@@ -419,12 +449,17 @@ Menu::Menu()
             if(selectedImage->layerSize() > 0){
                 filtros = filters(selectedImage);
             }else{
-                cout << "No hay imagen seleccionada!" << endl;;
+                cout << "No hay imagen seleccionada!" << endl;
             }
             break;
         case 4:
             break;
         case 5:
+            if(selectedImage->layerSize() > 0){
+                imageExport(selectedImage, filtros,arbolImagenes);
+            }else{
+                cout << "No hay imagen seleccionada!" << endl;
+            }
             break;
         case 6:
             if(arbolImagenes->esVacio()){

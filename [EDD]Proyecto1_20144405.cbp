@@ -40,6 +40,7 @@
 		<Unit filename="include/Menu.h" />
 		<Unit filename="include/cuboDisperso.h" />
 		<Unit filename="include/listaCircular.h" />
+		<Unit filename="include/listaCubo.h" />
 		<Unit filename="include/listaEnlazada.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/ArbolB.cpp" />
@@ -48,6 +49,7 @@
 		<Unit filename="src/Menu.cpp" />
 		<Unit filename="src/cuboDisperso.cpp" />
 		<Unit filename="src/listaCircular.cpp" />
+		<Unit filename="src/listaCubo.cpp" />
 		<Unit filename="src/listaEnlazada.cpp" />
 		<Extensions>
 			<code_completion />
