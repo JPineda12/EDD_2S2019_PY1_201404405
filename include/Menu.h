@@ -1,6 +1,6 @@
 #ifndef MENU_H
 #define MENU_H
-#include "listaCircular.h"
+#include "listaFiltros.h"
 #include "ArbolB.h"
 #include "cuboDisperso.h"
 class Menu
@@ -14,14 +14,16 @@ class Menu
         void insertImage(ArbolB *tree);
         cuboDisperso* selectImage(ArbolB *tree);
         void printImageMenu(ArbolB *tree);
-        listaCircular* filters(cuboDisperso *selectedimage);
-        void manualEdit(cuboDisperso *selectedimage, listaCircular *filtros);
-        void imageExport(cuboDisperso *selectedimage, listaCircular *filtros, ArbolB *arbolImagenes);
-        void reports(ArbolB *arbolImagenes, listaCircular *filtros);
+        listaFiltros* filters(cuboDisperso *selectedimage, ArbolB *arbolImagenes, listaFiltros *filtros);
+        void manualEdit(cuboDisperso *selectedimage, listaFiltros *filtros);
+        void imageExport(cuboDisperso *selectedimage, listaFiltros *filtros, ArbolB *arbolImagenes);
+        void reports(ArbolB *arbolImagenes, listaFiltros *filtros);
         void repImageLayer(ArbolB *arbolImagenes);
         void repTrasversal(ArbolB *arbolImagenes);
         void repLinearMatrix(ArbolB *arbolImagenes);
         cuboDisperso *createImage(string nombreCarpeta, listaCircular *listaCsv);
+        void exportarSelected(cuboDisperso *selectedImage, ArbolB *arbolImagenes);
+        void exportarFiltro(listaFiltros *filtros, ArbolB *arbolImagenes, string nombreImagen);
 
 };
 

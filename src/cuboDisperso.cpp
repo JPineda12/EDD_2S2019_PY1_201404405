@@ -511,7 +511,7 @@ listaCubo* cuboDisperso::linearMap_byCol(int z){
         tempx = tempx->next;
 
     }
-    cout << to_string(linealizado->getSize()) << endl;
+    cout << "Returning with: " << to_string(linealizado->getSize()) << endl;
     return linealizado;
 }
 

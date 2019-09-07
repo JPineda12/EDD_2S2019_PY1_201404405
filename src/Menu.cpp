@@ -175,11 +175,27 @@ cuboDisperso* Menu::selectImage(ArbolB *arbolImagenes){
     selectImage(arbolImagenes);
 }
 
-listaCircular* Menu::filters(cuboDisperso* selectedImage){
-    cuboDisperso *imagenFiltro = selectedImage;
-    Filters *filter = new Filters();
+listaFiltros* Menu::filters(cuboDisperso* selectedImage, ArbolB *arbolImagenes, listaFiltros *filtros){
     int opcion = 0;
     while(opcion != 6){
+    cuboDisperso *imagenFiltro = new cuboDisperso(selectedImage->root->info);
+    NodoCubo *auxz = selectedImage->root;
+    NodoCubo *auxy;
+    NodoCubo *auxx;
+    while (auxz != NULL){
+        auxy = auxz->down;
+        while(auxy != NULL){
+            auxx = auxy->next;
+            while(auxx != NULL){
+                imagenFiltro->insert_element(auxx->info,auxx->layerName,auxx->x,auxx->y,auxx->z);
+                auxx = auxx->next;
+            }
+            auxy = auxy->down;
+        }
+        auxz = auxz->upper;
+    }
+    NodoArbol *hoja = arbolImagenes->obtener(imagenFiltro->root->info);
+    Filters *filter = new Filters();
         system("clear");
         cout << "1. Negative" << endl;
         cout << "2. Grayscale" << endl;
@@ -190,19 +206,27 @@ listaCircular* Menu::filters(cuboDisperso* selectedImage){
         cin >> opcion;
         switch(opcion){
             case 1:
-                filter->negativeAll(imagenFiltro);
+                imagenFiltro = filter->negativeAll(imagenFiltro);
+                //cout << hoja << endl;
+                //cout << imagenFiltro << endl;
+                //cin.ignore();
+                //cin.ignore();
+                filtros->insertar("Negative", hoja->width, hoja->height, hoja->pxWidth, hoja->pxHeight, imagenFiltro);
+
                 break;
             case 2:
-                filter->grayscaleAll(imagenFiltro);
+                imagenFiltro = filter->grayscaleAll(imagenFiltro);
+                filtros->insertar("Grayscale", hoja->width, hoja->height, hoja->pxWidth, hoja->pxHeight, imagenFiltro);
                 break;
             case 3:
-                filter->mirrorAll(imagenFiltro, 0);
+                imagenFiltro = filter->mirrorAll(imagenFiltro, 0,hoja);
+                filtros->insertar("Mirror", hoja->width, hoja->height, hoja->pxWidth, hoja->pxHeight, imagenFiltro);
                 break;
             case 4:
-                filter->collage(imagenFiltro);
+                imagenFiltro = filter->collage(imagenFiltro);
                 break;
             case 5:
-                filter->mosaic(imagenFiltro);
+                imagenFiltro = filter->mosaic(imagenFiltro);
                 break;
             case 6:
                 break;
@@ -212,7 +236,7 @@ listaCircular* Menu::filters(cuboDisperso* selectedImage){
                 cin.ignore();
         }
     }
-
+    return filtros;
 
 }
 void Menu::repImageLayer(ArbolB *arbolImagenes){
@@ -340,7 +364,7 @@ void Menu::repLinearMatrix(ArbolB *arbolImagenes){
 
 }
 
-void Menu::reports(ArbolB *arbolImagenes, listaCircular *filtros){
+void Menu::reports(ArbolB *arbolImagenes, listaFiltros *filtros){
     int opcion = 0;
     string st = "";
     string comando;
@@ -388,8 +412,7 @@ void Menu::reports(ArbolB *arbolImagenes, listaCircular *filtros){
     }
 }
 
-void Menu::imageExport(cuboDisperso *selectedImage, listaCircular *filtros, ArbolB *arbolImagenes){
-    cout << "Exportando imagen...." << endl;
+void Menu::exportarSelected(cuboDisperso *selectedImage, ArbolB *arbolImagenes){
     listaCubo *ls = new listaCubo();
     listaCubo *aux = new listaCubo();
     NodoArbol *hoja = arbolImagenes->obtener(selectedImage->root->info);
@@ -404,13 +427,78 @@ void Menu::imageExport(cuboDisperso *selectedImage, listaCircular *filtros, Arbo
             l = l->next;
         }
     }
-    //ls = selectedImage->linearMap_byCol(2);
-    //ls = selectedImage->linearMap_byCol(3);
-    GenerarPagina *pagina = new GenerarPagina("Yoda");
+    GenerarPagina *pagina = new GenerarPagina(selectedImage->root->info);
     pagina->crearCSS(ls,hoja);
     pagina->crearHTMl(ls,hoja);
+    cout << "Imagen "+selectedImage->root->info+" exportada!";
     cin.ignore();
     cin.ignore();
+
+}
+void Menu::exportarFiltro(listaFiltros *filtros, ArbolB *arbolImagenes, string nombreImagen){
+    cout << "Lista de filtros aplicados" << endl;
+    int n = 1;
+    int opcion = 0;
+    nodoFiltro *fil = filtros->head;
+    cout << to_string(n)+". "+fil->nombre << endl;;
+    fil = fil->next;
+    n++;
+    while (fil != filtros->head){
+       cout << to_string(n)+". "+fil->nombre << endl;
+       fil = fil->next;
+       n++;
+    }
+    cout << "Escoja que filtro aplicado sobre "+nombreImagen+" quiere exportar:" << endl;
+    cin >> opcion;
+    cuboDisperso *exportar = filtros->obtener(opcion)->imagenFiltro;
+    nodoFiltro *f = filtros->obtener(opcion);
+    NodoCubo *aux = exportar->root->upper;
+    listaCubo *ls = new listaCubo();
+    NodoLineal *l;
+    listaCubo *temp = new listaCubo();
+    while(aux != NULL){
+        temp = exportar->linearMap_byCol(aux->z);
+        l = temp->inicio;
+        while(l != NULL){
+            ls->insertar(l->info,l->coords);
+            l = l->next;
+        }
+        aux = aux->upper;
+    }
+    NodoArbol *hoja = new NodoArbol(nombreImagen,f->width,f->height,f->pxwidth,f->pxheight,f->imagenFiltro);
+    GenerarPagina *pagina = new GenerarPagina(nombreImagen+"_"+f->nombre);
+    pagina->crearCSS(ls,hoja);
+    pagina->crearHTMl(ls,hoja);
+    cout << "Imagen con filtro exportada..." << endl;
+    cin.ignore();
+    cin.ignore();
+}
+
+void Menu::imageExport(cuboDisperso *selectedImage, listaFiltros *filtros, ArbolB *arbolImagenes){
+    cout << "-----Image Export-----" << endl;
+    cout << "1. Imagen original" << endl;
+    cout << "2. Filtros aplicados" << endl;
+    cout << "Que imagen desea exportar: ";
+    int opcion = 0;
+    string op = "";
+    cin >> opcion;
+    switch(opcion){
+        case 1:
+            cout << "Exportar "+selectedImage->root->info+" (y/n): ";
+            cin >> op;
+            if(op == "y"){
+                exportarSelected(selectedImage, arbolImagenes);
+            }else{
+                break;
+            }
+            break;
+        case 2:
+            exportarFiltro(filtros, arbolImagenes, selectedImage->root->info);
+            break;
+
+
+    }
+
 
 }
 
@@ -418,7 +506,7 @@ Menu::Menu()
 {
     ArbolB *arbolImagenes = new ArbolB();
     cuboDisperso *selectedImage = new cuboDisperso("select");
-    listaCircular *filtros = new listaCircular();
+    listaFiltros *filtros = new listaFiltros();
 
     int opcion = 0;
     while(opcion != 7){
@@ -447,7 +535,7 @@ Menu::Menu()
             break;
         case 3:
             if(selectedImage->layerSize() > 0){
-                filtros = filters(selectedImage);
+                filtros = filters(selectedImage, arbolImagenes, filtros);
             }else{
                 cout << "No hay imagen seleccionada!" << endl;
             }

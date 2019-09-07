@@ -3,16 +3,14 @@
 #include <iostream>
 #include "cuboDisperso.h"
 #include <string>
-#include "ArbolB.h"
-#include <fstream>
-#include "listaEnlazada.h"
-#include "listaCubo.h"
+#include "listaFiltros.h"
 using namespace std;
 
 
 
 int main()
 {
+
 
     Menu *m = new Menu();
 

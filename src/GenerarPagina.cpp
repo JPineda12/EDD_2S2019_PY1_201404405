@@ -1,9 +1,13 @@
 #include "GenerarPagina.h"
 #include <fstream>
 #include <iostream>
+
 GenerarPagina::GenerarPagina(string nombreImagen)
 {
     this->nombreImagen = nombreImagen;
+    string comando = "mkdir Exports/"+nombreImagen;
+    const char *cmd = comando.c_str();
+    system(cmd);
 }
 
 void GenerarPagina::crearHTMl(listaCubo *lsPixeles, NodoArbol *imagen){
@@ -15,7 +19,7 @@ void GenerarPagina::crearHTMl(listaCubo *lsPixeles, NodoArbol *imagen){
     archivo << "<!DOCTYPE html>\n";
     archivo << "<html>";
     archivo << "<head>";
-    archivo << "<link rel=\"stylesheet\" href=\""+imagen->nombre+".scss\">\n";
+    archivo << "<link rel=\"stylesheet\" href=\""+nombreImagen+".scss\">\n";
     archivo << "</head>\n";
     archivo << "<body>\n";
     archivo << "<div class=\"canvas\">\n";
@@ -76,6 +80,7 @@ string GenerarPagina::convertRGB(NodoLineal *pixel){
 }
 
 void GenerarPagina::crearCSS(listaCubo *lsPixeles, NodoArbol *imagen){
+
     ofstream style;
     style.open("Exports/"+nombreImagen+"/"+nombreImagen+".scss");
 

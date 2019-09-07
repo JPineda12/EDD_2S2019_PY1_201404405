@@ -42,6 +42,7 @@
 		<Unit filename="include/listaCircular.h" />
 		<Unit filename="include/listaCubo.h" />
 		<Unit filename="include/listaEnlazada.h" />
+		<Unit filename="include/listaFiltros.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/ArbolB.cpp" />
 		<Unit filename="src/Filters.cpp" />
@@ -51,6 +52,7 @@
 		<Unit filename="src/listaCircular.cpp" />
 		<Unit filename="src/listaCubo.cpp" />
 		<Unit filename="src/listaEnlazada.cpp" />
+		<Unit filename="src/listaFiltros.cpp" />
 		<Extensions>
 			<code_completion />
 			<debugger />

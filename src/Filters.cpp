@@ -82,9 +82,6 @@ cuboDisperso *Filters::grayscaleAll(cuboDisperso *imagen){
                 //Change these values from the existing node.
                 newRGB = to_string(new_R)+"-"+to_string(new_G)+"-"+to_string(new_B);
                 tempx->info = newRGB;
-                cout << "New values: "+tempx->info << endl;
-                cin.ignore();
-                cin.ignore();
                 tempx = tempx->next;
             }
             tempy = tempy->down;
@@ -94,8 +91,28 @@ cuboDisperso *Filters::grayscaleAll(cuboDisperso *imagen){
     return imagen;
 }
 
-cuboDisperso *Filters::mirrorAll(cuboDisperso *imagen, int tipo){
-    return imagen;
+cuboDisperso *Filters::mirrorAll(cuboDisperso *imagen, int tipo, NodoArbol *hoja){
+    NodoCubo* tempz = imagen->root;
+    NodoCubo* tempx;
+    NodoCubo* tempy;
+    int newx = 0;
+    int width = hoja->width;
+    cuboDisperso *aux = new cuboDisperso(imagen->root->info);
+    while(tempz != NULL){
+        tempy = tempz->down;
+        while(tempy != NULL){
+            tempx = tempy->next;
+            while(tempx != NULL){
+                newx = width - tempx->x;
+                aux->insert_element(tempx->info,tempx->layerName,newx,tempx->y,tempx->z);
+                tempx = tempx->next;
+            }
+            tempy = tempy->down;
+        }
+        tempz = tempz->upper;
+    }
+
+    return aux;
 }
 cuboDisperso *Filters::mosaic(cuboDisperso *imagen){
     return imagen;
