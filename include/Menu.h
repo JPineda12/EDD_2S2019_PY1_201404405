@@ -12,7 +12,7 @@ class Menu
 
     private:
         void insertImage(ArbolB *tree);
-        cuboDisperso* selectImage(ArbolB *tree);
+        cuboDisperso* selectImage(ArbolB *tree, listaFiltros *filtros);
         void printImageMenu(ArbolB *tree);
         listaFiltros* filters(cuboDisperso *selectedimage, ArbolB *arbolImagenes, listaFiltros *filtros);
         void manualEdit(cuboDisperso *selectedimage, listaFiltros *filtros);

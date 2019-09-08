@@ -25,6 +25,11 @@ int ArbolB::comparar(string palabraNueva,string palabraArbol){
     //El primer parametro es la palabra de la imagen nueva a insertar
     //El segundo parametro es la palabra que ya existe en el arbol;
     //Retorna si es menor = true
+    //Pasar a minusculas ambas
+    transform(palabraNueva.begin(),palabraNueva.end(),palabraNueva.begin(),
+                [](unsigned char c){ return tolower(c);});
+    transform(palabraArbol.begin(),palabraArbol.end(),palabraArbol.begin(),
+                [](unsigned char c){ return tolower(c);});
     string smallest = palabraNueva;
     bool flag = false;
     bool iguales = false;
@@ -113,19 +118,18 @@ NodoArbol *ArbolB::obtener(NodoArbol *actual, string nombre){
     return NULL;
 }
 
-void ArbolB::inorder(NodoArbol *actual, int n){
+void ArbolB::inorder(NodoArbol *actual){
         // LEFT - ROOT - RIGHT
         // left
         if(actual->left != NULL){
-            inorder(actual->left,n);
+            inorder(actual->left);
         }
         // ROOT = PRINT
-        cout << n << ".- " <<actual->nombre << endl;
-        n++;
+        cout << "- " <<actual->nombre << endl;
 
         // RIGHT
         if(actual->right != NULL){
-            inorder(actual->right,n);
+            inorder(actual->right);
         }
 }
 
@@ -161,7 +165,7 @@ void ArbolB::posorder(NodoArbol *actual, int n){
 }
 void ArbolB::getinOrder(){
     int n = 1;
-    inorder(raiz,n);
+    inorder(raiz);
 }
 
 void ArbolB::getpreOrder(){
@@ -208,7 +212,7 @@ string ArbolB::escribirArbol(NodoArbol *treenode){
 
 void ArbolB::graficar(){
     ofstream archivo;
-    archivo.open("binaryTree.dot");
+    archivo.open("Reports/binaryTree.dot");
     archivo << "digraph arbolBinario\n{\n";
     archivo << "    rankdir=TB;\n";
     archivo << "    graph [pad=\".25\", ranksep=\"1.0\", nodesep=\"1\"];\n";
@@ -225,7 +229,7 @@ void ArbolB::graficar(){
      archivo.close();
 
     //ESCRIBIR EN TERMINAL PARA GENERAR EL .png BinaryTree.dot"
-    string comando = "dot binaryTree.dot -Tpng -o binaryTree.png";
+    string comando = "dot Reports/binaryTree.dot -Tpng -o Reports/binaryTree.png";
     const char *cmd = comando.c_str();
     system(cmd);
 }
@@ -326,6 +330,10 @@ void ArbolB::graficarInorder(){
     const char *cmd = comando.c_str();
     system(cmd);
 
+    comando ="eog Reports/inorder_Tree.png";
+    const char *cmd2 = comando.c_str();
+    system(cmd2);
+
 
 }
 
@@ -361,6 +369,10 @@ void ArbolB::graficarPosorder(){
     const char *cmd = comando.c_str();
     system(cmd);
 
+    comando ="eog Reports/posorder_Tree.png";
+    const char *cmd2 = comando.c_str();
+    system(cmd2);
+
 
 }
 
@@ -395,6 +407,10 @@ void ArbolB::graficarPreorder(){
     string comando = "dot Reports/preorder_Tree.dot -Tpng -o Reports/preorder_Tree.png";
     const char *cmd = comando.c_str();
     system(cmd);
+
+    comando ="eog Reports/preorder_Tree.png";
+    const char *cmd2 = comando.c_str();
+    system(cmd2);
 }
 
 

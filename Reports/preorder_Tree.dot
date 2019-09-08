@@ -1,0 +1,10 @@
+digraph arbol_inorder
+{
+    rankdir=LR;
+    node [width = 1, height = 0.25];
+    //Nodes and links creation
+
+ndYoda[label="Yoda"];
+ndYoda->ndminion
+ndminion[label="minion"];
+}

@@ -300,7 +300,7 @@ void cuboDisperso::imprimir(int z){
 
 }
 
-void cuboDisperso::graficarMatriz(string nombreCapa, int numeroCapa){
+void cuboDisperso::graficarMatriz(string nombreCapa, int numeroCapa, string carpeta){
     // WRITING THE .DOT FILE
     NodoCubo* layer = root;
     while(layer != NULL){ //Find the layer to graph 1 2 3 4 5 6
@@ -309,10 +309,12 @@ void cuboDisperso::graficarMatriz(string nombreCapa, int numeroCapa){
         }
         layer = layer->upper;
     }
-
+    string comando = "mkdir Reports/"+carpeta;
+    const char *cmd = comando.c_str();
+    system(cmd);
     ofstream archivo;
     //nombreCapa = to_string(numeroCapa);
-    archivo.open("Matrix_"+nombreCapa+".dot");
+    archivo.open("Reports/"+carpeta+"/Matrix_"+nombreCapa+".dot");
     archivo << "digraph Sparse_Matrix{\n";
     archivo << "node [shape=box]\n";
     archivo << "graph [ranksep=\"0.5\", nodesep=\"0.6\"];\n";
@@ -446,9 +448,9 @@ void cuboDisperso::graficarMatriz(string nombreCapa, int numeroCapa){
     archivo.close();
 
     //ESCRIBIR EN TERMINAL PARA GENERAR EL .png SparseMatrix_"+nombreCapa+".dot"
-    string comando = "dot Matrix_"+nombreCapa+".dot -Tpng -o Matrix_"+nombreCapa+".png";
-    const char *cmd = comando.c_str();
-    system(cmd);
+    string comando2 = "dot Reports/"+carpeta+"/Matrix_"+nombreCapa+".dot -Tpng -o Reports/"+carpeta+"/Matrix_"+nombreCapa+".png";
+    const char *cmd2 = comando2.c_str();
+    system(cmd2);
 
 
 }
@@ -480,7 +482,6 @@ listaCubo* cuboDisperso::linearMap_byRow(int z){
         tempy = tempy->down;
 
     }
-    cout << to_string(linealizado->getSize()) << endl;
     return linealizado;
 }
 
@@ -511,7 +512,6 @@ listaCubo* cuboDisperso::linearMap_byCol(int z){
         tempx = tempx->next;
 
     }
-    cout << "Returning with: " << to_string(linealizado->getSize()) << endl;
     return linealizado;
 }
 

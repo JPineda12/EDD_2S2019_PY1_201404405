@@ -10,7 +10,7 @@ class GenerarPagina
     public:
         GenerarPagina(string nombreImagen);
         void crearHTMl(listaCubo *lsPixeles, NodoArbol *imagen);
-        void crearCSS(listaCubo *lsPixeles, NodoArbol *imagen);
+        void crearCSS(listaCubo *lsPixeles, NodoArbol *imagen, int pagew, int pageh);
         string createHexa(int r, int g, int b);
         string convertRGB(NodoLineal *pixel);
 

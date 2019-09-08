@@ -79,14 +79,18 @@ string GenerarPagina::convertRGB(NodoLineal *pixel){
     return hexa;
 }
 
-void GenerarPagina::crearCSS(listaCubo *lsPixeles, NodoArbol *imagen){
+void GenerarPagina::crearCSS(listaCubo *lsPixeles, NodoArbol *imagen, int pagew, int pageh){
 
     ofstream style;
     style.open("Exports/"+nombreImagen+"/"+nombreImagen+".scss");
-
+    pageh = pageh * 100;
     style << "body {\n";
     style << "  background: #333333;\n ";
-    style << "  height: 100vh;\n";
+    style << "  height: "+to_string(pageh)+"vh;\n";
+    if(pagew > 1){
+    pagew = pagew * 100;
+    style << "  width: "+to_string(pagew)+"vh;\n";
+    }
     style << "  display: flex;\n";
     style << "  justify-content: center;\n";
     style << "  align-items: center;\n";

@@ -1,0 +1,37 @@
+digraph arbolBinario
+{
+    rankdir=TB;
+    graph [pad=".25", ranksep="1.0", nodesep="1"];
+    node [shape=record, style = rounded, color = forestgreen];
+    node [width = 2, height = 0.7, fixedsize="true"];
+    //Nodes and links creation
+    ndCrazy[label="<left> | Crazy \n30x30\n20x20 | <right>"];
+    //Links ndCrazy
+    ndCrazy : right->ndYoda
+    ndYoda[label="<left> | Yoda \n30x30\n20x20 | <right>"];
+    //Links ndYoda
+    ndYoda : left->ndWario
+    ndWario[label="<left> | Wario \n30x30\n20x20 | <right>"];
+    //Links ndWario
+    ndWario : left->ndRandom2
+    ndWario : right->ndWeird
+    ndRandom2[label="<left> | Random2 \n30x30\n20x20 | <right>"];
+    //Links ndRandom2
+    ndRandom2 : left->ndMister
+    ndRandom2 : right->ndRandom3
+    ndMister[label="<left> | Mister \n30x30\n20x20 | <right>"];
+    //Links ndMister
+    ndMister : left->ndminion
+    ndMister : right->ndRandom
+    ndminion[label="<left> | minion \n12x18\n30x30 | <right>"];
+    //Links ndminion
+    ndminion : left->ndInpres
+    ndInpres[label="<left> | Inpres \n30x30\n20x20 | <right>"];
+    //Links ndInpres
+    ndRandom[label="<left> | Random \n30x30\n20x20 | <right>"];
+    //Links ndRandom
+    ndRandom3[label="<left> | Random3 \n30x30\n20x20 | <right>"];
+    //Links ndRandom3
+    ndWeird[label="<left> | Weird \n30x30\n20x20 | <right>"];
+    //Links ndWeird
+}

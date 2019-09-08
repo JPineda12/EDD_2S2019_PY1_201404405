@@ -1,12 +1,25 @@
 # EDD_2S2019_PY1_201404405
 Juan Antonio Pineda Espino - Proyecto 1 - Estructuras de Datos 
 
-### Requirements
+### Requirements 
 
 - [x] Insert Images
 - [x] Select Images
-- [ ] Apply Filters (3/5 done)
+- [ ] Apply Filters (4/5 done)
+	- [x] Negative
+	- [x] Grayscale
+	- [x] Mirror
+		- [x] X-Mirror
+		- [x] Y-Mirror
+		- [x] Double Mirror
+	- [x] Collage (bugged)
+	- [ ] Mosaic
 - [ ] Manual Editing
 - [x] Export Image
 - [ ] Reports (4/5 done)
+	-[x] Imported Images Report
+	-[x] Image Layer Report
+	-[x] Linear Matrix Report
+	-[x] Traversal Report
+	-[ ] Filters Report
 

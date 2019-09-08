@@ -1,0 +1,548 @@
+digraph linearMatrix
+{
+    rankdir=LR;
+    node [ shape = box]
+     node [width = 1.5, height = 0.55];
+    //Nodes and links creation
+    Nodo0[label ="0-128-0\n(12,1)"];
+    Nodo0->Nodo1
+    Nodo1[label ="50-205-50\n(13,1)"];
+    Nodo1->Nodo2
+    Nodo2[label ="50-205-50\n(14,1)"];
+    Nodo2->Nodo3
+    Nodo3[label ="50-205-50\n(15,1)"];
+    Nodo3->Nodo4
+    Nodo4[label ="50-205-50\n(16,1)"];
+    Nodo4->Nodo5
+    Nodo5[label ="50-205-50\n(17,1)"];
+    Nodo5->Nodo6
+    Nodo6[label ="50-205-50\n(18,1)"];
+    Nodo6->Nodo7
+    Nodo7[label ="0-128-0\n(11,2)"];
+    Nodo7->Nodo8
+    Nodo8[label ="50-205-50\n(12,2)"];
+    Nodo8->Nodo9
+    Nodo9[label ="50-205-50\n(13,2)"];
+    Nodo9->Nodo10
+    Nodo10[label ="50-205-50\n(19,2)"];
+    Nodo10->Nodo11
+    Nodo11[label ="0-128-0\n(2,3)"];
+    Nodo11->Nodo12
+    Nodo12[label ="50-205-50\n(3,3)"];
+    Nodo12->Nodo13
+    Nodo13[label ="0-128-0\n(10,3)"];
+    Nodo13->Nodo14
+    Nodo14[label ="50-205-50\n(11,3)"];
+    Nodo14->Nodo15
+    Nodo15[label ="50-205-50\n(13,3)"];
+    Nodo15->Nodo16
+    Nodo16[label ="50-205-50\n(15,3)"];
+    Nodo16->Nodo17
+    Nodo17[label ="50-205-50\n(16,3)"];
+    Nodo17->Nodo18
+    Nodo18[label ="50-205-50\n(17,3)"];
+    Nodo18->Nodo19
+    Nodo19[label ="50-205-50\n(18,3)"];
+    Nodo19->Nodo20
+    Nodo20[label ="50-205-50\n(20,3)"];
+    Nodo20->Nodo21
+    Nodo21[label ="0-128-0\n(26,3)"];
+    Nodo21->Nodo22
+    Nodo22[label ="50-205-50\n(27,3)"];
+    Nodo22->Nodo23
+    Nodo23[label ="0-128-0\n(2,4)"];
+    Nodo23->Nodo24
+    Nodo24[label ="50-205-50\n(4,4)"];
+    Nodo24->Nodo25
+    Nodo25[label ="0-128-0\n(9,4)"];
+    Nodo25->Nodo26
+    Nodo26[label ="50-205-50\n(10,4)"];
+    Nodo26->Nodo27
+    Nodo27[label ="50-205-50\n(11,4)"];
+    Nodo27->Nodo28
+    Nodo28[label ="50-205-50\n(12,4)"];
+    Nodo28->Nodo29
+    Nodo29[label ="50-205-50\n(14,4)"];
+    Nodo29->Nodo30
+    Nodo30[label ="50-205-50\n(16,4)"];
+    Nodo30->Nodo31
+    Nodo31[label ="50-205-50\n(17,4)"];
+    Nodo31->Nodo32
+    Nodo32[label ="50-205-50\n(21,4)"];
+    Nodo32->Nodo33
+    Nodo33[label ="0-128-0\n(25,4)"];
+    Nodo33->Nodo34
+    Nodo34[label ="50-205-50\n(27,4)"];
+    Nodo34->Nodo35
+    Nodo35[label ="0-128-0\n(2,5)"];
+    Nodo35->Nodo36
+    Nodo36[label ="50-205-50\n(3,5)"];
+    Nodo36->Nodo37
+    Nodo37[label ="50-205-50\n(5,5)"];
+    Nodo37->Nodo38
+    Nodo38[label ="50-205-50\n(6,5)"];
+    Nodo38->Nodo39
+    Nodo39[label ="50-205-50\n(7,5)"];
+    Nodo39->Nodo40
+    Nodo40[label ="0-128-0\n(8,5)"];
+    Nodo40->Nodo41
+    Nodo41[label ="50-205-50\n(9,5)"];
+    Nodo41->Nodo42
+    Nodo42[label ="50-205-50\n(10,5)"];
+    Nodo42->Nodo43
+    Nodo43[label ="50-205-50\n(11,5)"];
+    Nodo43->Nodo44
+    Nodo44[label ="50-205-50\n(12,5)"];
+    Nodo44->Nodo45
+    Nodo45[label ="50-205-50\n(13,5)"];
+    Nodo45->Nodo46
+    Nodo46[label ="50-205-50\n(14,5)"];
+    Nodo46->Nodo47
+    Nodo47[label ="50-205-50\n(15,5)"];
+    Nodo47->Nodo48
+    Nodo48[label ="50-205-50\n(16,5)"];
+    Nodo48->Nodo49
+    Nodo49[label ="50-205-50\n(17,5)"];
+    Nodo49->Nodo50
+    Nodo50[label ="50-205-50\n(21,5)"];
+    Nodo50->Nodo51
+    Nodo51[label ="0-128-0\n(22,5)"];
+    Nodo51->Nodo52
+    Nodo52[label ="0-128-0\n(23,5)"];
+    Nodo52->Nodo53
+    Nodo53[label ="50-205-50\n(24,5)"];
+    Nodo53->Nodo54
+    Nodo54[label ="50-205-50\n(27,5)"];
+    Nodo54->Nodo55
+    Nodo55[label ="0-128-0\n(3,6)"];
+    Nodo55->Nodo56
+    Nodo56[label ="50-205-50\n(8,6)"];
+    Nodo56->Nodo57
+    Nodo57[label ="50-205-50\n(9,6)"];
+    Nodo57->Nodo58
+    Nodo58[label ="50-205-50\n(10,6)"];
+    Nodo58->Nodo59
+    Nodo59[label ="50-205-50\n(14,6)"];
+    Nodo59->Nodo60
+    Nodo60[label ="50-205-50\n(15,6)"];
+    Nodo60->Nodo61
+    Nodo61[label ="50-205-50\n(16,6)"];
+    Nodo61->Nodo62
+    Nodo62[label ="50-205-50\n(20,6)"];
+    Nodo62->Nodo63
+    Nodo63[label ="50-205-50\n(21,6)"];
+    Nodo63->Nodo64
+    Nodo64[label ="50-205-50\n(22,6)"];
+    Nodo64->Nodo65
+    Nodo65[label ="50-205-50\n(24,6)"];
+    Nodo65->Nodo66
+    Nodo66[label ="50-205-50\n(26,6)"];
+    Nodo66->Nodo67
+    Nodo67[label ="0-128-0\n(4,7)"];
+    Nodo67->Nodo68
+    Nodo68[label ="50-205-50\n(5,7)"];
+    Nodo68->Nodo69
+    Nodo69[label ="50-205-50\n(9,7)"];
+    Nodo69->Nodo70
+    Nodo70[label ="50-205-50\n(13,7)"];
+    Nodo70->Nodo71
+    Nodo71[label ="50-205-50\n(14,7)"];
+    Nodo71->Nodo72
+    Nodo72[label ="50-205-50\n(15,7)"];
+    Nodo72->Nodo73
+    Nodo73[label ="50-205-50\n(16,7)"];
+    Nodo73->Nodo74
+    Nodo74[label ="50-205-50\n(17,7)"];
+    Nodo74->Nodo75
+    Nodo75[label ="50-205-50\n(25,7)"];
+    Nodo75->Nodo76
+    Nodo76[label ="50-205-50\n(26,7)"];
+    Nodo76->Nodo77
+    Nodo77[label ="50-205-50\n(5,8)"];
+    Nodo77->Nodo78
+    Nodo78[label ="50-205-50\n(6,8)"];
+    Nodo78->Nodo79
+    Nodo79[label ="50-205-50\n(7,8)"];
+    Nodo79->Nodo80
+    Nodo80[label ="50-205-50\n(8,8)"];
+    Nodo80->Nodo81
+    Nodo81[label ="50-205-50\n(9,8)"];
+    Nodo81->Nodo82
+    Nodo82[label ="50-205-50\n(14,8)"];
+    Nodo82->Nodo83
+    Nodo83[label ="50-205-50\n(15,8)"];
+    Nodo83->Nodo84
+    Nodo84[label ="50-205-50\n(16,8)"];
+    Nodo84->Nodo85
+    Nodo85[label ="50-205-50\n(21,8)"];
+    Nodo85->Nodo86
+    Nodo86[label ="0-128-0\n(22,8)"];
+    Nodo86->Nodo87
+    Nodo87[label ="0-128-0\n(23,8)"];
+    Nodo87->Nodo88
+    Nodo88[label ="50-205-50\n(24,8)"];
+    Nodo88->Nodo89
+    Nodo89[label ="0-128-0\n(25,8)"];
+    Nodo89->Nodo90
+    Nodo90[label ="0-128-0\n(6,9)"];
+    Nodo90->Nodo91
+    Nodo91[label ="0-128-0\n(7,9)"];
+    Nodo91->Nodo92
+    Nodo92[label ="50-205-50\n(8,9)"];
+    Nodo92->Nodo93
+    Nodo93[label ="50-205-50\n(9,9)"];
+    Nodo93->Nodo94
+    Nodo94[label ="50-205-50\n(10,9)"];
+    Nodo94->Nodo95
+    Nodo95[label ="50-205-50\n(11,9)"];
+    Nodo95->Nodo96
+    Nodo96[label ="50-205-50\n(12,9)"];
+    Nodo96->Nodo97
+    Nodo97[label ="50-205-50\n(13,9)"];
+    Nodo97->Nodo98
+    Nodo98[label ="50-205-50\n(17,9)"];
+    Nodo98->Nodo99
+    Nodo99[label ="50-205-50\n(18,9)"];
+    Nodo99->Nodo100
+    Nodo100[label ="50-205-50\n(19,9)"];
+    Nodo100->Nodo101
+    Nodo101[label ="50-205-50\n(21,9)"];
+    Nodo101->Nodo102
+    Nodo102[label ="50-205-50\n(22,9)"];
+    Nodo102->Nodo103
+    Nodo103[label ="0-128-0\n(23,9)"];
+    Nodo103->Nodo104
+    Nodo104[label ="0-128-0\n(24,9)"];
+    Nodo104->Nodo105
+    Nodo105[label ="0-128-0\n(8,10)"];
+    Nodo105->Nodo106
+    Nodo106[label ="50-205-50\n(9,10)"];
+    Nodo106->Nodo107
+    Nodo107[label ="50-205-50\n(10,10)"];
+    Nodo107->Nodo108
+    Nodo108[label ="50-205-50\n(11,10)"];
+    Nodo108->Nodo109
+    Nodo109[label ="50-205-50\n(12,10)"];
+    Nodo109->Nodo110
+    Nodo110[label ="50-205-50\n(13,10)"];
+    Nodo110->Nodo111
+    Nodo111[label ="50-205-50\n(14,10)"];
+    Nodo111->Nodo112
+    Nodo112[label ="50-205-50\n(15,10)"];
+    Nodo112->Nodo113
+    Nodo113[label ="50-205-50\n(16,10)"];
+    Nodo113->Nodo114
+    Nodo114[label ="50-205-50\n(17,10)"];
+    Nodo114->Nodo115
+    Nodo115[label ="50-205-50\n(18,10)"];
+    Nodo115->Nodo116
+    Nodo116[label ="50-205-50\n(19,10)"];
+    Nodo116->Nodo117
+    Nodo117[label ="50-205-50\n(20,10)"];
+    Nodo117->Nodo118
+    Nodo118[label ="50-205-50\n(21,10)"];
+    Nodo118->Nodo119
+    Nodo119[label ="0-128-0\n(22,10)"];
+    Nodo119->Nodo120
+    Nodo120[label ="0-128-0\n(9,11)"];
+    Nodo120->Nodo121
+    Nodo121[label ="50-205-50\n(10,11)"];
+    Nodo121->Nodo122
+    Nodo122[label ="50-205-50\n(11,11)"];
+    Nodo122->Nodo123
+    Nodo123[label ="50-205-50\n(12,11)"];
+    Nodo123->Nodo124
+    Nodo124[label ="50-205-50\n(14,11)"];
+    Nodo124->Nodo125
+    Nodo125[label ="50-205-50\n(16,11)"];
+    Nodo125->Nodo126
+    Nodo126[label ="50-205-50\n(18,11)"];
+    Nodo126->Nodo127
+    Nodo127[label ="50-205-50\n(19,11)"];
+    Nodo127->Nodo128
+    Nodo128[label ="50-205-50\n(20,11)"];
+    Nodo128->Nodo129
+    Nodo129[label ="50-205-50\n(21,11)"];
+    Nodo129->Nodo130
+    Nodo130[label ="0-128-0\n(22,11)"];
+    Nodo130->Nodo131
+    Nodo131[label ="0-128-0\n(8,12)"];
+    Nodo131->Nodo132
+    Nodo132[label ="0-128-0\n(9,12)"];
+    Nodo132->Nodo133
+    Nodo133[label ="0-128-0\n(10,12)"];
+    Nodo133->Nodo134
+    Nodo134[label ="50-205-50\n(11,12)"];
+    Nodo134->Nodo135
+    Nodo135[label ="50-205-50\n(12,12)"];
+    Nodo135->Nodo136
+    Nodo136[label ="50-205-50\n(18,12)"];
+    Nodo136->Nodo137
+    Nodo137[label ="50-205-50\n(19,12)"];
+    Nodo137->Nodo138
+    Nodo138[label ="0-128-0\n(20,12)"];
+    Nodo138->Nodo139
+    Nodo139[label ="0-128-0\n(21,12)"];
+    Nodo139->Nodo140
+    Nodo140[label ="0-128-0\n(22,12)"];
+    Nodo140->Nodo141
+    Nodo141[label ="0-128-0\n(7,13)"];
+    Nodo141->Nodo142
+    Nodo142[label ="0-128-0\n(11,13)"];
+    Nodo142->Nodo143
+    Nodo143[label ="50-205-50\n(12,13)"];
+    Nodo143->Nodo144
+    Nodo144[label ="50-205-50\n(13,13)"];
+    Nodo144->Nodo145
+    Nodo145[label ="50-205-50\n(14,13)"];
+    Nodo145->Nodo146
+    Nodo146[label ="50-205-50\n(15,13)"];
+    Nodo146->Nodo147
+    Nodo147[label ="50-205-50\n(16,13)"];
+    Nodo147->Nodo148
+    Nodo148[label ="50-205-50\n(17,13)"];
+    Nodo148->Nodo149
+    Nodo149[label ="50-205-50\n(18,13)"];
+    Nodo149->Nodo150
+    Nodo150[label ="0-128-0\n(19,13)"];
+    Nodo150->Nodo151
+    Nodo151[label ="0-128-0\n(6,14)"];
+    Nodo151->Nodo152
+    Nodo152[label ="0-128-0\n(12,14)"];
+    Nodo152->Nodo153
+    Nodo153[label ="0-128-0\n(13,14)"];
+    Nodo153->Nodo154
+    Nodo154[label ="0-128-0\n(14,14)"];
+    Nodo154->Nodo155
+    Nodo155[label ="0-128-0\n(15,14)"];
+    Nodo155->Nodo156
+    Nodo156[label ="0-128-0\n(16,14)"];
+    Nodo156->Nodo157
+    Nodo157[label ="0-128-0\n(17,14)"];
+    Nodo157->Nodo158
+    Nodo158[label ="0-128-0\n(18,14)"];
+    Nodo158->Nodo159
+    Nodo159[label ="0-128-0\n(23,14)"];
+    Nodo159->Nodo160
+    Nodo160[label ="0-128-0\n(5,15)"];
+    Nodo160->Nodo161
+    Nodo161[label ="0-128-0\n(12,15)"];
+    Nodo161->Nodo162
+    Nodo162[label ="0-128-0\n(13,15)"];
+    Nodo162->Nodo163
+    Nodo163[label ="50-205-50\n(14,15)"];
+    Nodo163->Nodo164
+    Nodo164[label ="50-205-50\n(15,15)"];
+    Nodo164->Nodo165
+    Nodo165[label ="50-205-50\n(16,15)"];
+    Nodo165->Nodo166
+    Nodo166[label ="0-128-0\n(17,15)"];
+    Nodo166->Nodo167
+    Nodo167[label ="0-128-0\n(24,15)"];
+    Nodo167->Nodo168
+    Nodo168[label ="0-128-0\n(4,16)"];
+    Nodo168->Nodo169
+    Nodo169[label ="0-128-0\n(12,16)"];
+    Nodo169->Nodo170
+    Nodo170[label ="0-128-0\n(13,16)"];
+    Nodo170->Nodo171
+    Nodo171[label ="0-128-0\n(14,16)"];
+    Nodo171->Nodo172
+    Nodo172[label ="0-128-0\n(16,16)"];
+    Nodo172->Nodo173
+    Nodo173[label ="0-128-0\n(25,16)"];
+    Nodo173->Nodo174
+    Nodo174[label ="0-128-0\n(3,17)"];
+    Nodo174->Nodo175
+    Nodo175[label ="0-128-0\n(13,17)"];
+    Nodo175->Nodo176
+    Nodo176[label ="0-128-0\n(14,17)"];
+    Nodo176->Nodo177
+    Nodo177[label ="0-128-0\n(15,17)"];
+    Nodo177->Nodo178
+    Nodo178[label ="0-128-0\n(17,17)"];
+    Nodo178->Nodo179
+    Nodo179[label ="0-128-0\n(26,17)"];
+    Nodo179->Nodo180
+    Nodo180[label ="0-128-0\n(13,18)"];
+    Nodo180->Nodo181
+    Nodo181[label ="0-128-0\n(15,18)"];
+    Nodo181->Nodo182
+    Nodo182[label ="0-128-0\n(17,18)"];
+    Nodo182->Nodo183
+    Nodo183[label ="0-128-0\n(26,18)"];
+    Nodo183->Nodo184
+    Nodo184[label ="0-128-0\n(2,19)"];
+    Nodo184->Nodo185
+    Nodo185[label ="0-128-0\n(3,19)"];
+    Nodo185->Nodo186
+    Nodo186[label ="0-128-0\n(13,19)"];
+    Nodo186->Nodo187
+    Nodo187[label ="0-128-0\n(15,19)"];
+    Nodo187->Nodo188
+    Nodo188[label ="0-128-0\n(17,19)"];
+    Nodo188->Nodo189
+    Nodo189[label ="0-128-0\n(26,19)"];
+    Nodo189->Nodo190
+    Nodo190[label ="0-128-0\n(2,20)"];
+    Nodo190->Nodo191
+    Nodo191[label ="0-128-0\n(5,20)"];
+    Nodo191->Nodo192
+    Nodo192[label ="0-128-0\n(7,20)"];
+    Nodo192->Nodo193
+    Nodo193[label ="0-128-0\n(13,20)"];
+    Nodo193->Nodo194
+    Nodo194[label ="0-128-0\n(15,20)"];
+    Nodo194->Nodo195
+    Nodo195[label ="0-128-0\n(17,20)"];
+    Nodo195->Nodo196
+    Nodo196[label ="0-128-0\n(26,20)"];
+    Nodo196->Nodo197
+    Nodo197[label ="0-128-0\n(2,21)"];
+    Nodo197->Nodo198
+    Nodo198[label ="0-128-0\n(5,21)"];
+    Nodo198->Nodo199
+    Nodo199[label ="0-128-0\n(6,21)"];
+    Nodo199->Nodo200
+    Nodo200[label ="0-128-0\n(7,21)"];
+    Nodo200->Nodo201
+    Nodo201[label ="0-128-0\n(13,21)"];
+    Nodo201->Nodo202
+    Nodo202[label ="0-128-0\n(15,21)"];
+    Nodo202->Nodo203
+    Nodo203[label ="0-128-0\n(17,21)"];
+    Nodo203->Nodo204
+    Nodo204[label ="0-128-0\n(26,21)"];
+    Nodo204->Nodo205
+    Nodo205[label ="0-128-0\n(3,22)"];
+    Nodo205->Nodo206
+    Nodo206[label ="0-128-0\n(4,22)"];
+    Nodo206->Nodo207
+    Nodo207[label ="0-128-0\n(5,22)"];
+    Nodo207->Nodo208
+    Nodo208[label ="0-128-0\n(7,22)"];
+    Nodo208->Nodo209
+    Nodo209[label ="0-128-0\n(13,22)"];
+    Nodo209->Nodo210
+    Nodo210[label ="0-128-0\n(15,22)"];
+    Nodo210->Nodo211
+    Nodo211[label ="0-128-0\n(17,22)"];
+    Nodo211->Nodo212
+    Nodo212[label ="0-128-0\n(23,22)"];
+    Nodo212->Nodo213
+    Nodo213[label ="0-128-0\n(26,22)"];
+    Nodo213->Nodo214
+    Nodo214[label ="0-128-0\n(4,23)"];
+    Nodo214->Nodo215
+    Nodo215[label ="0-128-0\n(7,23)"];
+    Nodo215->Nodo216
+    Nodo216[label ="0-128-0\n(13,23)"];
+    Nodo216->Nodo217
+    Nodo217[label ="0-128-0\n(15,23)"];
+    Nodo217->Nodo218
+    Nodo218[label ="0-128-0\n(17,23)"];
+    Nodo218->Nodo219
+    Nodo219[label ="0-128-0\n(23,23)"];
+    Nodo219->Nodo220
+    Nodo220[label ="0-128-0\n(24,23)"];
+    Nodo220->Nodo221
+    Nodo221[label ="0-128-0\n(25,23)"];
+    Nodo221->Nodo222
+    Nodo222[label ="0-128-0\n(4,24)"];
+    Nodo222->Nodo223
+    Nodo223[label ="0-128-0\n(7,24)"];
+    Nodo223->Nodo224
+    Nodo224[label ="0-128-0\n(13,24)"];
+    Nodo224->Nodo225
+    Nodo225[label ="0-128-0\n(15,24)"];
+    Nodo225->Nodo226
+    Nodo226[label ="0-128-0\n(17,24)"];
+    Nodo226->Nodo227
+    Nodo227[label ="0-128-0\n(23,24)"];
+    Nodo227->Nodo228
+    Nodo228[label ="0-128-0\n(4,25)"];
+    Nodo228->Nodo229
+    Nodo229[label ="0-128-0\n(7,25)"];
+    Nodo229->Nodo230
+    Nodo230[label ="0-128-0\n(12,25)"];
+    Nodo230->Nodo231
+    Nodo231[label ="0-128-0\n(13,25)"];
+    Nodo231->Nodo232
+    Nodo232[label ="0-128-0\n(15,25)"];
+    Nodo232->Nodo233
+    Nodo233[label ="0-128-0\n(17,25)"];
+    Nodo233->Nodo234
+    Nodo234[label ="0-128-0\n(18,25)"];
+    Nodo234->Nodo235
+    Nodo235[label ="0-128-0\n(23,25)"];
+    Nodo235->Nodo236
+    Nodo236[label ="0-128-0\n(4,26)"];
+    Nodo236->Nodo237
+    Nodo237[label ="0-128-0\n(7,26)"];
+    Nodo237->Nodo238
+    Nodo238[label ="0-128-0\n(12,26)"];
+    Nodo238->Nodo239
+    Nodo239[label ="0-128-0\n(13,26)"];
+    Nodo239->Nodo240
+    Nodo240[label ="0-128-0\n(15,26)"];
+    Nodo240->Nodo241
+    Nodo241[label ="0-128-0\n(16,26)"];
+    Nodo241->Nodo242
+    Nodo242[label ="0-128-0\n(17,26)"];
+    Nodo242->Nodo243
+    Nodo243[label ="0-128-0\n(18,26)"];
+    Nodo243->Nodo244
+    Nodo244[label ="0-128-0\n(23,26)"];
+    Nodo244->Nodo245
+    Nodo245[label ="0-128-0\n(4,27)"];
+    Nodo245->Nodo246
+    Nodo246[label ="0-128-0\n(8,27)"];
+    Nodo246->Nodo247
+    Nodo247[label ="0-128-0\n(12,27)"];
+    Nodo247->Nodo248
+    Nodo248[label ="0-128-0\n(13,27)"];
+    Nodo248->Nodo249
+    Nodo249[label ="0-128-0\n(15,27)"];
+    Nodo249->Nodo250
+    Nodo250[label ="0-128-0\n(16,27)"];
+    Nodo250->Nodo251
+    Nodo251[label ="0-128-0\n(17,27)"];
+    Nodo251->Nodo252
+    Nodo252[label ="0-128-0\n(18,27)"];
+    Nodo252->Nodo253
+    Nodo253[label ="0-128-0\n(19,27)"];
+    Nodo253->Nodo254
+    Nodo254[label ="0-128-0\n(20,27)"];
+    Nodo254->Nodo255
+    Nodo255[label ="0-128-0\n(23,27)"];
+    Nodo255->Nodo256
+    Nodo256[label ="0-128-0\n(4,28)"];
+    Nodo256->Nodo257
+    Nodo257[label ="0-128-0\n(8,28)"];
+    Nodo257->Nodo258
+    Nodo258[label ="0-128-0\n(9,28)"];
+    Nodo258->Nodo259
+    Nodo259[label ="0-128-0\n(10,28)"];
+    Nodo259->Nodo260
+    Nodo260[label ="0-128-0\n(11,28)"];
+    Nodo260->Nodo261
+    Nodo261[label ="0-128-0\n(12,28)"];
+    Nodo261->Nodo262
+    Nodo262[label ="0-128-0\n(13,28)"];
+    Nodo262->Nodo263
+    Nodo263[label ="0-128-0\n(14,28)"];
+    Nodo263->Nodo264
+    Nodo264[label ="0-128-0\n(16,28)"];
+    Nodo264->Nodo265
+    Nodo265[label ="0-128-0\n(17,28)"];
+    Nodo265->Nodo266
+    Nodo266[label ="0-128-0\n(18,28)"];
+    Nodo266->Nodo267
+    Nodo267[label ="0-128-0\n(19,28)"];
+    Nodo267->Nodo268
+    Nodo268[label ="0-128-0\n(20,28)"];
+    Nodo268->Nodo269
+    Nodo269[label ="0-128-0\n(21,28)"];
+    Nodo269->Nodo270
+    Nodo270[label ="0-128-0\n(22,28)"];
+}

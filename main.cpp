@@ -6,16 +6,13 @@
 #include "listaFiltros.h"
 using namespace std;
 
-
-
 int main()
 {
 
 
     Menu *m = new Menu();
-
     //cb->imprimir(0);
-    /*cuboDisperso *cb = new cuboDisperso();
+    /*cuboDisperso *cb = new cuboDisperso("p");
     ArbolB *tree = new ArbolB();
     tree->insertar("Mario1",0,0,0,0, cb);
     tree->insertar("Pickachu",0,0,0,0,cb);
@@ -24,11 +21,11 @@ int main()
     tree->insertar("Mario2",0,0,0,0,cb);
     tree->insertar("Mushroom",0,0,0,0,cb);
     //tree->insertar("Geoff", cb);
-    tree->inorder(tree->raiz,0);
+    tree->getinOrder();
     cout << endl;
-    tree->preorder(tree->raiz,0);
+    tree->getpreOrder();
     cout << endl;
-    tree->posorder(tree->raiz,0);
+    tree->getposOrder();
     cout << endl;
 
     tree->graficarInorder();

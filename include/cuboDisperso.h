@@ -40,7 +40,7 @@ class cuboDisperso
         NodoCubo *findLayer(int z);
         NodoCubo *obtener(int x, int y, int z);
         int layerSize();
-        void graficarMatriz(string nombreCapa, int z);
+        void graficarMatriz(string nombreCapa, int z, string carpeta);
         void imprimir(int z);
         listaCubo *linearMap_byRow(int capa);
         listaCubo *linearMap_byCol(int capa);

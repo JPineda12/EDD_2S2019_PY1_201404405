@@ -19,7 +19,7 @@ class listaCubo
         listaCubo();
         void insertar(string info, string coords);
         int getSize();
-        void graficar(string nombre);
+        void graficar(string nombre, string carpeta);
         NodoLineal *obtenerInicio();
     protected:
 

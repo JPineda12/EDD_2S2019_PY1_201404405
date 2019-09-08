@@ -96,15 +96,29 @@ cuboDisperso *Filters::mirrorAll(cuboDisperso *imagen, int tipo, NodoArbol *hoja
     NodoCubo* tempx;
     NodoCubo* tempy;
     int newx = 0;
-    int width = hoja->width;
+    int newy = 0;
+    int width = hoja->width-1;
+    int height = hoja->height-1;
     cuboDisperso *aux = new cuboDisperso(imagen->root->info);
     while(tempz != NULL){
         tempy = tempz->down;
         while(tempy != NULL){
             tempx = tempy->next;
             while(tempx != NULL){
-                newx = width - tempx->x;
-                aux->insert_element(tempx->info,tempx->layerName,newx,tempx->y,tempx->z);
+                if(tipo == 0){
+                    //Apply only X-Mirror
+                    newx = width - tempx->x;
+                    newy = tempx->y;
+                }else if(tipo == 1){
+                    //Apply only Y-Mirror
+                    newx =tempx->x;
+                    newy = height - tempx->y;
+                }else if(tipo == 2){
+                    //Apply both mirrors
+                    newx = width - tempx->x;
+                    newy = height -tempx->y;
+                }
+                aux->insert_element(tempx->info,tempx->layerName,newx,newy,tempx->z);
                 tempx = tempx->next;
             }
             tempy = tempy->down;
@@ -117,7 +131,85 @@ cuboDisperso *Filters::mirrorAll(cuboDisperso *imagen, int tipo, NodoArbol *hoja
 cuboDisperso *Filters::mosaic(cuboDisperso *imagen){
     return imagen;
 }
-cuboDisperso *Filters::collage(cuboDisperso *imagen){
-    return imagen;
+
+cuboDisperso *Filters::rep_x(cuboDisperso *imagen, int repeticiones_x, NodoArbol *hoja){
+    NodoCubo* tempz;
+    NodoCubo* tempx;
+    NodoCubo* tempy;
+    int width = hoja->width;
+    int increment_width = hoja->width;
+    int newx = 0;
+    cuboDisperso *aux = new cuboDisperso(imagen->root->info);
+    for(int i = 0; i<repeticiones_x; i++){
+        tempz = imagen->root->upper;
+        while (tempz != NULL){
+            tempy = tempz->down;
+            while(tempy != NULL){
+                tempx = tempy->next;
+                while(tempx != NULL){
+                    aux->insert_element(tempx->info,tempx->layerName,tempx->x,tempx->y,tempx->z);
+                    if(tempx->next == NULL){
+                        tempx = tempy->next;
+                        while(tempx != NULL){
+                            newx = width + tempx->x;
+                            aux->insert_element(tempx->info,tempx->layerName,newx,tempx->y,tempx->z);
+                            tempx = tempx->next;
+                        }
+                    }else{
+                        tempx = tempx->next;
+                    }
+                }
+                tempy = tempy->down;
+            }
+            tempz = tempz->upper;
+        }
+        width = width + increment_width;
+    }
+    return aux;
+}
+
+cuboDisperso *Filters::rep_y(cuboDisperso *img, int repeticiones_y, NodoArbol *hoja){
+    NodoCubo* tempz;
+    NodoCubo* tempx;
+    NodoCubo* tempy;
+    int height = hoja->height;
+    int increment_height = hoja->height;
+    int newy = 0;
+    cuboDisperso *aux = new cuboDisperso(img->root->info);
+
+    for(int i = 0; i<repeticiones_y; i++){
+        tempz = img->root->upper;
+        while (tempz != NULL){
+            tempx = tempz->next;
+            while(tempx != NULL){
+                tempy = tempx->down;
+                while(tempy != NULL){
+                    aux->insert_element(tempy->info,tempy->layerName,tempy->x,tempy->y,tempy->z);
+                    if(tempy->down == NULL){
+                        tempy = tempx->down;
+                        while(tempy != NULL){
+                        newy = height + tempy->y;
+                        aux->insert_element(tempy->info,tempy->layerName,tempy->x,newy,tempy->z);
+                        tempy = tempy->down;
+                        }
+                    }else{
+                        tempy = tempy->down;
+                    }
+                }
+                tempx = tempx->next;
+            }
+            tempz = tempz->upper;
+        }
+        height = height + increment_height;
+    }
+    return aux;
+
+}
+
+cuboDisperso *Filters::collage(cuboDisperso *imagen, int repeticiones_x, int repeticiones_y, NodoArbol *hoja){
+    cuboDisperso *aux = new cuboDisperso(imagen->root->info);
+    aux = rep_y(imagen, repeticiones_y, hoja);
+    aux = rep_x(aux, repeticiones_x, hoja);
+    return aux;
 }
 

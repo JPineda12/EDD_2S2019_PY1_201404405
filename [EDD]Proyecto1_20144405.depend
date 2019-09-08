@@ -163,7 +163,7 @@
 1567562581 /home/brest12/Desktop/Estructuras de Datos/Laboratorio/Proyecto 1/EDD_2S2019_PY1_201404405/include/listaCubo.h
 	<string>
 
-1567725521 source:/home/brest12/Desktop/EDD_2S2019_PY1_201404405/main.cpp
+1567904939 source:/home/brest12/Desktop/EDD_2S2019_PY1_201404405/main.cpp
 	"Menu.h"
 	"listaCircular.h"
 	<iostream>
@@ -171,7 +171,7 @@
 	<string>
 	"listaFiltros.h"
 
-1567728774 /home/brest12/Desktop/EDD_2S2019_PY1_201404405/include/Menu.h
+1567911532 /home/brest12/Desktop/EDD_2S2019_PY1_201404405/include/Menu.h
 	"listaFiltros.h"
 	"ArbolB.h"
 	"cuboDisperso.h"
@@ -179,46 +179,46 @@
 1567463134 /home/brest12/Desktop/EDD_2S2019_PY1_201404405/include/listaCircular.h
 	<string>
 
-1567485889 /home/brest12/Desktop/EDD_2S2019_PY1_201404405/include/ArbolB.h
+1567904898 /home/brest12/Desktop/EDD_2S2019_PY1_201404405/include/ArbolB.h
 	"cuboDisperso.h"
 	"listaEnlazada.h"
 
-1567628767 /home/brest12/Desktop/EDD_2S2019_PY1_201404405/include/cuboDisperso.h
+1567905471 /home/brest12/Desktop/EDD_2S2019_PY1_201404405/include/cuboDisperso.h
 	<string>
 	"listaCircular.h"
 	"listaCubo.h"
 
-1567562581 /home/brest12/Desktop/EDD_2S2019_PY1_201404405/include/listaCubo.h
+1567901188 /home/brest12/Desktop/EDD_2S2019_PY1_201404405/include/listaCubo.h
 	<string>
 
 1567558074 /home/brest12/Desktop/EDD_2S2019_PY1_201404405/include/listaEnlazada.h
 	<string>
 
-1567487102 source:/home/brest12/Desktop/EDD_2S2019_PY1_201404405/src/ArbolB.cpp
+1567906523 source:/home/brest12/Desktop/EDD_2S2019_PY1_201404405/src/ArbolB.cpp
 	"ArbolB.h"
 	<bits/stdc++.h>
 	<fstream>
 
-1567837212 source:/home/brest12/Desktop/EDD_2S2019_PY1_201404405/src/cuboDisperso.cpp
+1567906227 source:/home/brest12/Desktop/EDD_2S2019_PY1_201404405/src/cuboDisperso.cpp
 	"cuboDisperso.h"
 	<fstream>
 	<iostream>
 	"listaCubo.h"
 
-1567840476 source:/home/brest12/Desktop/EDD_2S2019_PY1_201404405/src/Filters.cpp
+1567983164 source:/home/brest12/Desktop/EDD_2S2019_PY1_201404405/src/Filters.cpp
 	"Filters.h"
 	<iostream>
 
-1567664390 /home/brest12/Desktop/EDD_2S2019_PY1_201404405/include/Filters.h
+1567915903 /home/brest12/Desktop/EDD_2S2019_PY1_201404405/include/Filters.h
 	"cuboDisperso.h"
 	"ArbolB.h"
 
-1567839313 source:/home/brest12/Desktop/EDD_2S2019_PY1_201404405/src/GenerarPagina.cpp
+1567981054 source:/home/brest12/Desktop/EDD_2S2019_PY1_201404405/src/GenerarPagina.cpp
 	"GenerarPagina.h"
 	<fstream>
 	<iostream>
 
-1567634462 /home/brest12/Desktop/EDD_2S2019_PY1_201404405/include/GenerarPagina.h
+1567924869 /home/brest12/Desktop/EDD_2S2019_PY1_201404405/include/GenerarPagina.h
 	<string>
 	"listaCubo.h"
 	"ArbolB.h"
@@ -227,14 +227,15 @@
 	"listaCircular.h"
 	<iostream>
 
-1567573329 source:/home/brest12/Desktop/EDD_2S2019_PY1_201404405/src/listaCubo.cpp
+1567902057 source:/home/brest12/Desktop/EDD_2S2019_PY1_201404405/src/listaCubo.cpp
 	"listaCubo.h"
 	<fstream>
+	<iostream>
 
 1567484065 source:/home/brest12/Desktop/EDD_2S2019_PY1_201404405/src/listaEnlazada.cpp
 	"listaEnlazada.h"
 
-1567839601 source:/home/brest12/Desktop/EDD_2S2019_PY1_201404405/src/Menu.cpp
+1567981256 source:/home/brest12/Desktop/EDD_2S2019_PY1_201404405/src/Menu.cpp
 	"Menu.h"
 	<iostream>
 	<string>
@@ -245,10 +246,100 @@
 	"Filters.h"
 	<GenerarPagina.h>
 
-1567728746 /home/brest12/Desktop/EDD_2S2019_PY1_201404405/include/listaFiltros.h
+1567925343 /home/brest12/Desktop/EDD_2S2019_PY1_201404405/include/listaFiltros.h
 	"cuboDisperso.h"
 
-1567840046 source:/home/brest12/Desktop/EDD_2S2019_PY1_201404405/src/listaFiltros.cpp
+1567925411 source:/home/brest12/Desktop/EDD_2S2019_PY1_201404405/src/listaFiltros.cpp
 	"listaFiltros.h"
 	<iostream>
+
+1567904939 source:/home/brest12/Desktop/w/EDD_2S2019_PY1_201404405/main.cpp
+	"Menu.h"
+	"listaCircular.h"
+	<iostream>
+	"cuboDisperso.h"
+	<string>
+	"listaFiltros.h"
+
+1567911532 /home/brest12/Desktop/w/EDD_2S2019_PY1_201404405/include/Menu.h
+	"listaFiltros.h"
+	"ArbolB.h"
+	"cuboDisperso.h"
+
+1567925343 /home/brest12/Desktop/w/EDD_2S2019_PY1_201404405/include/listaFiltros.h
+	"cuboDisperso.h"
+
+1567905471 /home/brest12/Desktop/w/EDD_2S2019_PY1_201404405/include/cuboDisperso.h
+	<string>
+	"listaCircular.h"
+	"listaCubo.h"
+
+1567463134 /home/brest12/Desktop/w/EDD_2S2019_PY1_201404405/include/listaCircular.h
+	<string>
+
+1567901188 /home/brest12/Desktop/w/EDD_2S2019_PY1_201404405/include/listaCubo.h
+	<string>
+
+1567904898 /home/brest12/Desktop/w/EDD_2S2019_PY1_201404405/include/ArbolB.h
+	"cuboDisperso.h"
+	"listaEnlazada.h"
+
+1567558074 /home/brest12/Desktop/w/EDD_2S2019_PY1_201404405/include/listaEnlazada.h
+	<string>
+
+1567906523 source:/home/brest12/Desktop/w/EDD_2S2019_PY1_201404405/src/ArbolB.cpp
+	"ArbolB.h"
+	<bits/stdc++.h>
+	<fstream>
+
+1567906227 source:/home/brest12/Desktop/w/EDD_2S2019_PY1_201404405/src/cuboDisperso.cpp
+	"cuboDisperso.h"
+	<fstream>
+	<iostream>
+	"listaCubo.h"
+
+1567984543 source:/home/brest12/Desktop/w/EDD_2S2019_PY1_201404405/src/Filters.cpp
+	"Filters.h"
+	<iostream>
+
+1567915903 /home/brest12/Desktop/w/EDD_2S2019_PY1_201404405/include/Filters.h
+	"cuboDisperso.h"
+	"ArbolB.h"
+
+1567981054 source:/home/brest12/Desktop/w/EDD_2S2019_PY1_201404405/src/GenerarPagina.cpp
+	"GenerarPagina.h"
+	<fstream>
+	<iostream>
+
+1567924869 /home/brest12/Desktop/w/EDD_2S2019_PY1_201404405/include/GenerarPagina.h
+	<string>
+	"listaCubo.h"
+	"ArbolB.h"
+
+1567463134 source:/home/brest12/Desktop/w/EDD_2S2019_PY1_201404405/src/listaCircular.cpp
+	"listaCircular.h"
+	<iostream>
+
+1567902057 source:/home/brest12/Desktop/w/EDD_2S2019_PY1_201404405/src/listaCubo.cpp
+	"listaCubo.h"
+	<fstream>
+	<iostream>
+
+1567484065 source:/home/brest12/Desktop/w/EDD_2S2019_PY1_201404405/src/listaEnlazada.cpp
+	"listaEnlazada.h"
+
+1567925411 source:/home/brest12/Desktop/w/EDD_2S2019_PY1_201404405/src/listaFiltros.cpp
+	"listaFiltros.h"
+	<iostream>
+
+1567985839 source:/home/brest12/Desktop/w/EDD_2S2019_PY1_201404405/src/Menu.cpp
+	"Menu.h"
+	<iostream>
+	<string>
+	<fstream>
+	<sstream>
+	<listaCircular.h>
+	<cuboDisperso.h>
+	"Filters.h"
+	<GenerarPagina.h>
 

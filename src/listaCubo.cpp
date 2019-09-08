@@ -1,5 +1,6 @@
 #include "listaCubo.h"
 #include <fstream>
+#include <iostream>
 NodoLineal::NodoLineal(string info, string coords){
 
     this->info = info;
@@ -40,10 +41,12 @@ void listaCubo::insertar(string info, string coords){
     }
 }
 
-void listaCubo::graficar(string nombre){
-
+void listaCubo::graficar(string nombre, string carpeta){
+    string comando = "mkdir Reports/"+carpeta;
+    const char *cmd = comando.c_str();
+    system(cmd);
     ofstream archivo;
-    archivo.open("Reports/"+nombre+".dot");
+    archivo.open("Reports/"+carpeta+"/"+nombre+".dot");
     archivo << "digraph linearMatrix\n{\n";
     archivo << "    rankdir=LR;\n";
     archivo << "    node [ shape = box]\n ";
@@ -70,9 +73,9 @@ void listaCubo::graficar(string nombre){
      archivo.close();
 
     //ESCRIBIR EN TERMINAL PARA GENERAR EL .png"
-    string comando = "dot Reports/"+nombre+".dot -Tpng -o Reports/"+nombre+".png";
-    const char *cmd = comando.c_str();
-    system(cmd);
+    string comando2 = "dot Reports/"+carpeta+"/"+nombre+".dot -Tpng -o Reports/"+carpeta+"/"+nombre+".png";
+    const char *cmd2 = comando2.c_str();
+    system(cmd2);
 
 
 }

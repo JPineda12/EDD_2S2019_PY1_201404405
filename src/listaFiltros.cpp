@@ -1,12 +1,14 @@
 #include "listaFiltros.h"
 #include <iostream>
-nodoFiltro::nodoFiltro(string nombre, int width, int height, int pxwidth, int pxheight, cuboDisperso *imagen){
+nodoFiltro::nodoFiltro(string nombre, int width, int height, int pxwidth, int pxheight, int repx, int repy, cuboDisperso *imagen){
     this->nombre = nombre;
     imagenFiltro = imagen;
     this->width = width;
     this->height = height;
     this->pxwidth = pxwidth;
     this->pxheight = pxheight;
+    this->repx = repx;
+    this->repy = repy;
     prev = NULL;
     next = NULL;
 }
@@ -17,8 +19,8 @@ listaFiltros::listaFiltros()
     head = NULL;
 }
 
-void listaFiltros::insertar(string nombre, int width, int height, int pxwidth, int pxheight, cuboDisperso *imagen){
-    nodoFiltro *nuevo = new nodoFiltro(nombre, width, height, pxwidth, pxheight, imagen);
+void listaFiltros::insertar(string nombre, int width, int height, int pxwidth, int pxheight, int repx, int repy, cuboDisperso *imagen){
+    nodoFiltro *nuevo = new nodoFiltro(nombre, width, height, pxwidth, pxheight, repx, repy, imagen);
     if(head == NULL){
         head = nuevo;
         head->next = head;
@@ -48,8 +50,6 @@ nodoFiltro *listaFiltros::obtener(int x){
     //cout << "x: " << x << endl;
    // cout << "aux :" << aux << endl;
     while(temp != head){ //0 1
-            cout << "x: " << x << endl;
-            cout << "aux :" << aux << endl;
         if(aux == x){
             flag = true;
             break;

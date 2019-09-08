@@ -26,7 +26,7 @@ class ArbolB
         bool insertar(string nombre, int width, int height, int pxWidth,int pxHeigth, cuboDisperso* imagen);
         NodoArbol *obtener(string nombre);
         int comparar(string palabraNueva, string palabraArbol);
-        void inorder(NodoArbol *actual, int n);
+        void inorder(NodoArbol *actual);
         void getinOrder();
         void getposOrder();
         void getpreOrder();
