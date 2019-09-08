@@ -257,8 +257,7 @@ listaFiltros* Menu::filters(cuboDisperso* selectedImage, ArbolB *arbolImagenes, 
                 cout << "\nRepeticiones en el eje y: ";
                 cin >> y;
                 imagenFiltro = filter->collage(imagenFiltro, x, y, hoja);
-                string msj = "Collage "+to_string(x)+"x"+to_string(y);
-                filtros->insertar(msj, hoja->width*x, hoja->height*y, hoja->pxWidth, hoja->pxHeight, x, y, imagenFiltro);
+                filtros->insertar("Collage-"+to_string(x)+"x"+to_string(y), hoja->width*x, hoja->height*y, hoja->pxWidth, hoja->pxHeight, x, y, imagenFiltro);
                 cout << "Collage Filter applied" << endl;
                 cin.ignore();
                 cin.ignore();
