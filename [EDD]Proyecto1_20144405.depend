@@ -351,12 +351,12 @@
 	<string>
 	"listaFiltros.h"
 
-1567911532 /home/brest12/Desktop/Proyecto/EDD_2S2019_PY1_201404405/include/Menu.h
+1567995653 /home/brest12/Desktop/Proyecto/EDD_2S2019_PY1_201404405/include/Menu.h
 	"listaFiltros.h"
 	"ArbolB.h"
 	"cuboDisperso.h"
 
-1567925343 /home/brest12/Desktop/Proyecto/EDD_2S2019_PY1_201404405/include/listaFiltros.h
+1567992612 /home/brest12/Desktop/Proyecto/EDD_2S2019_PY1_201404405/include/listaFiltros.h
 	"cuboDisperso.h"
 
 1567905471 /home/brest12/Desktop/Proyecto/EDD_2S2019_PY1_201404405/include/cuboDisperso.h
@@ -377,12 +377,12 @@
 1567558074 /home/brest12/Desktop/Proyecto/EDD_2S2019_PY1_201404405/include/listaEnlazada.h
 	<string>
 
-1567906523 source:/home/brest12/Desktop/Proyecto/EDD_2S2019_PY1_201404405/src/ArbolB.cpp
+1568001971 source:/home/brest12/Desktop/Proyecto/EDD_2S2019_PY1_201404405/src/ArbolB.cpp
 	"ArbolB.h"
 	<bits/stdc++.h>
 	<fstream>
 
-1567906227 source:/home/brest12/Desktop/Proyecto/EDD_2S2019_PY1_201404405/src/cuboDisperso.cpp
+1568000545 source:/home/brest12/Desktop/Proyecto/EDD_2S2019_PY1_201404405/src/cuboDisperso.cpp
 	"cuboDisperso.h"
 	<fstream>
 	<iostream>
@@ -418,7 +418,19 @@
 1567484065 source:/home/brest12/Desktop/Proyecto/EDD_2S2019_PY1_201404405/src/listaEnlazada.cpp
 	"listaEnlazada.h"
 
-1567925411 source:/home/brest12/Desktop/Proyecto/EDD_2S2019_PY1_201404405/src/listaFiltros.cpp
+1567994946 source:/home/brest12/Desktop/Proyecto/EDD_2S2019_PY1_201404405/src/listaFiltros.cpp
 	"listaFiltros.h"
 	<iostream>
+	<fstream>
+
+1568001248 source:/home/brest12/Desktop/Proyecto/EDD_2S2019_PY1_201404405/src/Menu.cpp
+	"Menu.h"
+	<iostream>
+	<string>
+	<fstream>
+	<sstream>
+	<listaCircular.h>
+	<cuboDisperso.h>
+	"Filters.h"
+	<GenerarPagina.h>
 

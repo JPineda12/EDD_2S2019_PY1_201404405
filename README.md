@@ -16,10 +16,10 @@ Juan Antonio Pineda Espino - Proyecto 1 - Estructuras de Datos
 	- [ ] Mosaic
 - [ ] Manual Editing
 - [x] Export Image
-- [ ] Reports (4/5 done)
-	- [x] Imported Images Report
-	- [x] Image Layer Report
-	- [x] Linear Matrix Report
-	- [x] Traversal Report
-	- [ ] Filters Report
+- [x] Reports (4/5 done)
+	-[x] Imported Images Report
+	-[x] Image Layer Report
+	-[x] Linear Matrix Report
+	-[x] Traversal Report
+	-[x] Filters Report
 

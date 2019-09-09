@@ -136,7 +136,7 @@ void Menu::insertImage(ArbolB *arbolImagenes){ //Metodo para obtener los archivo
     if(imagen != NULL){
 
         bool success = arbolImagenes->insertar(carpeta, imageWidth, imageHeight, pxWidth, pxHeight, imagen);
-        if(success){
+        if(success == true){
             cout << "La imagen  \"" << carpeta << "\" fue insertada al arbol!" << endl;
             cout << "\nPresiona cualquiera tecla para volver...." << endl;
         }else{
@@ -287,19 +287,28 @@ void Menu::repImageLayer(ArbolB *arbolImagenes){
         cout << "------ " << hoja->nombre << " ------" << endl;
         cout << "Numero      Capa" << endl;
         NodoCubo *temp = hoja->imagen->root->upper;
+        int x = 1;
         while (temp != NULL){
             cout << "  " << temp->z << "    " << temp->layerName << endl;
             temp = temp->upper;
+            x++;
         }
+        cout << "  " << to_string(x) << "    Graficar TODAS" << endl;
         cout << "\nNumero de capa a reportar: ";
         string capa = "";
         cin >> capa;
-        string salida = nombre+"Layer"+capa;
-        hoja->imagen->graficarMatriz(salida,stoi(capa),nombre);
-        //Abrir grafica.
-        string comando = "eog Reports/"+nombre+"/Matrix_"+salida+".png";
-        const char *cmd2 = comando.c_str();
-        system(cmd2);
+        string salida = "";
+        if(stoi(capa) == x){
+            temp = hoja->imagen->root->upper;
+            while( temp != NULL){
+                salida = nombre+"Layer"+to_string(temp->z);
+                hoja->imagen->graficarMatriz(salida,temp->z,nombre);
+                temp = temp->upper;
+            }
+        }else{
+            salida = nombre+"Layer"+capa;
+            hoja->imagen->graficarMatriz(salida,stoi(capa),nombre);
+        }
         system("clear");
         cout << "\n¿Desea Graficar otra imagen? (y/n): ";
         cin >> capa;
@@ -427,6 +436,95 @@ void Menu::repLinearMatrix(ArbolB *arbolImagenes){
 
 }
 
+void Menu::repFIndiv(listaFiltros *filtros){
+    int opcion = 0;
+    int sub = 0;
+    int exit = filtros->getSize()+1;
+    int n;
+    nodoFiltro *temp;
+    while(opcion != exit){
+        system("clear");
+        n = 1;
+        temp = filtros->head;
+        cout << to_string(n) << ". " << temp->nombre << endl;
+        temp = temp->next;
+        n++;
+        while(temp != filtros->head){
+            cout << to_string(n) << ". " << temp->nombre << endl;
+            temp = temp->next;
+            n++;
+        }
+        cout << to_string(exit) << ". Volver " << endl;
+        cin >> opcion;
+        if(opcion == exit){
+            break;
+        }else if(opcion > exit){
+            cout << "Opcion invalida" << endl;
+        }else{
+            nodoFiltro *f = filtros->obtener(opcion);
+            cout << "---- Reporte De: " << f->nombre << " ----"<< endl;
+            cout << "Numero      Capa" << endl;
+            NodoCubo *capa = f->imagenFiltro->root->upper;
+            int x = 0;
+            while(capa != NULL){
+                cout << "  " << to_string(capa->z) << "     " << capa->layerName << endl;
+                capa = capa->upper;
+                x++;
+            }
+            x++;
+            cout << "  " << to_string(x) << "    Graficar TODAS" << endl;
+            cin >> sub;
+            string carpeta = f->imagenFiltro->root->info+"/Filters";
+            string nombreF = f->nombre;
+            if(sub == x){
+                capa = f->imagenFiltro->root->upper;
+                while(capa != NULL){
+                    f->imagenFiltro->graficarMatriz(nombreF+"_"+capa->layerName,capa->z,carpeta);
+                    capa = capa->upper;
+                }
+            }else if (sub <= x){
+                capa = f->imagenFiltro->root->upper;
+                while(capa != NULL){
+                    if(sub == capa->z){
+                        break;
+                    }
+                    capa = capa->upper;
+                }
+                f->imagenFiltro->graficarMatriz(nombreF+"_"+capa->layerName,capa->z,carpeta);
+            }
+
+        }
+
+    }
+}
+
+void Menu::repFilters(listaFiltros *filtros){
+    int opcion = 0;
+    while (opcion != 3){
+        system("clear");
+        cout << "1. All filters Report" << endl;
+        cout << "2. Individual filter Report" << endl;
+        cout << "3. Volver" << endl;
+        cin >> opcion;
+        switch(opcion){
+            case 1:
+                filtros->graficar();
+                cout << "Reporte Generado" << endl;
+                cin.ignore();
+                cin.ignore();
+                break;
+            case 2:
+                repFIndiv(filtros);
+                break;
+            case 3:
+                break;
+            default:
+                cout << "Opcion invalida!" << endl;
+                break;
+        }
+    }
+}
+
 void Menu::reports(ArbolB *arbolImagenes, listaFiltros *filtros){
     int opcion = 0;
     string st = "";
@@ -464,6 +562,14 @@ void Menu::reports(ArbolB *arbolImagenes, listaFiltros *filtros){
                 repTrasversal(arbolImagenes);
                 break;
             case 5:
+                if(filtros->esVacio()){
+                    cout << "No existen filtros aplicados aun!" << endl;
+                    cin.ignore();
+                    cin.ignore();
+                }else{
+                    repFilters(filtros);
+                }
+                system("clear");
                 break;
             case 6:
                 break;

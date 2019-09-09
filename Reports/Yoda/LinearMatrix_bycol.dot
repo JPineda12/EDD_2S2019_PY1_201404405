@@ -1,0 +1,78 @@
+digraph linearMatrix
+{
+    rankdir=LR;
+    node [ shape = box]
+     node [width = 1.5, height = 0.55];
+    //Nodes and links creation
+    Nodo0[label ="240-230-140\n(5,18)"];
+    Nodo0->Nodo1
+    Nodo1[label ="240-230-140\n(6,17)"];
+    Nodo1->Nodo2
+    Nodo2[label ="240-230-140\n(7,16)"];
+    Nodo2->Nodo3
+    Nodo3[label ="240-230-140\n(7,17)"];
+    Nodo3->Nodo4
+    Nodo4[label ="240-230-140\n(7,18)"];
+    Nodo4->Nodo5
+    Nodo5[label ="240-230-140\n(10,16)"];
+    Nodo5->Nodo6
+    Nodo6[label ="240-230-140\n(10,17)"];
+    Nodo6->Nodo7
+    Nodo7[label ="240-230-140\n(10,18)"];
+    Nodo7->Nodo8
+    Nodo8[label ="240-230-140\n(10,19)"];
+    Nodo8->Nodo9
+    Nodo9[label ="240-230-140\n(10,20)"];
+    Nodo9->Nodo10
+    Nodo10[label ="240-230-140\n(10,21)"];
+    Nodo10->Nodo11
+    Nodo11[label ="240-230-140\n(10,22)"];
+    Nodo11->Nodo12
+    Nodo12[label ="240-230-140\n(10,23)"];
+    Nodo12->Nodo13
+    Nodo13[label ="240-230-140\n(10,24)"];
+    Nodo13->Nodo14
+    Nodo14[label ="240-230-140\n(10,25)"];
+    Nodo14->Nodo15
+    Nodo15[label ="240-230-140\n(12,17)"];
+    Nodo15->Nodo16
+    Nodo16[label ="240-230-140\n(12,18)"];
+    Nodo16->Nodo17
+    Nodo17[label ="240-230-140\n(12,19)"];
+    Nodo17->Nodo18
+    Nodo18[label ="240-230-140\n(12,20)"];
+    Nodo18->Nodo19
+    Nodo19[label ="240-230-140\n(12,21)"];
+    Nodo19->Nodo20
+    Nodo20[label ="240-230-140\n(12,22)"];
+    Nodo20->Nodo21
+    Nodo21[label ="240-230-140\n(12,23)"];
+    Nodo21->Nodo22
+    Nodo22[label ="240-230-140\n(12,24)"];
+    Nodo22->Nodo23
+    Nodo23[label ="240-230-140\n(20,16)"];
+    Nodo23->Nodo24
+    Nodo24[label ="240-230-140\n(20,17)"];
+    Nodo24->Nodo25
+    Nodo25[label ="240-230-140\n(20,18)"];
+    Nodo25->Nodo26
+    Nodo26[label ="240-230-140\n(20,19)"];
+    Nodo26->Nodo27
+    Nodo27[label ="240-230-140\n(20,20)"];
+    Nodo27->Nodo28
+    Nodo28[label ="240-230-140\n(20,21)"];
+    Nodo28->Nodo29
+    Nodo29[label ="240-230-140\n(20,22)"];
+    Nodo29->Nodo30
+    Nodo30[label ="240-230-140\n(20,23)"];
+    Nodo30->Nodo31
+    Nodo31[label ="240-230-140\n(20,24)"];
+    Nodo31->Nodo32
+    Nodo32[label ="240-230-140\n(20,25)"];
+    Nodo32->Nodo33
+    Nodo33[label ="240-230-140\n(25,18)"];
+    Nodo33->Nodo34
+    Nodo34[label ="240-230-140\n(25,19)"];
+    Nodo34->Nodo35
+    Nodo35[label ="240-230-140\n(25,20)"];
+}

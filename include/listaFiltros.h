@@ -17,10 +17,14 @@ class listaFiltros
 {
     public:
         nodoFiltro *head;
+        int tamano;
+        bool esVacio();
         listaFiltros();
         void insertar(string nombre, int width, int height, int pxwidth, int pxheight, int repx, int repy, cuboDisperso *imagenFiltro);
         void imprimir();
+        int getSize();
         nodoFiltro *obtener(int x);
+        void graficar();
 
     protected:
 

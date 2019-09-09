@@ -4,7 +4,7 @@ digraph arbol_inorder
     node [width = 1, height = 0.25];
     //Nodes and links creation
 
-ndminion[label="minion"];
-ndminion->ndYoda
 ndYoda[label="Yoda"];
+ndYoda->ndminion
+ndminion[label="minion"];
 }

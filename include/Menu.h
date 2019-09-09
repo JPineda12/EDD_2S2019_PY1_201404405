@@ -21,6 +21,8 @@ class Menu
         void repImageLayer(ArbolB *arbolImagenes);
         void repTrasversal(ArbolB *arbolImagenes);
         void repLinearMatrix(ArbolB *arbolImagenes);
+        void repFilters(listaFiltros *filters);
+        void repFIndiv(listaFiltros *filters);
         cuboDisperso *createImage(string nombreCarpeta, listaCircular *listaCsv);
         void exportarSelected(cuboDisperso *selectedImage, ArbolB *arbolImagenes);
         void exportarFiltro(listaFiltros *filtros, ArbolB *arbolImagenes, string nombreImagen);

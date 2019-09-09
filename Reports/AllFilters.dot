@@ -1,0 +1,12 @@
+digraph Circular{
+    node[shape=box, width = 1.7];
+    graph[nodesep=0.6];
+    edge[dir=both]
+    Filtro0[label = "Negative"];
+    Filtro0->Filtro1;
+    Filtro1[label = "Grayscale"];
+    Filtro1->Filtro2;
+    Filtro2[label = "Mirror-Y"];
+    Filtro2->Filtro0
+    {rank=same; Filtro0; Filtro1; Filtro2; };
+}

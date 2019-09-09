@@ -75,13 +75,13 @@ bool ArbolB::insertar_recursivo(NodoArbol *actual, NodoArbol *nuevo){
     int menor = comparar(palabraNueva, palabraArbol);
     if(menor == 1){ // Si es menor, insertar en la izquierda del arbol
         if(actual->left != NULL){ //Si ya existe un valor
-            insertar_recursivo(actual->left ,nuevo);
+            return insertar_recursivo(actual->left ,nuevo);
         }else{ // insertar .
             actual->left = nuevo;
         }
     }else if(menor == -1){ // Si es mayor, insertar en la derecha
         if(actual->right != NULL){
-            insertar_recursivo(actual->right, nuevo);
+            return insertar_recursivo(actual->right, nuevo);
         }else{
             actual->right = nuevo;
         }

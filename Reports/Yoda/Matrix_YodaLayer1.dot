@@ -1,0 +1,1113 @@
+digraph Sparse_Matrix{
+node [shape=box]
+graph [ranksep="0.5", nodesep="0.6"];
+/* Group 0 para alinear verticalmente RAIZ*/ 
+Layer1[ label = "Layer1", width = 1.5, style = filled, fillcolor = coral, group = 0 ];
+
+// Filas 
+Fila1 [label = "Fila1" width = 1.5 style = filled, fillcolor = bisque1, group = 0 ];
+Fila2 [label = "Fila2" width = 1.5 style = filled, fillcolor = bisque1, group = 0 ];
+Fila3 [label = "Fila3" width = 1.5 style = filled, fillcolor = bisque1, group = 0 ];
+Fila4 [label = "Fila4" width = 1.5 style = filled, fillcolor = bisque1, group = 0 ];
+Fila5 [label = "Fila5" width = 1.5 style = filled, fillcolor = bisque1, group = 0 ];
+Fila6 [label = "Fila6" width = 1.5 style = filled, fillcolor = bisque1, group = 0 ];
+Fila7 [label = "Fila7" width = 1.5 style = filled, fillcolor = bisque1, group = 0 ];
+Fila8 [label = "Fila8" width = 1.5 style = filled, fillcolor = bisque1, group = 0 ];
+Fila9 [label = "Fila9" width = 1.5 style = filled, fillcolor = bisque1, group = 0 ];
+Fila10 [label = "Fila10" width = 1.5 style = filled, fillcolor = bisque1, group = 0 ];
+Fila11 [label = "Fila11" width = 1.5 style = filled, fillcolor = bisque1, group = 0 ];
+Fila12 [label = "Fila12" width = 1.5 style = filled, fillcolor = bisque1, group = 0 ];
+Fila13 [label = "Fila13" width = 1.5 style = filled, fillcolor = bisque1, group = 0 ];
+Fila14 [label = "Fila14" width = 1.5 style = filled, fillcolor = bisque1, group = 0 ];
+Fila15 [label = "Fila15" width = 1.5 style = filled, fillcolor = bisque1, group = 0 ];
+Fila16 [label = "Fila16" width = 1.5 style = filled, fillcolor = bisque1, group = 0 ];
+Fila17 [label = "Fila17" width = 1.5 style = filled, fillcolor = bisque1, group = 0 ];
+Fila18 [label = "Fila18" width = 1.5 style = filled, fillcolor = bisque1, group = 0 ];
+Fila19 [label = "Fila19" width = 1.5 style = filled, fillcolor = bisque1, group = 0 ];
+Fila20 [label = "Fila20" width = 1.5 style = filled, fillcolor = bisque1, group = 0 ];
+Fila21 [label = "Fila21" width = 1.5 style = filled, fillcolor = bisque1, group = 0 ];
+Fila22 [label = "Fila22" width = 1.5 style = filled, fillcolor = bisque1, group = 0 ];
+Fila23 [label = "Fila23" width = 1.5 style = filled, fillcolor = bisque1, group = 0 ];
+Fila24 [label = "Fila24" width = 1.5 style = filled, fillcolor = bisque1, group = 0 ];
+Fila25 [label = "Fila25" width = 1.5 style = filled, fillcolor = bisque1, group = 0 ];
+Fila26 [label = "Fila26" width = 1.5 style = filled, fillcolor = bisque1, group = 0 ];
+Fila27 [label = "Fila27" width = 1.5 style = filled, fillcolor = bisque1, group = 0 ];
+Fila28 [label = "Fila28" width = 1.5 style = filled, fillcolor = bisque1, group = 0 ];
+
+ //Enlaces de Filas
+Fila1->Fila2 [dir = both];
+Fila2->Fila3 [dir = both];
+Fila3->Fila4 [dir = both];
+Fila4->Fila5 [dir = both];
+Fila5->Fila6 [dir = both];
+Fila6->Fila7 [dir = both];
+Fila7->Fila8 [dir = both];
+Fila8->Fila9 [dir = both];
+Fila9->Fila10 [dir = both];
+Fila10->Fila11 [dir = both];
+Fila11->Fila12 [dir = both];
+Fila12->Fila13 [dir = both];
+Fila13->Fila14 [dir = both];
+Fila14->Fila15 [dir = both];
+Fila15->Fila16 [dir = both];
+Fila16->Fila17 [dir = both];
+Fila17->Fila18 [dir = both];
+Fila18->Fila19 [dir = both];
+Fila19->Fila20 [dir = both];
+Fila20->Fila21 [dir = both];
+Fila21->Fila22 [dir = both];
+Fila22->Fila23 [dir = both];
+Fila23->Fila24 [dir = both];
+Fila24->Fila25 [dir = both];
+Fila25->Fila26 [dir = both];
+Fila26->Fila27 [dir = both];
+Fila27->Fila28 [dir = both];
+
+ //Columnas
+//Cada una con diferente group para alinear verticalmente con los nodos
+Column2[label = "Columna2" width = 1.5 style = filled, fillcolor = pink2, group = 3];
+Column3[label = "Columna3" width = 1.5 style = filled, fillcolor = pink2, group = 4];
+Column4[label = "Columna4" width = 1.5 style = filled, fillcolor = pink2, group = 5];
+Column5[label = "Columna5" width = 1.5 style = filled, fillcolor = pink2, group = 6];
+Column6[label = "Columna6" width = 1.5 style = filled, fillcolor = pink2, group = 7];
+Column7[label = "Columna7" width = 1.5 style = filled, fillcolor = pink2, group = 8];
+Column8[label = "Columna8" width = 1.5 style = filled, fillcolor = pink2, group = 9];
+Column9[label = "Columna9" width = 1.5 style = filled, fillcolor = pink2, group = 10];
+Column10[label = "Columna10" width = 1.5 style = filled, fillcolor = pink2, group = 11];
+Column11[label = "Columna11" width = 1.5 style = filled, fillcolor = pink2, group = 12];
+Column12[label = "Columna12" width = 1.5 style = filled, fillcolor = pink2, group = 13];
+Column13[label = "Columna13" width = 1.5 style = filled, fillcolor = pink2, group = 14];
+Column14[label = "Columna14" width = 1.5 style = filled, fillcolor = pink2, group = 15];
+Column15[label = "Columna15" width = 1.5 style = filled, fillcolor = pink2, group = 16];
+Column16[label = "Columna16" width = 1.5 style = filled, fillcolor = pink2, group = 17];
+Column17[label = "Columna17" width = 1.5 style = filled, fillcolor = pink2, group = 18];
+Column18[label = "Columna18" width = 1.5 style = filled, fillcolor = pink2, group = 19];
+Column19[label = "Columna19" width = 1.5 style = filled, fillcolor = pink2, group = 20];
+Column20[label = "Columna20" width = 1.5 style = filled, fillcolor = pink2, group = 21];
+Column21[label = "Columna21" width = 1.5 style = filled, fillcolor = pink2, group = 22];
+Column22[label = "Columna22" width = 1.5 style = filled, fillcolor = pink2, group = 23];
+Column23[label = "Columna23" width = 1.5 style = filled, fillcolor = pink2, group = 24];
+Column24[label = "Columna24" width = 1.5 style = filled, fillcolor = pink2, group = 25];
+Column25[label = "Columna25" width = 1.5 style = filled, fillcolor = pink2, group = 26];
+Column26[label = "Columna26" width = 1.5 style = filled, fillcolor = pink2, group = 27];
+Column27[label = "Columna27" width = 1.5 style = filled, fillcolor = pink2, group = 28];
+
+ //Enlaces de Columnas
+Column2->Column3 [dir = both];
+Column3->Column4 [dir = both];
+Column4->Column5 [dir = both];
+Column5->Column6 [dir = both];
+Column6->Column7 [dir = both];
+Column7->Column8 [dir = both];
+Column8->Column9 [dir = both];
+Column9->Column10 [dir = both];
+Column10->Column11 [dir = both];
+Column11->Column12 [dir = both];
+Column12->Column13 [dir = both];
+Column13->Column14 [dir = both];
+Column14->Column15 [dir = both];
+Column15->Column16 [dir = both];
+Column16->Column17 [dir = both];
+Column17->Column18 [dir = both];
+Column18->Column19 [dir = both];
+Column19->Column20 [dir = both];
+Column20->Column21 [dir = both];
+Column21->Column22 [dir = both];
+Column22->Column23 [dir = both];
+Column23->Column24 [dir = both];
+Column24->Column25 [dir = both];
+Column25->Column26 [dir = both];
+Column26->Column27 [dir = both];
+
+ // Alinear Raiz con Columnas
+{rank = same; Layer1; Column2;  Column3;  Column4;  Column5;  Column6;  Column7;  Column8;  Column9;  Column10;  Column11;  Column12;  Column13;  Column14;  Column15;  Column16;  Column17;  Column18;  Column19;  Column20;  Column21;  Column22;  Column23;  Column24;  Column25;  Column26;  Column27; };
+
+ // Enlaces Raiz con primera fila y columna
+Layer1->Column2;
+Layer1->Fila1;
+
+ //Creacion de nodos
+//(^<---------------------- F I L A   1---------------------->
+N12_F1 [label = "0-128-0" width = 1.5 group = 13 style = filled, fillcolor = lavenderblush1];
+N13_F1 [label = "50-205-50" width = 1.5 group = 14 style = filled, fillcolor = lavenderblush1];
+N14_F1 [label = "50-205-50" width = 1.5 group = 15 style = filled, fillcolor = lavenderblush1];
+N15_F1 [label = "50-205-50" width = 1.5 group = 16 style = filled, fillcolor = lavenderblush1];
+N16_F1 [label = "50-205-50" width = 1.5 group = 17 style = filled, fillcolor = lavenderblush1];
+N17_F1 [label = "50-205-50" width = 1.5 group = 18 style = filled, fillcolor = lavenderblush1];
+N18_F1 [label = "50-205-50" width = 1.5 group = 19 style = filled, fillcolor = lavenderblush1];
+
+//(^<---------------------- F I L A   2---------------------->
+N11_F2 [label = "0-128-0" width = 1.5 group = 12 style = filled, fillcolor = lavenderblush1];
+N12_F2 [label = "50-205-50" width = 1.5 group = 13 style = filled, fillcolor = lavenderblush1];
+N13_F2 [label = "50-205-50" width = 1.5 group = 14 style = filled, fillcolor = lavenderblush1];
+N19_F2 [label = "50-205-50" width = 1.5 group = 20 style = filled, fillcolor = lavenderblush1];
+
+//(^<---------------------- F I L A   3---------------------->
+N2_F3 [label = "0-128-0" width = 1.5 group = 3 style = filled, fillcolor = lavenderblush1];
+N3_F3 [label = "50-205-50" width = 1.5 group = 4 style = filled, fillcolor = lavenderblush1];
+N10_F3 [label = "0-128-0" width = 1.5 group = 11 style = filled, fillcolor = lavenderblush1];
+N11_F3 [label = "50-205-50" width = 1.5 group = 12 style = filled, fillcolor = lavenderblush1];
+N13_F3 [label = "50-205-50" width = 1.5 group = 14 style = filled, fillcolor = lavenderblush1];
+N15_F3 [label = "50-205-50" width = 1.5 group = 16 style = filled, fillcolor = lavenderblush1];
+N16_F3 [label = "50-205-50" width = 1.5 group = 17 style = filled, fillcolor = lavenderblush1];
+N17_F3 [label = "50-205-50" width = 1.5 group = 18 style = filled, fillcolor = lavenderblush1];
+N18_F3 [label = "50-205-50" width = 1.5 group = 19 style = filled, fillcolor = lavenderblush1];
+N20_F3 [label = "50-205-50" width = 1.5 group = 21 style = filled, fillcolor = lavenderblush1];
+N26_F3 [label = "0-128-0" width = 1.5 group = 27 style = filled, fillcolor = lavenderblush1];
+N27_F3 [label = "50-205-50" width = 1.5 group = 28 style = filled, fillcolor = lavenderblush1];
+
+//(^<---------------------- F I L A   4---------------------->
+N2_F4 [label = "0-128-0" width = 1.5 group = 3 style = filled, fillcolor = lavenderblush1];
+N4_F4 [label = "50-205-50" width = 1.5 group = 5 style = filled, fillcolor = lavenderblush1];
+N9_F4 [label = "0-128-0" width = 1.5 group = 10 style = filled, fillcolor = lavenderblush1];
+N10_F4 [label = "50-205-50" width = 1.5 group = 11 style = filled, fillcolor = lavenderblush1];
+N11_F4 [label = "50-205-50" width = 1.5 group = 12 style = filled, fillcolor = lavenderblush1];
+N12_F4 [label = "50-205-50" width = 1.5 group = 13 style = filled, fillcolor = lavenderblush1];
+N14_F4 [label = "50-205-50" width = 1.5 group = 15 style = filled, fillcolor = lavenderblush1];
+N16_F4 [label = "50-205-50" width = 1.5 group = 17 style = filled, fillcolor = lavenderblush1];
+N17_F4 [label = "50-205-50" width = 1.5 group = 18 style = filled, fillcolor = lavenderblush1];
+N21_F4 [label = "50-205-50" width = 1.5 group = 22 style = filled, fillcolor = lavenderblush1];
+N25_F4 [label = "0-128-0" width = 1.5 group = 26 style = filled, fillcolor = lavenderblush1];
+N27_F4 [label = "50-205-50" width = 1.5 group = 28 style = filled, fillcolor = lavenderblush1];
+
+//(^<---------------------- F I L A   5---------------------->
+N2_F5 [label = "0-128-0" width = 1.5 group = 3 style = filled, fillcolor = lavenderblush1];
+N3_F5 [label = "50-205-50" width = 1.5 group = 4 style = filled, fillcolor = lavenderblush1];
+N5_F5 [label = "50-205-50" width = 1.5 group = 6 style = filled, fillcolor = lavenderblush1];
+N6_F5 [label = "50-205-50" width = 1.5 group = 7 style = filled, fillcolor = lavenderblush1];
+N7_F5 [label = "50-205-50" width = 1.5 group = 8 style = filled, fillcolor = lavenderblush1];
+N8_F5 [label = "0-128-0" width = 1.5 group = 9 style = filled, fillcolor = lavenderblush1];
+N9_F5 [label = "50-205-50" width = 1.5 group = 10 style = filled, fillcolor = lavenderblush1];
+N10_F5 [label = "50-205-50" width = 1.5 group = 11 style = filled, fillcolor = lavenderblush1];
+N11_F5 [label = "50-205-50" width = 1.5 group = 12 style = filled, fillcolor = lavenderblush1];
+N12_F5 [label = "50-205-50" width = 1.5 group = 13 style = filled, fillcolor = lavenderblush1];
+N13_F5 [label = "50-205-50" width = 1.5 group = 14 style = filled, fillcolor = lavenderblush1];
+N14_F5 [label = "50-205-50" width = 1.5 group = 15 style = filled, fillcolor = lavenderblush1];
+N15_F5 [label = "50-205-50" width = 1.5 group = 16 style = filled, fillcolor = lavenderblush1];
+N16_F5 [label = "50-205-50" width = 1.5 group = 17 style = filled, fillcolor = lavenderblush1];
+N17_F5 [label = "50-205-50" width = 1.5 group = 18 style = filled, fillcolor = lavenderblush1];
+N21_F5 [label = "50-205-50" width = 1.5 group = 22 style = filled, fillcolor = lavenderblush1];
+N22_F5 [label = "0-128-0" width = 1.5 group = 23 style = filled, fillcolor = lavenderblush1];
+N23_F5 [label = "0-128-0" width = 1.5 group = 24 style = filled, fillcolor = lavenderblush1];
+N24_F5 [label = "50-205-50" width = 1.5 group = 25 style = filled, fillcolor = lavenderblush1];
+N27_F5 [label = "50-205-50" width = 1.5 group = 28 style = filled, fillcolor = lavenderblush1];
+
+//(^<---------------------- F I L A   6---------------------->
+N3_F6 [label = "0-128-0" width = 1.5 group = 4 style = filled, fillcolor = lavenderblush1];
+N8_F6 [label = "50-205-50" width = 1.5 group = 9 style = filled, fillcolor = lavenderblush1];
+N9_F6 [label = "50-205-50" width = 1.5 group = 10 style = filled, fillcolor = lavenderblush1];
+N10_F6 [label = "50-205-50" width = 1.5 group = 11 style = filled, fillcolor = lavenderblush1];
+N14_F6 [label = "50-205-50" width = 1.5 group = 15 style = filled, fillcolor = lavenderblush1];
+N15_F6 [label = "50-205-50" width = 1.5 group = 16 style = filled, fillcolor = lavenderblush1];
+N16_F6 [label = "50-205-50" width = 1.5 group = 17 style = filled, fillcolor = lavenderblush1];
+N20_F6 [label = "50-205-50" width = 1.5 group = 21 style = filled, fillcolor = lavenderblush1];
+N21_F6 [label = "50-205-50" width = 1.5 group = 22 style = filled, fillcolor = lavenderblush1];
+N22_F6 [label = "50-205-50" width = 1.5 group = 23 style = filled, fillcolor = lavenderblush1];
+N24_F6 [label = "50-205-50" width = 1.5 group = 25 style = filled, fillcolor = lavenderblush1];
+N26_F6 [label = "50-205-50" width = 1.5 group = 27 style = filled, fillcolor = lavenderblush1];
+
+//(^<---------------------- F I L A   7---------------------->
+N4_F7 [label = "0-128-0" width = 1.5 group = 5 style = filled, fillcolor = lavenderblush1];
+N5_F7 [label = "50-205-50" width = 1.5 group = 6 style = filled, fillcolor = lavenderblush1];
+N9_F7 [label = "50-205-50" width = 1.5 group = 10 style = filled, fillcolor = lavenderblush1];
+N13_F7 [label = "50-205-50" width = 1.5 group = 14 style = filled, fillcolor = lavenderblush1];
+N14_F7 [label = "50-205-50" width = 1.5 group = 15 style = filled, fillcolor = lavenderblush1];
+N15_F7 [label = "50-205-50" width = 1.5 group = 16 style = filled, fillcolor = lavenderblush1];
+N16_F7 [label = "50-205-50" width = 1.5 group = 17 style = filled, fillcolor = lavenderblush1];
+N17_F7 [label = "50-205-50" width = 1.5 group = 18 style = filled, fillcolor = lavenderblush1];
+N25_F7 [label = "50-205-50" width = 1.5 group = 26 style = filled, fillcolor = lavenderblush1];
+N26_F7 [label = "50-205-50" width = 1.5 group = 27 style = filled, fillcolor = lavenderblush1];
+
+//(^<---------------------- F I L A   8---------------------->
+N5_F8 [label = "50-205-50" width = 1.5 group = 6 style = filled, fillcolor = lavenderblush1];
+N6_F8 [label = "50-205-50" width = 1.5 group = 7 style = filled, fillcolor = lavenderblush1];
+N7_F8 [label = "50-205-50" width = 1.5 group = 8 style = filled, fillcolor = lavenderblush1];
+N8_F8 [label = "50-205-50" width = 1.5 group = 9 style = filled, fillcolor = lavenderblush1];
+N9_F8 [label = "50-205-50" width = 1.5 group = 10 style = filled, fillcolor = lavenderblush1];
+N14_F8 [label = "50-205-50" width = 1.5 group = 15 style = filled, fillcolor = lavenderblush1];
+N15_F8 [label = "50-205-50" width = 1.5 group = 16 style = filled, fillcolor = lavenderblush1];
+N16_F8 [label = "50-205-50" width = 1.5 group = 17 style = filled, fillcolor = lavenderblush1];
+N21_F8 [label = "50-205-50" width = 1.5 group = 22 style = filled, fillcolor = lavenderblush1];
+N22_F8 [label = "0-128-0" width = 1.5 group = 23 style = filled, fillcolor = lavenderblush1];
+N23_F8 [label = "0-128-0" width = 1.5 group = 24 style = filled, fillcolor = lavenderblush1];
+N24_F8 [label = "50-205-50" width = 1.5 group = 25 style = filled, fillcolor = lavenderblush1];
+N25_F8 [label = "0-128-0" width = 1.5 group = 26 style = filled, fillcolor = lavenderblush1];
+
+//(^<---------------------- F I L A   9---------------------->
+N6_F9 [label = "0-128-0" width = 1.5 group = 7 style = filled, fillcolor = lavenderblush1];
+N7_F9 [label = "0-128-0" width = 1.5 group = 8 style = filled, fillcolor = lavenderblush1];
+N8_F9 [label = "50-205-50" width = 1.5 group = 9 style = filled, fillcolor = lavenderblush1];
+N9_F9 [label = "50-205-50" width = 1.5 group = 10 style = filled, fillcolor = lavenderblush1];
+N10_F9 [label = "50-205-50" width = 1.5 group = 11 style = filled, fillcolor = lavenderblush1];
+N11_F9 [label = "50-205-50" width = 1.5 group = 12 style = filled, fillcolor = lavenderblush1];
+N12_F9 [label = "50-205-50" width = 1.5 group = 13 style = filled, fillcolor = lavenderblush1];
+N13_F9 [label = "50-205-50" width = 1.5 group = 14 style = filled, fillcolor = lavenderblush1];
+N17_F9 [label = "50-205-50" width = 1.5 group = 18 style = filled, fillcolor = lavenderblush1];
+N18_F9 [label = "50-205-50" width = 1.5 group = 19 style = filled, fillcolor = lavenderblush1];
+N19_F9 [label = "50-205-50" width = 1.5 group = 20 style = filled, fillcolor = lavenderblush1];
+N21_F9 [label = "50-205-50" width = 1.5 group = 22 style = filled, fillcolor = lavenderblush1];
+N22_F9 [label = "50-205-50" width = 1.5 group = 23 style = filled, fillcolor = lavenderblush1];
+N23_F9 [label = "0-128-0" width = 1.5 group = 24 style = filled, fillcolor = lavenderblush1];
+N24_F9 [label = "0-128-0" width = 1.5 group = 25 style = filled, fillcolor = lavenderblush1];
+
+//(^<---------------------- F I L A   10---------------------->
+N8_F10 [label = "0-128-0" width = 1.5 group = 9 style = filled, fillcolor = lavenderblush1];
+N9_F10 [label = "50-205-50" width = 1.5 group = 10 style = filled, fillcolor = lavenderblush1];
+N10_F10 [label = "50-205-50" width = 1.5 group = 11 style = filled, fillcolor = lavenderblush1];
+N11_F10 [label = "50-205-50" width = 1.5 group = 12 style = filled, fillcolor = lavenderblush1];
+N12_F10 [label = "50-205-50" width = 1.5 group = 13 style = filled, fillcolor = lavenderblush1];
+N13_F10 [label = "50-205-50" width = 1.5 group = 14 style = filled, fillcolor = lavenderblush1];
+N14_F10 [label = "50-205-50" width = 1.5 group = 15 style = filled, fillcolor = lavenderblush1];
+N15_F10 [label = "50-205-50" width = 1.5 group = 16 style = filled, fillcolor = lavenderblush1];
+N16_F10 [label = "50-205-50" width = 1.5 group = 17 style = filled, fillcolor = lavenderblush1];
+N17_F10 [label = "50-205-50" width = 1.5 group = 18 style = filled, fillcolor = lavenderblush1];
+N18_F10 [label = "50-205-50" width = 1.5 group = 19 style = filled, fillcolor = lavenderblush1];
+N19_F10 [label = "50-205-50" width = 1.5 group = 20 style = filled, fillcolor = lavenderblush1];
+N20_F10 [label = "50-205-50" width = 1.5 group = 21 style = filled, fillcolor = lavenderblush1];
+N21_F10 [label = "50-205-50" width = 1.5 group = 22 style = filled, fillcolor = lavenderblush1];
+N22_F10 [label = "0-128-0" width = 1.5 group = 23 style = filled, fillcolor = lavenderblush1];
+
+//(^<---------------------- F I L A   11---------------------->
+N9_F11 [label = "0-128-0" width = 1.5 group = 10 style = filled, fillcolor = lavenderblush1];
+N10_F11 [label = "50-205-50" width = 1.5 group = 11 style = filled, fillcolor = lavenderblush1];
+N11_F11 [label = "50-205-50" width = 1.5 group = 12 style = filled, fillcolor = lavenderblush1];
+N12_F11 [label = "50-205-50" width = 1.5 group = 13 style = filled, fillcolor = lavenderblush1];
+N14_F11 [label = "50-205-50" width = 1.5 group = 15 style = filled, fillcolor = lavenderblush1];
+N16_F11 [label = "50-205-50" width = 1.5 group = 17 style = filled, fillcolor = lavenderblush1];
+N18_F11 [label = "50-205-50" width = 1.5 group = 19 style = filled, fillcolor = lavenderblush1];
+N19_F11 [label = "50-205-50" width = 1.5 group = 20 style = filled, fillcolor = lavenderblush1];
+N20_F11 [label = "50-205-50" width = 1.5 group = 21 style = filled, fillcolor = lavenderblush1];
+N21_F11 [label = "50-205-50" width = 1.5 group = 22 style = filled, fillcolor = lavenderblush1];
+N22_F11 [label = "0-128-0" width = 1.5 group = 23 style = filled, fillcolor = lavenderblush1];
+
+//(^<---------------------- F I L A   12---------------------->
+N8_F12 [label = "0-128-0" width = 1.5 group = 9 style = filled, fillcolor = lavenderblush1];
+N9_F12 [label = "0-128-0" width = 1.5 group = 10 style = filled, fillcolor = lavenderblush1];
+N10_F12 [label = "0-128-0" width = 1.5 group = 11 style = filled, fillcolor = lavenderblush1];
+N11_F12 [label = "50-205-50" width = 1.5 group = 12 style = filled, fillcolor = lavenderblush1];
+N12_F12 [label = "50-205-50" width = 1.5 group = 13 style = filled, fillcolor = lavenderblush1];
+N18_F12 [label = "50-205-50" width = 1.5 group = 19 style = filled, fillcolor = lavenderblush1];
+N19_F12 [label = "50-205-50" width = 1.5 group = 20 style = filled, fillcolor = lavenderblush1];
+N20_F12 [label = "0-128-0" width = 1.5 group = 21 style = filled, fillcolor = lavenderblush1];
+N21_F12 [label = "0-128-0" width = 1.5 group = 22 style = filled, fillcolor = lavenderblush1];
+N22_F12 [label = "0-128-0" width = 1.5 group = 23 style = filled, fillcolor = lavenderblush1];
+
+//(^<---------------------- F I L A   13---------------------->
+N7_F13 [label = "0-128-0" width = 1.5 group = 8 style = filled, fillcolor = lavenderblush1];
+N11_F13 [label = "0-128-0" width = 1.5 group = 12 style = filled, fillcolor = lavenderblush1];
+N12_F13 [label = "50-205-50" width = 1.5 group = 13 style = filled, fillcolor = lavenderblush1];
+N13_F13 [label = "50-205-50" width = 1.5 group = 14 style = filled, fillcolor = lavenderblush1];
+N14_F13 [label = "50-205-50" width = 1.5 group = 15 style = filled, fillcolor = lavenderblush1];
+N15_F13 [label = "50-205-50" width = 1.5 group = 16 style = filled, fillcolor = lavenderblush1];
+N16_F13 [label = "50-205-50" width = 1.5 group = 17 style = filled, fillcolor = lavenderblush1];
+N17_F13 [label = "50-205-50" width = 1.5 group = 18 style = filled, fillcolor = lavenderblush1];
+N18_F13 [label = "50-205-50" width = 1.5 group = 19 style = filled, fillcolor = lavenderblush1];
+N19_F13 [label = "0-128-0" width = 1.5 group = 20 style = filled, fillcolor = lavenderblush1];
+
+//(^<---------------------- F I L A   14---------------------->
+N6_F14 [label = "0-128-0" width = 1.5 group = 7 style = filled, fillcolor = lavenderblush1];
+N12_F14 [label = "0-128-0" width = 1.5 group = 13 style = filled, fillcolor = lavenderblush1];
+N13_F14 [label = "0-128-0" width = 1.5 group = 14 style = filled, fillcolor = lavenderblush1];
+N14_F14 [label = "0-128-0" width = 1.5 group = 15 style = filled, fillcolor = lavenderblush1];
+N15_F14 [label = "0-128-0" width = 1.5 group = 16 style = filled, fillcolor = lavenderblush1];
+N16_F14 [label = "0-128-0" width = 1.5 group = 17 style = filled, fillcolor = lavenderblush1];
+N17_F14 [label = "0-128-0" width = 1.5 group = 18 style = filled, fillcolor = lavenderblush1];
+N18_F14 [label = "0-128-0" width = 1.5 group = 19 style = filled, fillcolor = lavenderblush1];
+N23_F14 [label = "0-128-0" width = 1.5 group = 24 style = filled, fillcolor = lavenderblush1];
+
+//(^<---------------------- F I L A   15---------------------->
+N5_F15 [label = "0-128-0" width = 1.5 group = 6 style = filled, fillcolor = lavenderblush1];
+N12_F15 [label = "0-128-0" width = 1.5 group = 13 style = filled, fillcolor = lavenderblush1];
+N13_F15 [label = "0-128-0" width = 1.5 group = 14 style = filled, fillcolor = lavenderblush1];
+N14_F15 [label = "50-205-50" width = 1.5 group = 15 style = filled, fillcolor = lavenderblush1];
+N15_F15 [label = "50-205-50" width = 1.5 group = 16 style = filled, fillcolor = lavenderblush1];
+N16_F15 [label = "50-205-50" width = 1.5 group = 17 style = filled, fillcolor = lavenderblush1];
+N17_F15 [label = "0-128-0" width = 1.5 group = 18 style = filled, fillcolor = lavenderblush1];
+N24_F15 [label = "0-128-0" width = 1.5 group = 25 style = filled, fillcolor = lavenderblush1];
+
+//(^<---------------------- F I L A   16---------------------->
+N4_F16 [label = "0-128-0" width = 1.5 group = 5 style = filled, fillcolor = lavenderblush1];
+N12_F16 [label = "0-128-0" width = 1.5 group = 13 style = filled, fillcolor = lavenderblush1];
+N13_F16 [label = "0-128-0" width = 1.5 group = 14 style = filled, fillcolor = lavenderblush1];
+N14_F16 [label = "0-128-0" width = 1.5 group = 15 style = filled, fillcolor = lavenderblush1];
+N16_F16 [label = "0-128-0" width = 1.5 group = 17 style = filled, fillcolor = lavenderblush1];
+N25_F16 [label = "0-128-0" width = 1.5 group = 26 style = filled, fillcolor = lavenderblush1];
+
+//(^<---------------------- F I L A   17---------------------->
+N3_F17 [label = "0-128-0" width = 1.5 group = 4 style = filled, fillcolor = lavenderblush1];
+N13_F17 [label = "0-128-0" width = 1.5 group = 14 style = filled, fillcolor = lavenderblush1];
+N14_F17 [label = "0-128-0" width = 1.5 group = 15 style = filled, fillcolor = lavenderblush1];
+N15_F17 [label = "0-128-0" width = 1.5 group = 16 style = filled, fillcolor = lavenderblush1];
+N17_F17 [label = "0-128-0" width = 1.5 group = 18 style = filled, fillcolor = lavenderblush1];
+N26_F17 [label = "0-128-0" width = 1.5 group = 27 style = filled, fillcolor = lavenderblush1];
+
+//(^<---------------------- F I L A   18---------------------->
+N13_F18 [label = "0-128-0" width = 1.5 group = 14 style = filled, fillcolor = lavenderblush1];
+N15_F18 [label = "0-128-0" width = 1.5 group = 16 style = filled, fillcolor = lavenderblush1];
+N17_F18 [label = "0-128-0" width = 1.5 group = 18 style = filled, fillcolor = lavenderblush1];
+N26_F18 [label = "0-128-0" width = 1.5 group = 27 style = filled, fillcolor = lavenderblush1];
+
+//(^<---------------------- F I L A   19---------------------->
+N2_F19 [label = "0-128-0" width = 1.5 group = 3 style = filled, fillcolor = lavenderblush1];
+N3_F19 [label = "0-128-0" width = 1.5 group = 4 style = filled, fillcolor = lavenderblush1];
+N13_F19 [label = "0-128-0" width = 1.5 group = 14 style = filled, fillcolor = lavenderblush1];
+N15_F19 [label = "0-128-0" width = 1.5 group = 16 style = filled, fillcolor = lavenderblush1];
+N17_F19 [label = "0-128-0" width = 1.5 group = 18 style = filled, fillcolor = lavenderblush1];
+N26_F19 [label = "0-128-0" width = 1.5 group = 27 style = filled, fillcolor = lavenderblush1];
+
+//(^<---------------------- F I L A   20---------------------->
+N2_F20 [label = "0-128-0" width = 1.5 group = 3 style = filled, fillcolor = lavenderblush1];
+N5_F20 [label = "0-128-0" width = 1.5 group = 6 style = filled, fillcolor = lavenderblush1];
+N7_F20 [label = "0-128-0" width = 1.5 group = 8 style = filled, fillcolor = lavenderblush1];
+N13_F20 [label = "0-128-0" width = 1.5 group = 14 style = filled, fillcolor = lavenderblush1];
+N15_F20 [label = "0-128-0" width = 1.5 group = 16 style = filled, fillcolor = lavenderblush1];
+N17_F20 [label = "0-128-0" width = 1.5 group = 18 style = filled, fillcolor = lavenderblush1];
+N26_F20 [label = "0-128-0" width = 1.5 group = 27 style = filled, fillcolor = lavenderblush1];
+
+//(^<---------------------- F I L A   21---------------------->
+N2_F21 [label = "0-128-0" width = 1.5 group = 3 style = filled, fillcolor = lavenderblush1];
+N5_F21 [label = "0-128-0" width = 1.5 group = 6 style = filled, fillcolor = lavenderblush1];
+N6_F21 [label = "0-128-0" width = 1.5 group = 7 style = filled, fillcolor = lavenderblush1];
+N7_F21 [label = "0-128-0" width = 1.5 group = 8 style = filled, fillcolor = lavenderblush1];
+N13_F21 [label = "0-128-0" width = 1.5 group = 14 style = filled, fillcolor = lavenderblush1];
+N15_F21 [label = "0-128-0" width = 1.5 group = 16 style = filled, fillcolor = lavenderblush1];
+N17_F21 [label = "0-128-0" width = 1.5 group = 18 style = filled, fillcolor = lavenderblush1];
+N26_F21 [label = "0-128-0" width = 1.5 group = 27 style = filled, fillcolor = lavenderblush1];
+
+//(^<---------------------- F I L A   22---------------------->
+N3_F22 [label = "0-128-0" width = 1.5 group = 4 style = filled, fillcolor = lavenderblush1];
+N4_F22 [label = "0-128-0" width = 1.5 group = 5 style = filled, fillcolor = lavenderblush1];
+N5_F22 [label = "0-128-0" width = 1.5 group = 6 style = filled, fillcolor = lavenderblush1];
+N7_F22 [label = "0-128-0" width = 1.5 group = 8 style = filled, fillcolor = lavenderblush1];
+N13_F22 [label = "0-128-0" width = 1.5 group = 14 style = filled, fillcolor = lavenderblush1];
+N15_F22 [label = "0-128-0" width = 1.5 group = 16 style = filled, fillcolor = lavenderblush1];
+N17_F22 [label = "0-128-0" width = 1.5 group = 18 style = filled, fillcolor = lavenderblush1];
+N23_F22 [label = "0-128-0" width = 1.5 group = 24 style = filled, fillcolor = lavenderblush1];
+N26_F22 [label = "0-128-0" width = 1.5 group = 27 style = filled, fillcolor = lavenderblush1];
+
+//(^<---------------------- F I L A   23---------------------->
+N4_F23 [label = "0-128-0" width = 1.5 group = 5 style = filled, fillcolor = lavenderblush1];
+N7_F23 [label = "0-128-0" width = 1.5 group = 8 style = filled, fillcolor = lavenderblush1];
+N13_F23 [label = "0-128-0" width = 1.5 group = 14 style = filled, fillcolor = lavenderblush1];
+N15_F23 [label = "0-128-0" width = 1.5 group = 16 style = filled, fillcolor = lavenderblush1];
+N17_F23 [label = "0-128-0" width = 1.5 group = 18 style = filled, fillcolor = lavenderblush1];
+N23_F23 [label = "0-128-0" width = 1.5 group = 24 style = filled, fillcolor = lavenderblush1];
+N24_F23 [label = "0-128-0" width = 1.5 group = 25 style = filled, fillcolor = lavenderblush1];
+N25_F23 [label = "0-128-0" width = 1.5 group = 26 style = filled, fillcolor = lavenderblush1];
+
+//(^<---------------------- F I L A   24---------------------->
+N4_F24 [label = "0-128-0" width = 1.5 group = 5 style = filled, fillcolor = lavenderblush1];
+N7_F24 [label = "0-128-0" width = 1.5 group = 8 style = filled, fillcolor = lavenderblush1];
+N13_F24 [label = "0-128-0" width = 1.5 group = 14 style = filled, fillcolor = lavenderblush1];
+N15_F24 [label = "0-128-0" width = 1.5 group = 16 style = filled, fillcolor = lavenderblush1];
+N17_F24 [label = "0-128-0" width = 1.5 group = 18 style = filled, fillcolor = lavenderblush1];
+N23_F24 [label = "0-128-0" width = 1.5 group = 24 style = filled, fillcolor = lavenderblush1];
+
+//(^<---------------------- F I L A   25---------------------->
+N4_F25 [label = "0-128-0" width = 1.5 group = 5 style = filled, fillcolor = lavenderblush1];
+N7_F25 [label = "0-128-0" width = 1.5 group = 8 style = filled, fillcolor = lavenderblush1];
+N12_F25 [label = "0-128-0" width = 1.5 group = 13 style = filled, fillcolor = lavenderblush1];
+N13_F25 [label = "0-128-0" width = 1.5 group = 14 style = filled, fillcolor = lavenderblush1];
+N15_F25 [label = "0-128-0" width = 1.5 group = 16 style = filled, fillcolor = lavenderblush1];
+N17_F25 [label = "0-128-0" width = 1.5 group = 18 style = filled, fillcolor = lavenderblush1];
+N18_F25 [label = "0-128-0" width = 1.5 group = 19 style = filled, fillcolor = lavenderblush1];
+N23_F25 [label = "0-128-0" width = 1.5 group = 24 style = filled, fillcolor = lavenderblush1];
+
+//(^<---------------------- F I L A   26---------------------->
+N4_F26 [label = "0-128-0" width = 1.5 group = 5 style = filled, fillcolor = lavenderblush1];
+N7_F26 [label = "0-128-0" width = 1.5 group = 8 style = filled, fillcolor = lavenderblush1];
+N12_F26 [label = "0-128-0" width = 1.5 group = 13 style = filled, fillcolor = lavenderblush1];
+N13_F26 [label = "0-128-0" width = 1.5 group = 14 style = filled, fillcolor = lavenderblush1];
+N15_F26 [label = "0-128-0" width = 1.5 group = 16 style = filled, fillcolor = lavenderblush1];
+N16_F26 [label = "0-128-0" width = 1.5 group = 17 style = filled, fillcolor = lavenderblush1];
+N17_F26 [label = "0-128-0" width = 1.5 group = 18 style = filled, fillcolor = lavenderblush1];
+N18_F26 [label = "0-128-0" width = 1.5 group = 19 style = filled, fillcolor = lavenderblush1];
+N23_F26 [label = "0-128-0" width = 1.5 group = 24 style = filled, fillcolor = lavenderblush1];
+
+//(^<---------------------- F I L A   27---------------------->
+N4_F27 [label = "0-128-0" width = 1.5 group = 5 style = filled, fillcolor = lavenderblush1];
+N8_F27 [label = "0-128-0" width = 1.5 group = 9 style = filled, fillcolor = lavenderblush1];
+N12_F27 [label = "0-128-0" width = 1.5 group = 13 style = filled, fillcolor = lavenderblush1];
+N13_F27 [label = "0-128-0" width = 1.5 group = 14 style = filled, fillcolor = lavenderblush1];
+N15_F27 [label = "0-128-0" width = 1.5 group = 16 style = filled, fillcolor = lavenderblush1];
+N16_F27 [label = "0-128-0" width = 1.5 group = 17 style = filled, fillcolor = lavenderblush1];
+N17_F27 [label = "0-128-0" width = 1.5 group = 18 style = filled, fillcolor = lavenderblush1];
+N18_F27 [label = "0-128-0" width = 1.5 group = 19 style = filled, fillcolor = lavenderblush1];
+N19_F27 [label = "0-128-0" width = 1.5 group = 20 style = filled, fillcolor = lavenderblush1];
+N20_F27 [label = "0-128-0" width = 1.5 group = 21 style = filled, fillcolor = lavenderblush1];
+N23_F27 [label = "0-128-0" width = 1.5 group = 24 style = filled, fillcolor = lavenderblush1];
+
+//(^<---------------------- F I L A   28---------------------->
+N4_F28 [label = "0-128-0" width = 1.5 group = 5 style = filled, fillcolor = lavenderblush1];
+N8_F28 [label = "0-128-0" width = 1.5 group = 9 style = filled, fillcolor = lavenderblush1];
+N9_F28 [label = "0-128-0" width = 1.5 group = 10 style = filled, fillcolor = lavenderblush1];
+N10_F28 [label = "0-128-0" width = 1.5 group = 11 style = filled, fillcolor = lavenderblush1];
+N11_F28 [label = "0-128-0" width = 1.5 group = 12 style = filled, fillcolor = lavenderblush1];
+N12_F28 [label = "0-128-0" width = 1.5 group = 13 style = filled, fillcolor = lavenderblush1];
+N13_F28 [label = "0-128-0" width = 1.5 group = 14 style = filled, fillcolor = lavenderblush1];
+N14_F28 [label = "0-128-0" width = 1.5 group = 15 style = filled, fillcolor = lavenderblush1];
+N16_F28 [label = "0-128-0" width = 1.5 group = 17 style = filled, fillcolor = lavenderblush1];
+N17_F28 [label = "0-128-0" width = 1.5 group = 18 style = filled, fillcolor = lavenderblush1];
+N18_F28 [label = "0-128-0" width = 1.5 group = 19 style = filled, fillcolor = lavenderblush1];
+N19_F28 [label = "0-128-0" width = 1.5 group = 20 style = filled, fillcolor = lavenderblush1];
+N20_F28 [label = "0-128-0" width = 1.5 group = 21 style = filled, fillcolor = lavenderblush1];
+N21_F28 [label = "0-128-0" width = 1.5 group = 22 style = filled, fillcolor = lavenderblush1];
+N22_F28 [label = "0-128-0" width = 1.5 group = 23 style = filled, fillcolor = lavenderblush1];
+
+
+ //Creacion de enlaces de nodos
+//E N L A C E S  F I L A   1
+Column12->N12_F1 [dir = both];
+Fila1->N12_F1 [dir = both];
+N12_F1->N13_F1 [dir = both];
+Column13->N13_F1 [dir = both];
+N13_F1->N14_F1 [dir = both];
+Column14->N14_F1 [dir = both];
+N14_F1->N15_F1 [dir = both];
+Column15->N15_F1 [dir = both];
+N15_F1->N16_F1 [dir = both];
+Column16->N16_F1 [dir = both];
+N16_F1->N17_F1 [dir = both];
+Column17->N17_F1 [dir = both];
+N17_F1->N18_F1 [dir = both];
+Column18->N18_F1 [dir = both];
+//Alineacion vertical de nodos con la fila
+{rank = same; Fila1; N12_F1; N13_F1; N14_F1; N15_F1; N16_F1; N17_F1; N18_F1;  };
+
+//E N L A C E S  F I L A   2
+Column11->N11_F2 [dir = both];
+Fila2->N11_F2 [dir = both];
+N11_F2->N12_F2 [dir = both];
+N12_F2->N12_F1 [dir = both];
+N12_F2->N13_F2 [dir = both];
+N13_F2->N13_F1 [dir = both];
+N13_F2->N19_F2 [dir = both];
+Column19->N19_F2 [dir = both];
+//Alineacion vertical de nodos con la fila
+{rank = same; Fila2; N11_F2; N12_F2; N13_F2; N19_F2;  };
+
+//E N L A C E S  F I L A   3
+Column2->N2_F3 [dir = both];
+Fila3->N2_F3 [dir = both];
+N2_F3->N3_F3 [dir = both];
+Column3->N3_F3 [dir = both];
+N3_F3->N10_F3 [dir = both];
+Column10->N10_F3 [dir = both];
+N10_F3->N11_F3 [dir = both];
+N11_F3->N11_F2 [dir = both];
+N11_F3->N13_F3 [dir = both];
+N13_F3->N13_F2 [dir = both];
+N13_F3->N15_F3 [dir = both];
+N15_F3->N15_F1 [dir = both];
+N15_F3->N16_F3 [dir = both];
+N16_F3->N16_F1 [dir = both];
+N16_F3->N17_F3 [dir = both];
+N17_F3->N17_F1 [dir = both];
+N17_F3->N18_F3 [dir = both];
+N18_F3->N18_F1 [dir = both];
+N18_F3->N20_F3 [dir = both];
+Column20->N20_F3 [dir = both];
+N20_F3->N26_F3 [dir = both];
+Column26->N26_F3 [dir = both];
+N26_F3->N27_F3 [dir = both];
+Column27->N27_F3 [dir = both];
+//Alineacion vertical de nodos con la fila
+{rank = same; Fila3; N2_F3; N3_F3; N10_F3; N11_F3; N13_F3; N15_F3; N16_F3; N17_F3; N18_F3; N20_F3; N26_F3; N27_F3;  };
+
+//E N L A C E S  F I L A   4
+N2_F4->N2_F3 [dir = both];
+Fila4->N2_F4 [dir = both];
+N2_F4->N4_F4 [dir = both];
+Column4->N4_F4 [dir = both];
+N4_F4->N9_F4 [dir = both];
+Column9->N9_F4 [dir = both];
+N9_F4->N10_F4 [dir = both];
+N10_F4->N10_F3 [dir = both];
+N10_F4->N11_F4 [dir = both];
+N11_F4->N11_F3 [dir = both];
+N11_F4->N12_F4 [dir = both];
+N12_F4->N12_F2 [dir = both];
+N12_F4->N14_F4 [dir = both];
+N14_F4->N14_F1 [dir = both];
+N14_F4->N16_F4 [dir = both];
+N16_F4->N16_F3 [dir = both];
+N16_F4->N17_F4 [dir = both];
+N17_F4->N17_F3 [dir = both];
+N17_F4->N21_F4 [dir = both];
+Column21->N21_F4 [dir = both];
+N21_F4->N25_F4 [dir = both];
+Column25->N25_F4 [dir = both];
+N25_F4->N27_F4 [dir = both];
+N27_F4->N27_F3 [dir = both];
+//Alineacion vertical de nodos con la fila
+{rank = same; Fila4; N2_F4; N4_F4; N9_F4; N10_F4; N11_F4; N12_F4; N14_F4; N16_F4; N17_F4; N21_F4; N25_F4; N27_F4;  };
+
+//E N L A C E S  F I L A   5
+N2_F5->N2_F4 [dir = both];
+Fila5->N2_F5 [dir = both];
+N2_F5->N3_F5 [dir = both];
+N3_F5->N3_F3 [dir = both];
+N3_F5->N5_F5 [dir = both];
+Column5->N5_F5 [dir = both];
+N5_F5->N6_F5 [dir = both];
+Column6->N6_F5 [dir = both];
+N6_F5->N7_F5 [dir = both];
+Column7->N7_F5 [dir = both];
+N7_F5->N8_F5 [dir = both];
+Column8->N8_F5 [dir = both];
+N8_F5->N9_F5 [dir = both];
+N9_F5->N9_F4 [dir = both];
+N9_F5->N10_F5 [dir = both];
+N10_F5->N10_F4 [dir = both];
+N10_F5->N11_F5 [dir = both];
+N11_F5->N11_F4 [dir = both];
+N11_F5->N12_F5 [dir = both];
+N12_F5->N12_F4 [dir = both];
+N12_F5->N13_F5 [dir = both];
+N13_F5->N13_F3 [dir = both];
+N13_F5->N14_F5 [dir = both];
+N14_F5->N14_F4 [dir = both];
+N14_F5->N15_F5 [dir = both];
+N15_F5->N15_F3 [dir = both];
+N15_F5->N16_F5 [dir = both];
+N16_F5->N16_F4 [dir = both];
+N16_F5->N17_F5 [dir = both];
+N17_F5->N17_F4 [dir = both];
+N17_F5->N21_F5 [dir = both];
+N21_F5->N21_F4 [dir = both];
+N21_F5->N22_F5 [dir = both];
+Column22->N22_F5 [dir = both];
+N22_F5->N23_F5 [dir = both];
+Column23->N23_F5 [dir = both];
+N23_F5->N24_F5 [dir = both];
+Column24->N24_F5 [dir = both];
+N24_F5->N27_F5 [dir = both];
+N27_F5->N27_F4 [dir = both];
+//Alineacion vertical de nodos con la fila
+{rank = same; Fila5; N2_F5; N3_F5; N5_F5; N6_F5; N7_F5; N8_F5; N9_F5; N10_F5; N11_F5; N12_F5; N13_F5; N14_F5; N15_F5; N16_F5; N17_F5; N21_F5; N22_F5; N23_F5; N24_F5; N27_F5;  };
+
+//E N L A C E S  F I L A   6
+N3_F6->N3_F5 [dir = both];
+Fila6->N3_F6 [dir = both];
+N3_F6->N8_F6 [dir = both];
+N8_F6->N8_F5 [dir = both];
+N8_F6->N9_F6 [dir = both];
+N9_F6->N9_F5 [dir = both];
+N9_F6->N10_F6 [dir = both];
+N10_F6->N10_F5 [dir = both];
+N10_F6->N14_F6 [dir = both];
+N14_F6->N14_F5 [dir = both];
+N14_F6->N15_F6 [dir = both];
+N15_F6->N15_F5 [dir = both];
+N15_F6->N16_F6 [dir = both];
+N16_F6->N16_F5 [dir = both];
+N16_F6->N20_F6 [dir = both];
+N20_F6->N20_F3 [dir = both];
+N20_F6->N21_F6 [dir = both];
+N21_F6->N21_F5 [dir = both];
+N21_F6->N22_F6 [dir = both];
+N22_F6->N22_F5 [dir = both];
+N22_F6->N24_F6 [dir = both];
+N24_F6->N24_F5 [dir = both];
+N24_F6->N26_F6 [dir = both];
+N26_F6->N26_F3 [dir = both];
+//Alineacion vertical de nodos con la fila
+{rank = same; Fila6; N3_F6; N8_F6; N9_F6; N10_F6; N14_F6; N15_F6; N16_F6; N20_F6; N21_F6; N22_F6; N24_F6; N26_F6;  };
+
+//E N L A C E S  F I L A   7
+N4_F7->N4_F4 [dir = both];
+Fila7->N4_F7 [dir = both];
+N4_F7->N5_F7 [dir = both];
+N5_F7->N5_F5 [dir = both];
+N5_F7->N9_F7 [dir = both];
+N9_F7->N9_F6 [dir = both];
+N9_F7->N13_F7 [dir = both];
+N13_F7->N13_F5 [dir = both];
+N13_F7->N14_F7 [dir = both];
+N14_F7->N14_F6 [dir = both];
+N14_F7->N15_F7 [dir = both];
+N15_F7->N15_F6 [dir = both];
+N15_F7->N16_F7 [dir = both];
+N16_F7->N16_F6 [dir = both];
+N16_F7->N17_F7 [dir = both];
+N17_F7->N17_F5 [dir = both];
+N17_F7->N25_F7 [dir = both];
+N25_F7->N25_F4 [dir = both];
+N25_F7->N26_F7 [dir = both];
+N26_F7->N26_F6 [dir = both];
+//Alineacion vertical de nodos con la fila
+{rank = same; Fila7; N4_F7; N5_F7; N9_F7; N13_F7; N14_F7; N15_F7; N16_F7; N17_F7; N25_F7; N26_F7;  };
+
+//E N L A C E S  F I L A   8
+N5_F8->N5_F7 [dir = both];
+Fila8->N5_F8 [dir = both];
+N5_F8->N6_F8 [dir = both];
+N6_F8->N6_F5 [dir = both];
+N6_F8->N7_F8 [dir = both];
+N7_F8->N7_F5 [dir = both];
+N7_F8->N8_F8 [dir = both];
+N8_F8->N8_F6 [dir = both];
+N8_F8->N9_F8 [dir = both];
+N9_F8->N9_F7 [dir = both];
+N9_F8->N14_F8 [dir = both];
+N14_F8->N14_F7 [dir = both];
+N14_F8->N15_F8 [dir = both];
+N15_F8->N15_F7 [dir = both];
+N15_F8->N16_F8 [dir = both];
+N16_F8->N16_F7 [dir = both];
+N16_F8->N21_F8 [dir = both];
+N21_F8->N21_F6 [dir = both];
+N21_F8->N22_F8 [dir = both];
+N22_F8->N22_F6 [dir = both];
+N22_F8->N23_F8 [dir = both];
+N23_F8->N23_F5 [dir = both];
+N23_F8->N24_F8 [dir = both];
+N24_F8->N24_F6 [dir = both];
+N24_F8->N25_F8 [dir = both];
+N25_F8->N25_F7 [dir = both];
+//Alineacion vertical de nodos con la fila
+{rank = same; Fila8; N5_F8; N6_F8; N7_F8; N8_F8; N9_F8; N14_F8; N15_F8; N16_F8; N21_F8; N22_F8; N23_F8; N24_F8; N25_F8;  };
+
+//E N L A C E S  F I L A   9
+N6_F9->N6_F8 [dir = both];
+Fila9->N6_F9 [dir = both];
+N6_F9->N7_F9 [dir = both];
+N7_F9->N7_F8 [dir = both];
+N7_F9->N8_F9 [dir = both];
+N8_F9->N8_F8 [dir = both];
+N8_F9->N9_F9 [dir = both];
+N9_F9->N9_F8 [dir = both];
+N9_F9->N10_F9 [dir = both];
+N10_F9->N10_F6 [dir = both];
+N10_F9->N11_F9 [dir = both];
+N11_F9->N11_F5 [dir = both];
+N11_F9->N12_F9 [dir = both];
+N12_F9->N12_F5 [dir = both];
+N12_F9->N13_F9 [dir = both];
+N13_F9->N13_F7 [dir = both];
+N13_F9->N17_F9 [dir = both];
+N17_F9->N17_F7 [dir = both];
+N17_F9->N18_F9 [dir = both];
+N18_F9->N18_F3 [dir = both];
+N18_F9->N19_F9 [dir = both];
+N19_F9->N19_F2 [dir = both];
+N19_F9->N21_F9 [dir = both];
+N21_F9->N21_F8 [dir = both];
+N21_F9->N22_F9 [dir = both];
+N22_F9->N22_F8 [dir = both];
+N22_F9->N23_F9 [dir = both];
+N23_F9->N23_F8 [dir = both];
+N23_F9->N24_F9 [dir = both];
+N24_F9->N24_F8 [dir = both];
+//Alineacion vertical de nodos con la fila
+{rank = same; Fila9; N6_F9; N7_F9; N8_F9; N9_F9; N10_F9; N11_F9; N12_F9; N13_F9; N17_F9; N18_F9; N19_F9; N21_F9; N22_F9; N23_F9; N24_F9;  };
+
+//E N L A C E S  F I L A   10
+N8_F10->N8_F9 [dir = both];
+Fila10->N8_F10 [dir = both];
+N8_F10->N9_F10 [dir = both];
+N9_F10->N9_F9 [dir = both];
+N9_F10->N10_F10 [dir = both];
+N10_F10->N10_F9 [dir = both];
+N10_F10->N11_F10 [dir = both];
+N11_F10->N11_F9 [dir = both];
+N11_F10->N12_F10 [dir = both];
+N12_F10->N12_F9 [dir = both];
+N12_F10->N13_F10 [dir = both];
+N13_F10->N13_F9 [dir = both];
+N13_F10->N14_F10 [dir = both];
+N14_F10->N14_F8 [dir = both];
+N14_F10->N15_F10 [dir = both];
+N15_F10->N15_F8 [dir = both];
+N15_F10->N16_F10 [dir = both];
+N16_F10->N16_F8 [dir = both];
+N16_F10->N17_F10 [dir = both];
+N17_F10->N17_F9 [dir = both];
+N17_F10->N18_F10 [dir = both];
+N18_F10->N18_F9 [dir = both];
+N18_F10->N19_F10 [dir = both];
+N19_F10->N19_F9 [dir = both];
+N19_F10->N20_F10 [dir = both];
+N20_F10->N20_F6 [dir = both];
+N20_F10->N21_F10 [dir = both];
+N21_F10->N21_F9 [dir = both];
+N21_F10->N22_F10 [dir = both];
+N22_F10->N22_F9 [dir = both];
+//Alineacion vertical de nodos con la fila
+{rank = same; Fila10; N8_F10; N9_F10; N10_F10; N11_F10; N12_F10; N13_F10; N14_F10; N15_F10; N16_F10; N17_F10; N18_F10; N19_F10; N20_F10; N21_F10; N22_F10;  };
+
+//E N L A C E S  F I L A   11
+N9_F11->N9_F10 [dir = both];
+Fila11->N9_F11 [dir = both];
+N9_F11->N10_F11 [dir = both];
+N10_F11->N10_F10 [dir = both];
+N10_F11->N11_F11 [dir = both];
+N11_F11->N11_F10 [dir = both];
+N11_F11->N12_F11 [dir = both];
+N12_F11->N12_F10 [dir = both];
+N12_F11->N14_F11 [dir = both];
+N14_F11->N14_F10 [dir = both];
+N14_F11->N16_F11 [dir = both];
+N16_F11->N16_F10 [dir = both];
+N16_F11->N18_F11 [dir = both];
+N18_F11->N18_F10 [dir = both];
+N18_F11->N19_F11 [dir = both];
+N19_F11->N19_F10 [dir = both];
+N19_F11->N20_F11 [dir = both];
+N20_F11->N20_F10 [dir = both];
+N20_F11->N21_F11 [dir = both];
+N21_F11->N21_F10 [dir = both];
+N21_F11->N22_F11 [dir = both];
+N22_F11->N22_F10 [dir = both];
+//Alineacion vertical de nodos con la fila
+{rank = same; Fila11; N9_F11; N10_F11; N11_F11; N12_F11; N14_F11; N16_F11; N18_F11; N19_F11; N20_F11; N21_F11; N22_F11;  };
+
+//E N L A C E S  F I L A   12
+N8_F12->N8_F10 [dir = both];
+Fila12->N8_F12 [dir = both];
+N8_F12->N9_F12 [dir = both];
+N9_F12->N9_F11 [dir = both];
+N9_F12->N10_F12 [dir = both];
+N10_F12->N10_F11 [dir = both];
+N10_F12->N11_F12 [dir = both];
+N11_F12->N11_F11 [dir = both];
+N11_F12->N12_F12 [dir = both];
+N12_F12->N12_F11 [dir = both];
+N12_F12->N18_F12 [dir = both];
+N18_F12->N18_F11 [dir = both];
+N18_F12->N19_F12 [dir = both];
+N19_F12->N19_F11 [dir = both];
+N19_F12->N20_F12 [dir = both];
+N20_F12->N20_F11 [dir = both];
+N20_F12->N21_F12 [dir = both];
+N21_F12->N21_F11 [dir = both];
+N21_F12->N22_F12 [dir = both];
+N22_F12->N22_F11 [dir = both];
+//Alineacion vertical de nodos con la fila
+{rank = same; Fila12; N8_F12; N9_F12; N10_F12; N11_F12; N12_F12; N18_F12; N19_F12; N20_F12; N21_F12; N22_F12;  };
+
+//E N L A C E S  F I L A   13
+N7_F13->N7_F9 [dir = both];
+Fila13->N7_F13 [dir = both];
+N7_F13->N11_F13 [dir = both];
+N11_F13->N11_F12 [dir = both];
+N11_F13->N12_F13 [dir = both];
+N12_F13->N12_F12 [dir = both];
+N12_F13->N13_F13 [dir = both];
+N13_F13->N13_F10 [dir = both];
+N13_F13->N14_F13 [dir = both];
+N14_F13->N14_F11 [dir = both];
+N14_F13->N15_F13 [dir = both];
+N15_F13->N15_F10 [dir = both];
+N15_F13->N16_F13 [dir = both];
+N16_F13->N16_F11 [dir = both];
+N16_F13->N17_F13 [dir = both];
+N17_F13->N17_F10 [dir = both];
+N17_F13->N18_F13 [dir = both];
+N18_F13->N18_F12 [dir = both];
+N18_F13->N19_F13 [dir = both];
+N19_F13->N19_F12 [dir = both];
+//Alineacion vertical de nodos con la fila
+{rank = same; Fila13; N7_F13; N11_F13; N12_F13; N13_F13; N14_F13; N15_F13; N16_F13; N17_F13; N18_F13; N19_F13;  };
+
+//E N L A C E S  F I L A   14
+N6_F14->N6_F9 [dir = both];
+Fila14->N6_F14 [dir = both];
+N6_F14->N12_F14 [dir = both];
+N12_F14->N12_F13 [dir = both];
+N12_F14->N13_F14 [dir = both];
+N13_F14->N13_F13 [dir = both];
+N13_F14->N14_F14 [dir = both];
+N14_F14->N14_F13 [dir = both];
+N14_F14->N15_F14 [dir = both];
+N15_F14->N15_F13 [dir = both];
+N15_F14->N16_F14 [dir = both];
+N16_F14->N16_F13 [dir = both];
+N16_F14->N17_F14 [dir = both];
+N17_F14->N17_F13 [dir = both];
+N17_F14->N18_F14 [dir = both];
+N18_F14->N18_F13 [dir = both];
+N18_F14->N23_F14 [dir = both];
+N23_F14->N23_F9 [dir = both];
+//Alineacion vertical de nodos con la fila
+{rank = same; Fila14; N6_F14; N12_F14; N13_F14; N14_F14; N15_F14; N16_F14; N17_F14; N18_F14; N23_F14;  };
+
+//E N L A C E S  F I L A   15
+N5_F15->N5_F8 [dir = both];
+Fila15->N5_F15 [dir = both];
+N5_F15->N12_F15 [dir = both];
+N12_F15->N12_F14 [dir = both];
+N12_F15->N13_F15 [dir = both];
+N13_F15->N13_F14 [dir = both];
+N13_F15->N14_F15 [dir = both];
+N14_F15->N14_F14 [dir = both];
+N14_F15->N15_F15 [dir = both];
+N15_F15->N15_F14 [dir = both];
+N15_F15->N16_F15 [dir = both];
+N16_F15->N16_F14 [dir = both];
+N16_F15->N17_F15 [dir = both];
+N17_F15->N17_F14 [dir = both];
+N17_F15->N24_F15 [dir = both];
+N24_F15->N24_F9 [dir = both];
+//Alineacion vertical de nodos con la fila
+{rank = same; Fila15; N5_F15; N12_F15; N13_F15; N14_F15; N15_F15; N16_F15; N17_F15; N24_F15;  };
+
+//E N L A C E S  F I L A   16
+N4_F16->N4_F7 [dir = both];
+Fila16->N4_F16 [dir = both];
+N4_F16->N12_F16 [dir = both];
+N12_F16->N12_F15 [dir = both];
+N12_F16->N13_F16 [dir = both];
+N13_F16->N13_F15 [dir = both];
+N13_F16->N14_F16 [dir = both];
+N14_F16->N14_F15 [dir = both];
+N14_F16->N16_F16 [dir = both];
+N16_F16->N16_F15 [dir = both];
+N16_F16->N25_F16 [dir = both];
+N25_F16->N25_F8 [dir = both];
+//Alineacion vertical de nodos con la fila
+{rank = same; Fila16; N4_F16; N12_F16; N13_F16; N14_F16; N16_F16; N25_F16;  };
+
+//E N L A C E S  F I L A   17
+N3_F17->N3_F6 [dir = both];
+Fila17->N3_F17 [dir = both];
+N3_F17->N13_F17 [dir = both];
+N13_F17->N13_F16 [dir = both];
+N13_F17->N14_F17 [dir = both];
+N14_F17->N14_F16 [dir = both];
+N14_F17->N15_F17 [dir = both];
+N15_F17->N15_F15 [dir = both];
+N15_F17->N17_F17 [dir = both];
+N17_F17->N17_F15 [dir = both];
+N17_F17->N26_F17 [dir = both];
+N26_F17->N26_F7 [dir = both];
+//Alineacion vertical de nodos con la fila
+{rank = same; Fila17; N3_F17; N13_F17; N14_F17; N15_F17; N17_F17; N26_F17;  };
+
+//E N L A C E S  F I L A   18
+N13_F18->N13_F17 [dir = both];
+Fila18->N13_F18 [dir = both];
+N13_F18->N15_F18 [dir = both];
+N15_F18->N15_F17 [dir = both];
+N15_F18->N17_F18 [dir = both];
+N17_F18->N17_F17 [dir = both];
+N17_F18->N26_F18 [dir = both];
+N26_F18->N26_F17 [dir = both];
+//Alineacion vertical de nodos con la fila
+{rank = same; Fila18; N13_F18; N15_F18; N17_F18; N26_F18;  };
+
+//E N L A C E S  F I L A   19
+N2_F19->N2_F5 [dir = both];
+Fila19->N2_F19 [dir = both];
+N2_F19->N3_F19 [dir = both];
+N3_F19->N3_F17 [dir = both];
+N3_F19->N13_F19 [dir = both];
+N13_F19->N13_F18 [dir = both];
+N13_F19->N15_F19 [dir = both];
+N15_F19->N15_F18 [dir = both];
+N15_F19->N17_F19 [dir = both];
+N17_F19->N17_F18 [dir = both];
+N17_F19->N26_F19 [dir = both];
+N26_F19->N26_F18 [dir = both];
+//Alineacion vertical de nodos con la fila
+{rank = same; Fila19; N2_F19; N3_F19; N13_F19; N15_F19; N17_F19; N26_F19;  };
+
+//E N L A C E S  F I L A   20
+N2_F20->N2_F19 [dir = both];
+Fila20->N2_F20 [dir = both];
+N2_F20->N5_F20 [dir = both];
+N5_F20->N5_F15 [dir = both];
+N5_F20->N7_F20 [dir = both];
+N7_F20->N7_F13 [dir = both];
+N7_F20->N13_F20 [dir = both];
+N13_F20->N13_F19 [dir = both];
+N13_F20->N15_F20 [dir = both];
+N15_F20->N15_F19 [dir = both];
+N15_F20->N17_F20 [dir = both];
+N17_F20->N17_F19 [dir = both];
+N17_F20->N26_F20 [dir = both];
+N26_F20->N26_F19 [dir = both];
+//Alineacion vertical de nodos con la fila
+{rank = same; Fila20; N2_F20; N5_F20; N7_F20; N13_F20; N15_F20; N17_F20; N26_F20;  };
+
+//E N L A C E S  F I L A   21
+N2_F21->N2_F20 [dir = both];
+Fila21->N2_F21 [dir = both];
+N2_F21->N5_F21 [dir = both];
+N5_F21->N5_F20 [dir = both];
+N5_F21->N6_F21 [dir = both];
+N6_F21->N6_F14 [dir = both];
+N6_F21->N7_F21 [dir = both];
+N7_F21->N7_F20 [dir = both];
+N7_F21->N13_F21 [dir = both];
+N13_F21->N13_F20 [dir = both];
+N13_F21->N15_F21 [dir = both];
+N15_F21->N15_F20 [dir = both];
+N15_F21->N17_F21 [dir = both];
+N17_F21->N17_F20 [dir = both];
+N17_F21->N26_F21 [dir = both];
+N26_F21->N26_F20 [dir = both];
+//Alineacion vertical de nodos con la fila
+{rank = same; Fila21; N2_F21; N5_F21; N6_F21; N7_F21; N13_F21; N15_F21; N17_F21; N26_F21;  };
+
+//E N L A C E S  F I L A   22
+N3_F22->N3_F19 [dir = both];
+Fila22->N3_F22 [dir = both];
+N3_F22->N4_F22 [dir = both];
+N4_F22->N4_F16 [dir = both];
+N4_F22->N5_F22 [dir = both];
+N5_F22->N5_F21 [dir = both];
+N5_F22->N7_F22 [dir = both];
+N7_F22->N7_F21 [dir = both];
+N7_F22->N13_F22 [dir = both];
+N13_F22->N13_F21 [dir = both];
+N13_F22->N15_F22 [dir = both];
+N15_F22->N15_F21 [dir = both];
+N15_F22->N17_F22 [dir = both];
+N17_F22->N17_F21 [dir = both];
+N17_F22->N23_F22 [dir = both];
+N23_F22->N23_F14 [dir = both];
+N23_F22->N26_F22 [dir = both];
+N26_F22->N26_F21 [dir = both];
+//Alineacion vertical de nodos con la fila
+{rank = same; Fila22; N3_F22; N4_F22; N5_F22; N7_F22; N13_F22; N15_F22; N17_F22; N23_F22; N26_F22;  };
+
+//E N L A C E S  F I L A   23
+N4_F23->N4_F22 [dir = both];
+Fila23->N4_F23 [dir = both];
+N4_F23->N7_F23 [dir = both];
+N7_F23->N7_F22 [dir = both];
+N7_F23->N13_F23 [dir = both];
+N13_F23->N13_F22 [dir = both];
+N13_F23->N15_F23 [dir = both];
+N15_F23->N15_F22 [dir = both];
+N15_F23->N17_F23 [dir = both];
+N17_F23->N17_F22 [dir = both];
+N17_F23->N23_F23 [dir = both];
+N23_F23->N23_F22 [dir = both];
+N23_F23->N24_F23 [dir = both];
+N24_F23->N24_F15 [dir = both];
+N24_F23->N25_F23 [dir = both];
+N25_F23->N25_F16 [dir = both];
+//Alineacion vertical de nodos con la fila
+{rank = same; Fila23; N4_F23; N7_F23; N13_F23; N15_F23; N17_F23; N23_F23; N24_F23; N25_F23;  };
+
+//E N L A C E S  F I L A   24
+N4_F24->N4_F23 [dir = both];
+Fila24->N4_F24 [dir = both];
+N4_F24->N7_F24 [dir = both];
+N7_F24->N7_F23 [dir = both];
+N7_F24->N13_F24 [dir = both];
+N13_F24->N13_F23 [dir = both];
+N13_F24->N15_F24 [dir = both];
+N15_F24->N15_F23 [dir = both];
+N15_F24->N17_F24 [dir = both];
+N17_F24->N17_F23 [dir = both];
+N17_F24->N23_F24 [dir = both];
+N23_F24->N23_F23 [dir = both];
+//Alineacion vertical de nodos con la fila
+{rank = same; Fila24; N4_F24; N7_F24; N13_F24; N15_F24; N17_F24; N23_F24;  };
+
+//E N L A C E S  F I L A   25
+N4_F25->N4_F24 [dir = both];
+Fila25->N4_F25 [dir = both];
+N4_F25->N7_F25 [dir = both];
+N7_F25->N7_F24 [dir = both];
+N7_F25->N12_F25 [dir = both];
+N12_F25->N12_F16 [dir = both];
+N12_F25->N13_F25 [dir = both];
+N13_F25->N13_F24 [dir = both];
+N13_F25->N15_F25 [dir = both];
+N15_F25->N15_F24 [dir = both];
+N15_F25->N17_F25 [dir = both];
+N17_F25->N17_F24 [dir = both];
+N17_F25->N18_F25 [dir = both];
+N18_F25->N18_F14 [dir = both];
+N18_F25->N23_F25 [dir = both];
+N23_F25->N23_F24 [dir = both];
+//Alineacion vertical de nodos con la fila
+{rank = same; Fila25; N4_F25; N7_F25; N12_F25; N13_F25; N15_F25; N17_F25; N18_F25; N23_F25;  };
+
+//E N L A C E S  F I L A   26
+N4_F26->N4_F25 [dir = both];
+Fila26->N4_F26 [dir = both];
+N4_F26->N7_F26 [dir = both];
+N7_F26->N7_F25 [dir = both];
+N7_F26->N12_F26 [dir = both];
+N12_F26->N12_F25 [dir = both];
+N12_F26->N13_F26 [dir = both];
+N13_F26->N13_F25 [dir = both];
+N13_F26->N15_F26 [dir = both];
+N15_F26->N15_F25 [dir = both];
+N15_F26->N16_F26 [dir = both];
+N16_F26->N16_F16 [dir = both];
+N16_F26->N17_F26 [dir = both];
+N17_F26->N17_F25 [dir = both];
+N17_F26->N18_F26 [dir = both];
+N18_F26->N18_F25 [dir = both];
+N18_F26->N23_F26 [dir = both];
+N23_F26->N23_F25 [dir = both];
+//Alineacion vertical de nodos con la fila
+{rank = same; Fila26; N4_F26; N7_F26; N12_F26; N13_F26; N15_F26; N16_F26; N17_F26; N18_F26; N23_F26;  };
+
+//E N L A C E S  F I L A   27
+N4_F27->N4_F26 [dir = both];
+Fila27->N4_F27 [dir = both];
+N4_F27->N8_F27 [dir = both];
+N8_F27->N8_F12 [dir = both];
+N8_F27->N12_F27 [dir = both];
+N12_F27->N12_F26 [dir = both];
+N12_F27->N13_F27 [dir = both];
+N13_F27->N13_F26 [dir = both];
+N13_F27->N15_F27 [dir = both];
+N15_F27->N15_F26 [dir = both];
+N15_F27->N16_F27 [dir = both];
+N16_F27->N16_F26 [dir = both];
+N16_F27->N17_F27 [dir = both];
+N17_F27->N17_F26 [dir = both];
+N17_F27->N18_F27 [dir = both];
+N18_F27->N18_F26 [dir = both];
+N18_F27->N19_F27 [dir = both];
+N19_F27->N19_F13 [dir = both];
+N19_F27->N20_F27 [dir = both];
+N20_F27->N20_F12 [dir = both];
+N20_F27->N23_F27 [dir = both];
+N23_F27->N23_F26 [dir = both];
+//Alineacion vertical de nodos con la fila
+{rank = same; Fila27; N4_F27; N8_F27; N12_F27; N13_F27; N15_F27; N16_F27; N17_F27; N18_F27; N19_F27; N20_F27; N23_F27;  };
+
+//E N L A C E S  F I L A   28
+N4_F28->N4_F27 [dir = both];
+Fila28->N4_F28 [dir = both];
+N4_F28->N8_F28 [dir = both];
+N8_F28->N8_F27 [dir = both];
+N8_F28->N9_F28 [dir = both];
+N9_F28->N9_F12 [dir = both];
+N9_F28->N10_F28 [dir = both];
+N10_F28->N10_F12 [dir = both];
+N10_F28->N11_F28 [dir = both];
+N11_F28->N11_F13 [dir = both];
+N11_F28->N12_F28 [dir = both];
+N12_F28->N12_F27 [dir = both];
+N12_F28->N13_F28 [dir = both];
+N13_F28->N13_F27 [dir = both];
+N13_F28->N14_F28 [dir = both];
+N14_F28->N14_F17 [dir = both];
+N14_F28->N16_F28 [dir = both];
+N16_F28->N16_F27 [dir = both];
+N16_F28->N17_F28 [dir = both];
+N17_F28->N17_F27 [dir = both];
+N17_F28->N18_F28 [dir = both];
+N18_F28->N18_F27 [dir = both];
+N18_F28->N19_F28 [dir = both];
+N19_F28->N19_F27 [dir = both];
+N19_F28->N20_F28 [dir = both];
+N20_F28->N20_F27 [dir = both];
+N20_F28->N21_F28 [dir = both];
+N21_F28->N21_F12 [dir = both];
+N21_F28->N22_F28 [dir = both];
+N22_F28->N22_F12 [dir = both];
+//Alineacion vertical de nodos con la fila
+{rank = same; Fila28; N4_F28; N8_F28; N9_F28; N10_F28; N11_F28; N12_F28; N13_F28; N14_F28; N16_F28; N17_F28; N18_F28; N19_F28; N20_F28; N21_F28; N22_F28;  };
+
+}

@@ -452,7 +452,10 @@ void cuboDisperso::graficarMatriz(string nombreCapa, int numeroCapa, string carp
     const char *cmd2 = comando2.c_str();
     system(cmd2);
 
-
+    //Abrir grafica.
+    string comando3 = "eog Reports/"+carpeta+"/Matrix_"+nombreCapa+".png";
+    const char *cmd3 = comando3.c_str();
+    system(cmd3);
 }
 
 listaCubo* cuboDisperso::linearMap_byRow(int z){
