@@ -617,6 +617,7 @@ void Menu::exportarFiltro(listaFiltros *filtros, ArbolB *arbolImagenes, string n
        fil = fil->next;
        n++;
     }
+    cin.ignore();
     cout << "Escoja que filtro aplicado sobre "+nombreImagen+" quiere exportar:" << endl;
     cin >> opcion;
     nodoFiltro *f = filtros->obtener(opcion);
@@ -769,16 +770,106 @@ listaFiltros *Menu::editSelected(cuboDisperso *selectedImage, listaFiltros *filt
         cout << "Capa inexistente" << endl;
         return editSelected(selectedImage, filtros);
     }
-
-
     return filtros;
-
-
 }
 
 listaFiltros *Menu::editFilter(listaFiltros *filtros){
-
-
+    system("clear");
+    cout << "---- MANUAL EDIT - Filters ----" << endl;
+    nodoFiltro *f = filtros->head;
+    int n = 1;
+    cout << to_string(n) << ". " << f->nombre << endl;
+    f = f->next;
+    n++;
+    while(f != filtros->head){
+        cout << to_string(n) << ". " << f->nombre << endl;
+        f = f->next;
+        n++;
+    }
+    int op = 0;
+    cin >> op;
+    f = filtros->obtener(op);
+    NodoCubo *capa = f->imagenFiltro->root->upper;
+    int opcion = 0;
+    cout << "Numero      Capa" << endl;
+    while(capa != NULL){
+        cout << "  " << capa->z << "     "<< capa->layerName << endl;
+        capa = capa->upper;
+    }
+    cout << "Escoja el NUMERO de capa: ";
+    cin >> opcion;
+    capa = f->imagenFiltro->root->upper;
+    bool flag = false;
+    while(capa != NULL){
+        if(opcion == capa->z){
+            flag = true;
+            break;
+        }
+        capa = capa->upper;
+    }
+    if(flag){
+        int x,y;
+        cout << "---- LAYER: " << capa->layerName << " ----" << endl;
+        cout << "Coordenada X: ";
+        cin >> x;
+        cout << "Coordenada Y: ";
+        cin >> y;
+        NodoCubo *fila = capa->down;
+        NodoCubo *columna;
+        bool foundcoords = false;
+        system("clear");
+        while(fila != NULL){
+            if(fila->y == y){
+                columna = fila->next;
+                while(columna != NULL){
+                    if(columna->x == x){
+                        cout << "----------- (" << columna->x << "," << columna->y << ")" << " ----------- "<<endl;
+                        cout << "R-G-B Actual: " << columna->info << endl;
+                        cout << "-------------------------------" << endl;
+                        foundcoords = true;
+                        int r,g,b;
+                        cout << "New R: ";
+                        cin >> r;
+                        cout << "New G: ";
+                        cin >> g;
+                        cout << "New B: ";
+                        cin >> b;
+                        string rgb = to_string(r)+"-"+to_string(g)+"-"+to_string(b);
+                        columna->info = rgb;
+                        cout << "Successfully edited!" << endl;
+                        return filtros;
+                        cin.ignore();
+                        cin.ignore();
+                        break;
+                    }
+                    columna = columna->next;
+                }
+                break;
+            }
+            fila = fila->down;
+        }
+        if(foundcoords == false){
+            cout << "----------- (" << x << "," << y << ")" << " ----------- "<<endl;
+            cout << "R-G-B Actual: sin color" << endl;
+            cout << "-------------------------------" << endl;
+            int r,g,b;
+            cout << "New R: ";
+            cin >> r;
+            cout << "New G: ";
+            cin >> g;
+            cout << "New B: ";
+            cin >> b;
+            string rgb = to_string(r)+"-"+to_string(g)+"-"+to_string(b);
+            f->imagenFiltro->insert_element(rgb,capa->layerName,x,y,capa->z);
+            cout << "New color Successfully added!" << endl;
+            cin.ignore();
+            cin.ignore();
+        }
+    }else{
+        cout << "Capa inexistente" << endl;
+        return editFilter(filtros);
+    }
+    return filtros;
 }
 
 listaFiltros *Menu::manualEdit(cuboDisperso *selectedImage, listaFiltros *filtros){
@@ -792,14 +883,14 @@ listaFiltros *Menu::manualEdit(cuboDisperso *selectedImage, listaFiltros *filtro
         cin >> opcion;
         switch(opcion){
             case 1:
-                editSelected(selectedImage, filtros);
+                filtros = editSelected(selectedImage, filtros);
                 break;
             case 2:
                 if(filtros->esVacio()){
                     system("clear");
                     cout << "No hay filtros aplicados!"<< endl;
                 }else{
-                    editFilter(filtros);
+                    filtros = editFilter(filtros);
                     system("clear");
                 }
                 break;
@@ -811,6 +902,7 @@ listaFiltros *Menu::manualEdit(cuboDisperso *selectedImage, listaFiltros *filtro
                 break;
         }
     }
+    return filtros;
 
 }
 
