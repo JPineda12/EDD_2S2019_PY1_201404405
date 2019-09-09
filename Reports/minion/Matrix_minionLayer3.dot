@@ -66,6 +66,7 @@ Layer3->Fila1;
 
  //Creacion de nodos
 //(^<---------------------- F I L A   1---------------------->
+N1_F1 [label = "0-0-0" width = 1.5 group = 2 style = filled, fillcolor = lavenderblush1];
 N5_F1 [label = "99-109-114" width = 1.5 group = 6 style = filled, fillcolor = lavenderblush1];
 N6_F1 [label = "99-109-114" width = 1.5 group = 7 style = filled, fillcolor = lavenderblush1];
 
@@ -144,12 +145,14 @@ N9_F17 [label = "0-0-0" width = 1.5 group = 10 style = filled, fillcolor = laven
 
  //Creacion de enlaces de nodos
 //E N L A C E S  F I L A   1
+Column1->N1_F1 [dir = both];
+Fila1->N1_F1 [dir = both];
+N1_F1->N5_F1 [dir = both];
 Column5->N5_F1 [dir = both];
-Fila1->N5_F1 [dir = both];
 N5_F1->N6_F1 [dir = both];
 Column6->N6_F1 [dir = both];
 //Alineacion vertical de nodos con la fila
-{rank = same; Fila1; N5_F1; N6_F1;  };
+{rank = same; Fila1; N1_F1; N5_F1; N6_F1;  };
 
 //E N L A C E S  F I L A   2
 Column4->N4_F2 [dir = both];
@@ -164,7 +167,7 @@ Column7->N7_F2 [dir = both];
 {rank = same; Fila2; N4_F2; N5_F2; N6_F2; N7_F2;  };
 
 //E N L A C E S  F I L A   3
-Column1->N1_F3 [dir = both];
+N1_F3->N1_F1 [dir = both];
 Fila3->N1_F3 [dir = both];
 N1_F3->N2_F3 [dir = both];
 Column2->N2_F3 [dir = both];

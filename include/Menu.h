@@ -14,8 +14,10 @@ class Menu
         void insertImage(ArbolB *tree);
         cuboDisperso* selectImage(ArbolB *tree, listaFiltros *filtros);
         void printImageMenu(ArbolB *tree);
-        listaFiltros* filters(cuboDisperso *selectedimage, ArbolB *arbolImagenes, listaFiltros *filtros);
-        void manualEdit(cuboDisperso *selectedimage, listaFiltros *filtros);
+        listaFiltros *filters(cuboDisperso *selectedimage, ArbolB *arbolImagenes, listaFiltros *filtros);
+        listaFiltros *manualEdit(cuboDisperso *selectedimage, listaFiltros *filtros);
+        listaFiltros *editSelected(cuboDisperso *selectedImage, listaFiltros *filtros);
+        listaFiltros *editFilter(listaFiltros *filtros);
         void imageExport(cuboDisperso *selectedimage, listaFiltros *filtros, ArbolB *arbolImagenes);
         void reports(ArbolB *arbolImagenes, listaFiltros *filtros);
         void repImageLayer(ArbolB *arbolImagenes);

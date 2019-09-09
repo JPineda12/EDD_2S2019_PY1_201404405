@@ -290,9 +290,10 @@ void Menu::repImageLayer(ArbolB *arbolImagenes){
         int x = 1;
         while (temp != NULL){
             cout << "  " << temp->z << "    " << temp->layerName << endl;
+            x = temp->z;
             temp = temp->upper;
-            x++;
         }
+        x++;
         cout << "  " << to_string(x) << "    Graficar TODAS" << endl;
         cout << "\nNumero de capa a reportar: ";
         string capa = "";
@@ -468,8 +469,8 @@ void Menu::repFIndiv(listaFiltros *filtros){
             int x = 0;
             while(capa != NULL){
                 cout << "  " << to_string(capa->z) << "     " << capa->layerName << endl;
+                x = capa->z;
                 capa = capa->upper;
-                x++;
             }
             x++;
             cout << "  " << to_string(x) << "    Graficar TODAS" << endl;
@@ -686,6 +687,132 @@ void Menu::imageExport(cuboDisperso *selectedImage, listaFiltros *filtros, Arbol
         }
     }
 }
+listaFiltros *Menu::editSelected(cuboDisperso *selectedImage, listaFiltros *filtros){
+    system("clear");
+    cout << "---- MANUAL EDIT - OG Image ----" << endl;
+    NodoCubo *capa = selectedImage->root->upper;
+    int opcion = 0;
+    cout << "Numero      Capa" << endl;
+    while(capa != NULL){
+        cout << "  " << capa->z << "     "<< capa->layerName << endl;
+        capa = capa->upper;
+    }
+    cout << "Escoja el NUMERO de capa: ";
+    cin >> opcion;
+    capa = selectedImage->root->upper;
+    bool flag = false;
+    while(capa != NULL){
+        if(opcion == capa->z){
+            flag = true;
+            break;
+        }
+        capa = capa->upper;
+    }
+    if(flag){
+        int x,y;
+        cout << "---- LAYER: " << capa->layerName << " ----" << endl;
+        cout << "Coordenada X: ";
+        cin >> x;
+        cout << "Coordenada Y: ";
+        cin >> y;
+        NodoCubo *fila = capa->down;
+        NodoCubo *columna;
+        bool foundcoords = false;
+        system("clear");
+        while(fila != NULL){
+            if(fila->y == y){
+                columna = fila->next;
+                while(columna != NULL){
+                    if(columna->x == x){
+                        cout << "----------- (" << columna->x << "," << columna->y << ")" << " ----------- "<<endl;
+                        cout << "R-G-B Actual: " << columna->info << endl;
+                        cout << "-------------------------------" << endl;
+                        foundcoords = true;
+                        int r,g,b;
+                        cout << "New R: ";
+                        cin >> r;
+                        cout << "New G: ";
+                        cin >> g;
+                        cout << "New B: ";
+                        cin >> b;
+                        string rgb = to_string(r)+"-"+to_string(g)+"-"+to_string(b);
+                        columna->info = rgb;
+                        cout << "Successfully edited!" << endl;
+                        cin.ignore();
+                        cin.ignore();
+                        break;
+                    }
+                    columna = columna->next;
+                }
+                break;
+            }
+            fila = fila->down;
+        }
+        if(foundcoords == false){
+            cout << "----------- (" << x << "," << y << ")" << " ----------- "<<endl;
+            cout << "R-G-B Actual: sin color" << endl;
+            cout << "-------------------------------" << endl;
+            int r,g,b;
+            cout << "New R: ";
+            cin >> r;
+            cout << "New G: ";
+            cin >> g;
+            cout << "New B: ";
+            cin >> b;
+            string rgb = to_string(r)+"-"+to_string(g)+"-"+to_string(b);
+            selectedImage->insert_element(rgb,capa->layerName,x,y,capa->z);
+            cout << "New color Successfully added!" << endl;
+            cin.ignore();
+            cin.ignore();
+        }
+    }else{
+        cout << "Capa inexistente" << endl;
+        return editSelected(selectedImage, filtros);
+    }
+
+
+    return filtros;
+
+
+}
+
+listaFiltros *Menu::editFilter(listaFiltros *filtros){
+
+
+}
+
+listaFiltros *Menu::manualEdit(cuboDisperso *selectedImage, listaFiltros *filtros){
+    system("clear");
+    cout << "-------- MANUAL EDITING --------" << endl;
+    int opcion = 0;
+    while(opcion != 3){
+        cout << "1. Original Image" << endl;
+        cout << "2. Filters" << endl;
+        cout << "3. Volver" << endl;
+        cin >> opcion;
+        switch(opcion){
+            case 1:
+                editSelected(selectedImage, filtros);
+                break;
+            case 2:
+                if(filtros->esVacio()){
+                    system("clear");
+                    cout << "No hay filtros aplicados!"<< endl;
+                }else{
+                    editFilter(filtros);
+                    system("clear");
+                }
+                break;
+            case 3:
+                break;
+            default:
+                system("clear");
+                cout << "Opcion Invalida!" << endl;
+                break;
+        }
+    }
+
+}
 
 Menu::Menu()
 {
@@ -727,6 +854,11 @@ Menu::Menu()
             }
             break;
         case 4:
+            if(selectedImage->layerSize() > 0){
+                filtros = manualEdit(selectedImage, filtros);
+            }else{
+                cout << "No hay imagen seleccionada!" << endl;
+            }
             break;
         case 5:
             if(selectedImage->layerSize() > 0){

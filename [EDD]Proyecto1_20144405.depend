@@ -343,7 +343,7 @@
 	"Filters.h"
 	<GenerarPagina.h>
 
-1567904939 source:/home/brest12/Desktop/Proyecto/EDD_2S2019_PY1_201404405/main.cpp
+1568003913 source:/home/brest12/Desktop/Proyecto/EDD_2S2019_PY1_201404405/main.cpp
 	"Menu.h"
 	"listaCircular.h"
 	<iostream>
@@ -351,7 +351,7 @@
 	<string>
 	"listaFiltros.h"
 
-1567995653 /home/brest12/Desktop/Proyecto/EDD_2S2019_PY1_201404405/include/Menu.h
+1568004396 /home/brest12/Desktop/Proyecto/EDD_2S2019_PY1_201404405/include/Menu.h
 	"listaFiltros.h"
 	"ArbolB.h"
 	"cuboDisperso.h"
@@ -423,7 +423,7 @@
 	<iostream>
 	<fstream>
 
-1568001248 source:/home/brest12/Desktop/Proyecto/EDD_2S2019_PY1_201404405/src/Menu.cpp
+1568010051 source:/home/brest12/Desktop/Proyecto/EDD_2S2019_PY1_201404405/src/Menu.cpp
 	"Menu.h"
 	<iostream>
 	<string>
