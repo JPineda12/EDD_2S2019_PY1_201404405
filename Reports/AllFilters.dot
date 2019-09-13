@@ -4,9 +4,7 @@ digraph Circular{
     edge[dir=both]
     Filtro0[label = "Negative"];
     Filtro0->Filtro1;
-    Filtro1[label = "Grayscale"];
-    Filtro1->Filtro2;
-    Filtro2[label = "Mirror-Y"];
-    Filtro2->Filtro0
-    {rank=same; Filtro0; Filtro1; Filtro2; };
+    Filtro1[label = "Mirror-Y"];
+    Filtro1->Filtro0
+    {rank=same; Filtro0; Filtro1; };
 }

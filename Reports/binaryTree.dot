@@ -5,6 +5,6 @@ digraph arbolBinario
     node [shape=record, style = rounded, color = forestgreen];
     node [width = 2, height = 0.7, fixedsize="true"];
     //Nodes and links creation
-    ndminion[label="<left> | minion \n12x18\n30x30 | <right>"];
-    //Links ndminion
+    ndAve[label="<left> | Ave \n19x17\n30x30 | <right>"];
+    //Links ndAve
 }

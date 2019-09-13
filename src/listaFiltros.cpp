@@ -97,7 +97,9 @@ void listaFiltros::graficar(){
     int n = 0;
     //Writes head
     archivo << "    Filtro"+to_string(n)+"[label = \""+temp->nombre+"\"];\n";
-    archivo << "    Filtro"+to_string(n)+"->Filtro"+to_string(n+1)+";\n";
+    if(temp->next != head){
+        archivo << "    Filtro"+to_string(n)+"->Filtro"+to_string(n+1)+";\n";
+    }
     n++;
     temp = head->next;
     while(temp != head){

@@ -66,80 +66,80 @@ Layer3->Fila1;
 
  //Creacion de nodos
 //(^<---------------------- F I L A   1---------------------->
-N5_F1 [label = "99-109-114" width = 1.5 group = 6 style = filled, fillcolor = lavenderblush1];
-N6_F1 [label = "99-109-114" width = 1.5 group = 7 style = filled, fillcolor = lavenderblush1];
+N5_F1 [label = "156-146-141" width = 1.5 group = 6 style = filled, fillcolor = lavenderblush1];
+N6_F1 [label = "156-146-141" width = 1.5 group = 7 style = filled, fillcolor = lavenderblush1];
 
 //(^<---------------------- F I L A   2---------------------->
-N4_F2 [label = "99-109-114" width = 1.5 group = 5 style = filled, fillcolor = lavenderblush1];
-N5_F2 [label = "255-255-255" width = 1.5 group = 6 style = filled, fillcolor = lavenderblush1];
-N6_F2 [label = "255-255-255" width = 1.5 group = 7 style = filled, fillcolor = lavenderblush1];
-N7_F2 [label = "99-109-114" width = 1.5 group = 8 style = filled, fillcolor = lavenderblush1];
+N4_F2 [label = "156-146-141" width = 1.5 group = 5 style = filled, fillcolor = lavenderblush1];
+N5_F2 [label = "0-0-0" width = 1.5 group = 6 style = filled, fillcolor = lavenderblush1];
+N6_F2 [label = "0-0-0" width = 1.5 group = 7 style = filled, fillcolor = lavenderblush1];
+N7_F2 [label = "156-146-141" width = 1.5 group = 8 style = filled, fillcolor = lavenderblush1];
 
 //(^<---------------------- F I L A   3---------------------->
-N1_F3 [label = "0-0-0" width = 1.5 group = 2 style = filled, fillcolor = lavenderblush1];
-N2_F3 [label = "0-0-0" width = 1.5 group = 3 style = filled, fillcolor = lavenderblush1];
-N3_F3 [label = "99-109-114" width = 1.5 group = 4 style = filled, fillcolor = lavenderblush1];
-N4_F3 [label = "255-255-255" width = 1.5 group = 5 style = filled, fillcolor = lavenderblush1];
-N5_F3 [label = "0-0-0" width = 1.5 group = 6 style = filled, fillcolor = lavenderblush1];
-N6_F3 [label = "0-0-0" width = 1.5 group = 7 style = filled, fillcolor = lavenderblush1];
-N7_F3 [label = "255-255-255" width = 1.5 group = 8 style = filled, fillcolor = lavenderblush1];
-N8_F3 [label = "99-109-114" width = 1.5 group = 9 style = filled, fillcolor = lavenderblush1];
-N9_F3 [label = "0-0-0" width = 1.5 group = 10 style = filled, fillcolor = lavenderblush1];
-N10_F3 [label = "0-0-0" width = 1.5 group = 11 style = filled, fillcolor = lavenderblush1];
+N1_F3 [label = "255-255-255" width = 1.5 group = 2 style = filled, fillcolor = lavenderblush1];
+N2_F3 [label = "255-255-255" width = 1.5 group = 3 style = filled, fillcolor = lavenderblush1];
+N3_F3 [label = "156-146-141" width = 1.5 group = 4 style = filled, fillcolor = lavenderblush1];
+N4_F3 [label = "0-0-0" width = 1.5 group = 5 style = filled, fillcolor = lavenderblush1];
+N5_F3 [label = "255-255-255" width = 1.5 group = 6 style = filled, fillcolor = lavenderblush1];
+N6_F3 [label = "255-255-255" width = 1.5 group = 7 style = filled, fillcolor = lavenderblush1];
+N7_F3 [label = "0-0-0" width = 1.5 group = 8 style = filled, fillcolor = lavenderblush1];
+N8_F3 [label = "156-146-141" width = 1.5 group = 9 style = filled, fillcolor = lavenderblush1];
+N9_F3 [label = "255-255-255" width = 1.5 group = 10 style = filled, fillcolor = lavenderblush1];
+N10_F3 [label = "255-255-255" width = 1.5 group = 11 style = filled, fillcolor = lavenderblush1];
 
 //(^<---------------------- F I L A   4---------------------->
-N1_F4 [label = "0-0-0" width = 1.5 group = 2 style = filled, fillcolor = lavenderblush1];
-N2_F4 [label = "0-0-0" width = 1.5 group = 3 style = filled, fillcolor = lavenderblush1];
-N3_F4 [label = "99-109-114" width = 1.5 group = 4 style = filled, fillcolor = lavenderblush1];
-N4_F4 [label = "255-255-255" width = 1.5 group = 5 style = filled, fillcolor = lavenderblush1];
-N5_F4 [label = "0-0-0" width = 1.5 group = 6 style = filled, fillcolor = lavenderblush1];
-N6_F4 [label = "0-0-0" width = 1.5 group = 7 style = filled, fillcolor = lavenderblush1];
-N7_F4 [label = "255-255-255" width = 1.5 group = 8 style = filled, fillcolor = lavenderblush1];
-N8_F4 [label = "99-109-114" width = 1.5 group = 9 style = filled, fillcolor = lavenderblush1];
-N9_F4 [label = "0-0-0" width = 1.5 group = 10 style = filled, fillcolor = lavenderblush1];
-N10_F4 [label = "0-0-0" width = 1.5 group = 11 style = filled, fillcolor = lavenderblush1];
+N1_F4 [label = "255-255-255" width = 1.5 group = 2 style = filled, fillcolor = lavenderblush1];
+N2_F4 [label = "255-255-255" width = 1.5 group = 3 style = filled, fillcolor = lavenderblush1];
+N3_F4 [label = "156-146-141" width = 1.5 group = 4 style = filled, fillcolor = lavenderblush1];
+N4_F4 [label = "0-0-0" width = 1.5 group = 5 style = filled, fillcolor = lavenderblush1];
+N5_F4 [label = "255-255-255" width = 1.5 group = 6 style = filled, fillcolor = lavenderblush1];
+N6_F4 [label = "255-255-255" width = 1.5 group = 7 style = filled, fillcolor = lavenderblush1];
+N7_F4 [label = "0-0-0" width = 1.5 group = 8 style = filled, fillcolor = lavenderblush1];
+N8_F4 [label = "156-146-141" width = 1.5 group = 9 style = filled, fillcolor = lavenderblush1];
+N9_F4 [label = "255-255-255" width = 1.5 group = 10 style = filled, fillcolor = lavenderblush1];
+N10_F4 [label = "255-255-255" width = 1.5 group = 11 style = filled, fillcolor = lavenderblush1];
 
 //(^<---------------------- F I L A   5---------------------->
-N4_F5 [label = "99-109-114" width = 1.5 group = 5 style = filled, fillcolor = lavenderblush1];
-N5_F5 [label = "255-255-255" width = 1.5 group = 6 style = filled, fillcolor = lavenderblush1];
-N6_F5 [label = "255-255-255" width = 1.5 group = 7 style = filled, fillcolor = lavenderblush1];
-N7_F5 [label = "99-109-114" width = 1.5 group = 8 style = filled, fillcolor = lavenderblush1];
+N4_F5 [label = "156-146-141" width = 1.5 group = 5 style = filled, fillcolor = lavenderblush1];
+N5_F5 [label = "0-0-0" width = 1.5 group = 6 style = filled, fillcolor = lavenderblush1];
+N6_F5 [label = "0-0-0" width = 1.5 group = 7 style = filled, fillcolor = lavenderblush1];
+N7_F5 [label = "156-146-141" width = 1.5 group = 8 style = filled, fillcolor = lavenderblush1];
 
 //(^<---------------------- F I L A   6---------------------->
-N5_F6 [label = "99-109-114" width = 1.5 group = 6 style = filled, fillcolor = lavenderblush1];
-N6_F6 [label = "99-109-114" width = 1.5 group = 7 style = filled, fillcolor = lavenderblush1];
+N5_F6 [label = "156-146-141" width = 1.5 group = 6 style = filled, fillcolor = lavenderblush1];
+N6_F6 [label = "156-146-141" width = 1.5 group = 7 style = filled, fillcolor = lavenderblush1];
 
 //(^<---------------------- F I L A   7---------------------->
-N3_F7 [label = "0-0-0" width = 1.5 group = 4 style = filled, fillcolor = lavenderblush1];
-N8_F7 [label = "0-0-0" width = 1.5 group = 9 style = filled, fillcolor = lavenderblush1];
+N3_F7 [label = "255-255-255" width = 1.5 group = 4 style = filled, fillcolor = lavenderblush1];
+N8_F7 [label = "255-255-255" width = 1.5 group = 9 style = filled, fillcolor = lavenderblush1];
 
 //(^<---------------------- F I L A   8---------------------->
-N4_F8 [label = "0-0-0" width = 1.5 group = 5 style = filled, fillcolor = lavenderblush1];
-N5_F8 [label = "0-0-0" width = 1.5 group = 6 style = filled, fillcolor = lavenderblush1];
-N6_F8 [label = "0-0-0" width = 1.5 group = 7 style = filled, fillcolor = lavenderblush1];
-N7_F8 [label = "0-0-0" width = 1.5 group = 8 style = filled, fillcolor = lavenderblush1];
+N4_F8 [label = "255-255-255" width = 1.5 group = 5 style = filled, fillcolor = lavenderblush1];
+N5_F8 [label = "255-255-255" width = 1.5 group = 6 style = filled, fillcolor = lavenderblush1];
+N6_F8 [label = "255-255-255" width = 1.5 group = 7 style = filled, fillcolor = lavenderblush1];
+N7_F8 [label = "255-255-255" width = 1.5 group = 8 style = filled, fillcolor = lavenderblush1];
 
 //(^<---------------------- F I L A   15---------------------->
-N1_F15 [label = "0-0-0" width = 1.5 group = 2 style = filled, fillcolor = lavenderblush1];
-N10_F15 [label = "0-0-0" width = 1.5 group = 11 style = filled, fillcolor = lavenderblush1];
+N1_F15 [label = "255-255-255" width = 1.5 group = 2 style = filled, fillcolor = lavenderblush1];
+N10_F15 [label = "255-255-255" width = 1.5 group = 11 style = filled, fillcolor = lavenderblush1];
 
 //(^<---------------------- F I L A   16---------------------->
-N0_F16 [label = "0-0-0" width = 1.5 group = 1 style = filled, fillcolor = lavenderblush1];
-N1_F16 [label = "0-0-0" width = 1.5 group = 2 style = filled, fillcolor = lavenderblush1];
-N3_F16 [label = "0-0-0" width = 1.5 group = 4 style = filled, fillcolor = lavenderblush1];
-N4_F16 [label = "0-0-0" width = 1.5 group = 5 style = filled, fillcolor = lavenderblush1];
-N7_F16 [label = "0-0-0" width = 1.5 group = 8 style = filled, fillcolor = lavenderblush1];
-N8_F16 [label = "0-0-0" width = 1.5 group = 9 style = filled, fillcolor = lavenderblush1];
-N10_F16 [label = "0-0-0" width = 1.5 group = 11 style = filled, fillcolor = lavenderblush1];
-N11_F16 [label = "0-0-0" width = 1.5 group = 12 style = filled, fillcolor = lavenderblush1];
+N0_F16 [label = "255-255-255" width = 1.5 group = 1 style = filled, fillcolor = lavenderblush1];
+N1_F16 [label = "255-255-255" width = 1.5 group = 2 style = filled, fillcolor = lavenderblush1];
+N3_F16 [label = "255-255-255" width = 1.5 group = 4 style = filled, fillcolor = lavenderblush1];
+N4_F16 [label = "255-255-255" width = 1.5 group = 5 style = filled, fillcolor = lavenderblush1];
+N7_F16 [label = "255-255-255" width = 1.5 group = 8 style = filled, fillcolor = lavenderblush1];
+N8_F16 [label = "255-255-255" width = 1.5 group = 9 style = filled, fillcolor = lavenderblush1];
+N10_F16 [label = "255-255-255" width = 1.5 group = 11 style = filled, fillcolor = lavenderblush1];
+N11_F16 [label = "255-255-255" width = 1.5 group = 12 style = filled, fillcolor = lavenderblush1];
 
 //(^<---------------------- F I L A   17---------------------->
-N2_F17 [label = "0-0-0" width = 1.5 group = 3 style = filled, fillcolor = lavenderblush1];
-N3_F17 [label = "0-0-0" width = 1.5 group = 4 style = filled, fillcolor = lavenderblush1];
-N4_F17 [label = "0-0-0" width = 1.5 group = 5 style = filled, fillcolor = lavenderblush1];
-N7_F17 [label = "0-0-0" width = 1.5 group = 8 style = filled, fillcolor = lavenderblush1];
-N8_F17 [label = "0-0-0" width = 1.5 group = 9 style = filled, fillcolor = lavenderblush1];
-N9_F17 [label = "0-0-0" width = 1.5 group = 10 style = filled, fillcolor = lavenderblush1];
+N2_F17 [label = "255-255-255" width = 1.5 group = 3 style = filled, fillcolor = lavenderblush1];
+N3_F17 [label = "255-255-255" width = 1.5 group = 4 style = filled, fillcolor = lavenderblush1];
+N4_F17 [label = "255-255-255" width = 1.5 group = 5 style = filled, fillcolor = lavenderblush1];
+N7_F17 [label = "255-255-255" width = 1.5 group = 8 style = filled, fillcolor = lavenderblush1];
+N8_F17 [label = "255-255-255" width = 1.5 group = 9 style = filled, fillcolor = lavenderblush1];
+N9_F17 [label = "255-255-255" width = 1.5 group = 10 style = filled, fillcolor = lavenderblush1];
 
 
  //Creacion de enlaces de nodos

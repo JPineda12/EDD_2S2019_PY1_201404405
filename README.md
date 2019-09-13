@@ -18,10 +18,14 @@ Juan Antonio Pineda Espino - Proyecto 1 - Estructuras de Datos
 	- [x] Original Image
 	- [x] Filters 
 - [x] Export Image
-- [x] Reports
-	- [x] Imported Images Report
-	- [x] Image Layer Report
-	- [x] Linear Matrix Report
-	- [x] Traversal Report
-	- [x] Filters Report
+- [x] Reports (4/5 done)
+	-[x] Imported Images Report
+	-[x] Image Layer Report
+	-[x] Linear Matrix Report
+	-[x] Traversal Report
+	-[x] Filters Report
 
+### Archivos de entrada example folders
+- Ave
+- minion
+- Yoda
