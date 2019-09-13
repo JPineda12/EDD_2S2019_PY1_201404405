@@ -14,11 +14,11 @@ Juan Antonio Pineda Espino - Proyecto 1 - Estructuras de Datos
 		- [x] Double Mirror
 	- [x] Collage (bugged)
 	- [ ] Mosaic
-- [x] Manual Editing (1/2 done)
+- [x] Manual Editing
 	- [x] Original Image
 	- [x] Filters 
 - [x] Export Image
-- [x] Reports (4/5 done)
+- [x] Reports
 	-[x] Imported Images Report
 	-[x] Image Layer Report
 	-[x] Linear Matrix Report
