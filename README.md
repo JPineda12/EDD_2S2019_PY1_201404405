@@ -1,6 +1,20 @@
 # EDD_2S2019_PY1_201404405
 Juan Antonio Pineda Espino - Proyecto 1 - Estructuras de Datos 
 
+
+------------------------------------------------------------------------------
+**Proyecto:** Photgen++\
+**Tema:** Listas, Arbol Binario, Matriz Dispersa.
+------------------------------------------------------------------------------
+
+ ### COMO USAR PROGRAMA
+ ```bash
+** Cada carpeta de los archivos de entrada debe estar colocada en la raiz del proyecto
+para poder ser cargadas mediante la opcion "Insert Image" 
+** Correr desde CODEBLOCKS
+```
+
+
 ### Requirements 
 
 - [x] Insert Images
