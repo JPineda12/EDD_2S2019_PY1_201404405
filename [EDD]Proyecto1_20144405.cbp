@@ -34,7 +34,7 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="include/ArbolB.h" />
+		<Unit filename="include/BinarySearchTree.h" />
 		<Unit filename="include/Filters.h" />
 		<Unit filename="include/GenerarPagina.h" />
 		<Unit filename="include/Menu.h" />
@@ -44,7 +44,7 @@
 		<Unit filename="include/listaEnlazada.h" />
 		<Unit filename="include/listaFiltros.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="src/ArbolB.cpp" />
+		<Unit filename="src/BinarySearchTree.cpp" />
 		<Unit filename="src/Filters.cpp" />
 		<Unit filename="src/GenerarPagina.cpp" />
 		<Unit filename="src/Menu.cpp" />

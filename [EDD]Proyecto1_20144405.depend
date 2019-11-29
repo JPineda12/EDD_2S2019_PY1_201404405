@@ -434,3 +434,78 @@
 	"Filters.h"
 	<GenerarPagina.h>
 
+1575001217 source:/home/brest12/Desktop/asd/EDD_2S2019_PY1_201404405/main.cpp
+	"Menu.h"
+	"listaCircular.h"
+	<iostream>
+	"cuboDisperso.h"
+	<string>
+	"listaFiltros.h"
+
+1575001383 /home/brest12/Desktop/asd/EDD_2S2019_PY1_201404405/include/Menu.h
+	"listaFiltros.h"
+	"BinarySearchTree.h"
+	"cuboDisperso.h"
+
+1575001217 /home/brest12/Desktop/asd/EDD_2S2019_PY1_201404405/include/listaFiltros.h
+	"cuboDisperso.h"
+
+1575001217 /home/brest12/Desktop/asd/EDD_2S2019_PY1_201404405/include/cuboDisperso.h
+	<string>
+	"listaCircular.h"
+	"listaCubo.h"
+
+1575001217 /home/brest12/Desktop/asd/EDD_2S2019_PY1_201404405/include/listaCircular.h
+	<string>
+
+1575001217 /home/brest12/Desktop/asd/EDD_2S2019_PY1_201404405/include/listaCubo.h
+	<string>
+
+1575001375 /home/brest12/Desktop/asd/EDD_2S2019_PY1_201404405/include/BinarySearchTree.h
+	"cuboDisperso.h"
+	"listaEnlazada.h"
+
+1575001217 /home/brest12/Desktop/asd/EDD_2S2019_PY1_201404405/include/listaEnlazada.h
+	<string>
+
+1575001217 source:/home/brest12/Desktop/asd/EDD_2S2019_PY1_201404405/src/cuboDisperso.cpp
+	"cuboDisperso.h"
+	<fstream>
+	<iostream>
+	"listaCubo.h"
+
+1575001217 source:/home/brest12/Desktop/asd/EDD_2S2019_PY1_201404405/src/Filters.cpp
+	"Filters.h"
+	<iostream>
+
+1575001377 /home/brest12/Desktop/asd/EDD_2S2019_PY1_201404405/include/Filters.h
+	"cuboDisperso.h"
+	"BinarySearchTree.h"
+
+1575001217 source:/home/brest12/Desktop/asd/EDD_2S2019_PY1_201404405/src/GenerarPagina.cpp
+	"GenerarPagina.h"
+	<fstream>
+	<iostream>
+
+1575001379 /home/brest12/Desktop/asd/EDD_2S2019_PY1_201404405/include/GenerarPagina.h
+	<string>
+	"listaCubo.h"
+	"BinarySearchTree.h"
+
+1575001217 source:/home/brest12/Desktop/asd/EDD_2S2019_PY1_201404405/src/listaCircular.cpp
+	"listaCircular.h"
+	<iostream>
+
+1575001217 source:/home/brest12/Desktop/asd/EDD_2S2019_PY1_201404405/src/listaCubo.cpp
+	"listaCubo.h"
+	<fstream>
+	<iostream>
+
+1575001217 source:/home/brest12/Desktop/asd/EDD_2S2019_PY1_201404405/src/listaEnlazada.cpp
+	"listaEnlazada.h"
+
+1575001217 source:/home/brest12/Desktop/asd/EDD_2S2019_PY1_201404405/src/listaFiltros.cpp
+	"listaFiltros.h"
+	<iostream>
+	<fstream>
+

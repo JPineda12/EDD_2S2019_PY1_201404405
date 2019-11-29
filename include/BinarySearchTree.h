@@ -1,5 +1,5 @@
-#ifndef ARBOLB_H
-#define ARBOLB_H
+#ifndef BinarySearchTree_H
+#define BinarySearchTree_H
 #include "cuboDisperso.h"
 #include "listaEnlazada.h"
 struct NodoArbol{
@@ -17,10 +17,10 @@ struct NodoArbol{
 
 };
 
-class ArbolB
+class BinarySearchTree
 {
     public:
-        ArbolB();
+        BinarySearchTree();
         NodoArbol *raiz;
         bool esVacio();
         bool insertar(string nombre, int width, int height, int pxWidth,int pxHeigth, cuboDisperso* imagen);

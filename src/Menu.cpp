@@ -51,7 +51,7 @@ cuboDisperso* Menu::createImage(string nombreCarpeta,listaCircular *listaCSV){
 
 }
 
-void Menu::insertImage(ArbolB *arbolImagenes){ //Metodo para obtener los archivos config y capas.
+void Menu::insertImage(BinarySearchTree *arbolImagenes){ //Metodo para obtener los archivos config y capas.
     cout << "----------- Insert Image -----------  " << endl;
     cout << "Nombre del archivo: ";
     string nombreArchivo;
@@ -153,12 +153,12 @@ void Menu::insertImage(ArbolB *arbolImagenes){ //Metodo para obtener los archivo
     insertImage(arbolImagenes);
 
 }
-void Menu::printImageMenu(ArbolB *arbolImagenes){
+void Menu::printImageMenu(BinarySearchTree *arbolImagenes){
     cout << "----------- Select Image -----------  " << endl;
     arbolImagenes->getinOrder();
 }
 
-cuboDisperso* Menu::selectImage(ArbolB *arbolImagenes, listaFiltros *filtros){
+cuboDisperso* Menu::selectImage(BinarySearchTree *arbolImagenes, listaFiltros *filtros){
     string nombre = "";
     printImageMenu(arbolImagenes);
     cout << "Escriba el nombre de imagen a seleccionar: ";
@@ -176,7 +176,7 @@ cuboDisperso* Menu::selectImage(ArbolB *arbolImagenes, listaFiltros *filtros){
     return selectImage(arbolImagenes, filtros);
 }
 
-listaFiltros* Menu::filters(cuboDisperso* selectedImage, ArbolB *arbolImagenes, listaFiltros *filtros){
+listaFiltros* Menu::filters(cuboDisperso* selectedImage, BinarySearchTree *arbolImagenes, listaFiltros *filtros){
     int opcion = 0;
     int x, y;
     while(opcion != 6){
@@ -277,7 +277,7 @@ listaFiltros* Menu::filters(cuboDisperso* selectedImage, ArbolB *arbolImagenes, 
     return filtros;
 
 }
-void Menu::repImageLayer(ArbolB *arbolImagenes){
+void Menu::repImageLayer(BinarySearchTree *arbolImagenes){
     printImageMenu(arbolImagenes);
     string nombre = "";
     cout << "Escriba el nombre de la imagen a seleccionar: ";
@@ -327,7 +327,7 @@ void Menu::repImageLayer(ArbolB *arbolImagenes){
 
 }
 
-void Menu::repTrasversal(ArbolB *arbolImagenes){
+void Menu::repTrasversal(BinarySearchTree *arbolImagenes){
     int opcion = 0;
     string st = "";
     string comando;
@@ -373,7 +373,7 @@ void Menu::repTrasversal(ArbolB *arbolImagenes){
     }
 }
 
-void Menu::repLinearMatrix(ArbolB *arbolImagenes){
+void Menu::repLinearMatrix(BinarySearchTree *arbolImagenes){
     printImageMenu(arbolImagenes);
     string nombre = "";
     cout << "Escriba el nombre de imagen a seleccionar: ";
@@ -527,7 +527,7 @@ void Menu::repFilters(listaFiltros *filtros){
     }
 }
 
-void Menu::reports(ArbolB *arbolImagenes, listaFiltros *filtros){
+void Menu::reports(BinarySearchTree *arbolImagenes, listaFiltros *filtros){
     int opcion = 0;
     string st = "";
     string comando;
@@ -583,7 +583,7 @@ void Menu::reports(ArbolB *arbolImagenes, listaFiltros *filtros){
     }
 }
 
-void Menu::exportarSelected(cuboDisperso *selectedImage, ArbolB *arbolImagenes){
+void Menu::exportarSelected(cuboDisperso *selectedImage, BinarySearchTree *arbolImagenes){
     listaCubo *ls = new listaCubo();
     listaCubo *aux = new listaCubo();
     NodoArbol *hoja = arbolImagenes->obtener(selectedImage->root->info);
@@ -605,7 +605,7 @@ void Menu::exportarSelected(cuboDisperso *selectedImage, ArbolB *arbolImagenes){
     cin.ignore();
 
 }
-void Menu::exportarFiltro(listaFiltros *filtros, ArbolB *arbolImagenes, string nombreImagen){
+void Menu::exportarFiltro(listaFiltros *filtros, BinarySearchTree *arbolImagenes, string nombreImagen){
     cout << "\n\nLista de filtros aplicados" << endl;
     int n = 1;
     int opcion = 0;
@@ -650,7 +650,7 @@ void Menu::exportarFiltro(listaFiltros *filtros, ArbolB *arbolImagenes, string n
     }
 }
 
-void Menu::imageExport(cuboDisperso *selectedImage, listaFiltros *filtros, ArbolB *arbolImagenes){
+void Menu::imageExport(cuboDisperso *selectedImage, listaFiltros *filtros, BinarySearchTree *arbolImagenes){
     int opcion = 0;
     while(opcion != 3){
         system("clear");
@@ -689,7 +689,7 @@ void Menu::imageExport(cuboDisperso *selectedImage, listaFiltros *filtros, Arbol
         }
     }
 }
-listaFiltros *Menu::editSelected(cuboDisperso *selectedImage, listaFiltros *filtros, ArbolB *arbolImagenes){
+listaFiltros *Menu::editSelected(cuboDisperso *selectedImage, listaFiltros *filtros, BinarySearchTree *arbolImagenes){
     system("clear");
     cout << "---- MANUAL EDIT - OG Image ----" << endl;
     NodoArbol *img = arbolImagenes->obtener(selectedImage->root->info);
@@ -941,7 +941,7 @@ listaFiltros *Menu::editFilter(listaFiltros *filtros){
     return filtros;
 }
 
-listaFiltros *Menu::manualEdit(cuboDisperso *selectedImage, listaFiltros *filtros, ArbolB *arbolImagenes){
+listaFiltros *Menu::manualEdit(cuboDisperso *selectedImage, listaFiltros *filtros, BinarySearchTree *arbolImagenes){
     system("clear");
     cout << "-------- MANUAL EDITING --------" << endl;
     int opcion = 0;
@@ -977,7 +977,7 @@ listaFiltros *Menu::manualEdit(cuboDisperso *selectedImage, listaFiltros *filtro
 
 Menu::Menu()
 {
-    ArbolB *arbolImagenes = new ArbolB();
+    BinarySearchTree *arbolImagenes = new BinarySearchTree();
     cuboDisperso *selectedImage = new cuboDisperso("select");
     listaFiltros *filtros = new listaFiltros();
 

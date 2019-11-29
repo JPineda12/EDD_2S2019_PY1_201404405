@@ -2,7 +2,7 @@
 #define GENERARPAGINA_H
 #include <string>
 #include "listaCubo.h"
-#include "ArbolB.h"
+#include "BinarySearchTree.h"
 using namespace std;
 
 class GenerarPagina

@@ -1,7 +1,7 @@
 #ifndef FILTERS_H
 #define FILTERS_H
 #include "cuboDisperso.h"
-#include "ArbolB.h"
+#include "BinarySearchTree.h"
 class Filters
 {
     public:

@@ -1,7 +1,7 @@
 #ifndef MENU_H
 #define MENU_H
 #include "listaFiltros.h"
-#include "ArbolB.h"
+#include "BinarySearchTree.h"
 #include "cuboDisperso.h"
 class Menu
 {
@@ -11,23 +11,23 @@ class Menu
     protected:
 
     private:
-        void insertImage(ArbolB *tree);
-        cuboDisperso* selectImage(ArbolB *tree, listaFiltros *filtros);
-        void printImageMenu(ArbolB *tree);
-        listaFiltros *filters(cuboDisperso *selectedimage, ArbolB *arbolImagenes, listaFiltros *filtros);
-        listaFiltros *manualEdit(cuboDisperso *selectedimage, listaFiltros *filtros, ArbolB *arbolImagenes);
-        listaFiltros *editSelected(cuboDisperso *selectedImage, listaFiltros *filtros, ArbolB *arbolImagenes);
+        void insertImage(BinarySearchTree *tree);
+        cuboDisperso* selectImage(BinarySearchTree *tree, listaFiltros *filtros);
+        void printImageMenu(BinarySearchTree *tree);
+        listaFiltros *filters(cuboDisperso *selectedimage, BinarySearchTree *arbolImagenes, listaFiltros *filtros);
+        listaFiltros *manualEdit(cuboDisperso *selectedimage, listaFiltros *filtros, BinarySearchTree *arbolImagenes);
+        listaFiltros *editSelected(cuboDisperso *selectedImage, listaFiltros *filtros, BinarySearchTree *arbolImagenes);
         listaFiltros *editFilter(listaFiltros *filtros);
-        void imageExport(cuboDisperso *selectedimage, listaFiltros *filtros, ArbolB *arbolImagenes);
-        void reports(ArbolB *arbolImagenes, listaFiltros *filtros);
-        void repImageLayer(ArbolB *arbolImagenes);
-        void repTrasversal(ArbolB *arbolImagenes);
-        void repLinearMatrix(ArbolB *arbolImagenes);
+        void imageExport(cuboDisperso *selectedimage, listaFiltros *filtros, BinarySearchTree *arbolImagenes);
+        void reports(BinarySearchTree *arbolImagenes, listaFiltros *filtros);
+        void repImageLayer(BinarySearchTree *arbolImagenes);
+        void repTrasversal(BinarySearchTree *arbolImagenes);
+        void repLinearMatrix(BinarySearchTree *arbolImagenes);
         void repFilters(listaFiltros *filters);
         void repFIndiv(listaFiltros *filters);
         cuboDisperso *createImage(string nombreCarpeta, listaCircular *listaCsv);
-        void exportarSelected(cuboDisperso *selectedImage, ArbolB *arbolImagenes);
-        void exportarFiltro(listaFiltros *filtros, ArbolB *arbolImagenes, string nombreImagen);
+        void exportarSelected(cuboDisperso *selectedImage, BinarySearchTree *arbolImagenes);
+        void exportarFiltro(listaFiltros *filtros, BinarySearchTree *arbolImagenes, string nombreImagen);
 
 };
 

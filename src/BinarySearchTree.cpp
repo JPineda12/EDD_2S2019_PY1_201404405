@@ -1,4 +1,4 @@
-#include "ArbolB.h"
+#include "BinarySearchTree.h"
 #include <bits/stdc++.h>
 #include <fstream>
 NodoArbol::NodoArbol(string nombre, int width, int height, int pxWidth, int pxHeight, cuboDisperso *imagen){
@@ -12,16 +12,16 @@ NodoArbol::NodoArbol(string nombre, int width, int height, int pxWidth, int pxHe
     right = NULL;
 }
 
-ArbolB::ArbolB()
+BinarySearchTree::BinarySearchTree()
 {
     raiz = NULL;
 }
 
-bool ArbolB::esVacio(){
+bool BinarySearchTree::esVacio(){
     return raiz == NULL;
 }
 
-int ArbolB::comparar(string palabraNueva,string palabraArbol){
+int BinarySearchTree::comparar(string palabraNueva,string palabraArbol){
     //El primer parametro es la palabra de la imagen nueva a insertar
     //El segundo parametro es la palabra que ya existe en el arbol;
     //Retorna si es menor = true
@@ -59,7 +59,7 @@ int ArbolB::comparar(string palabraNueva,string palabraArbol){
     }
 }
 
-bool ArbolB::insertar(string nombre, int width, int height, int pxWidth, int pxHeight, cuboDisperso *imagen){
+bool BinarySearchTree::insertar(string nombre, int width, int height, int pxWidth, int pxHeight, cuboDisperso *imagen){
     NodoArbol *nuevo =new NodoArbol(nombre, width, height, pxWidth, pxHeight, imagen);
     if(raiz == NULL){
         raiz = nuevo;
@@ -69,7 +69,7 @@ bool ArbolB::insertar(string nombre, int width, int height, int pxWidth, int pxH
     }
 }
 
-bool ArbolB::insertar_recursivo(NodoArbol *actual, NodoArbol *nuevo){
+bool BinarySearchTree::insertar_recursivo(NodoArbol *actual, NodoArbol *nuevo){
     string palabraNueva = nuevo->nombre;
     string palabraArbol = actual->nombre;
     int menor = comparar(palabraNueva, palabraArbol);
@@ -95,11 +95,11 @@ bool ArbolB::insertar_recursivo(NodoArbol *actual, NodoArbol *nuevo){
     return true;
 }
 
-NodoArbol *ArbolB::obtener(string nombre){
+NodoArbol *BinarySearchTree::obtener(string nombre){
     return obtener(raiz, nombre);
 }
 
-NodoArbol *ArbolB::obtener(NodoArbol *actual, string nombre){
+NodoArbol *BinarySearchTree::obtener(NodoArbol *actual, string nombre){
     if(actual == NULL){
         return NULL;
     }
@@ -118,7 +118,7 @@ NodoArbol *ArbolB::obtener(NodoArbol *actual, string nombre){
     return NULL;
 }
 
-void ArbolB::inorder(NodoArbol *actual){
+void BinarySearchTree::inorder(NodoArbol *actual){
         // LEFT - ROOT - RIGHT
         // left
         if(actual->left != NULL){
@@ -133,7 +133,7 @@ void ArbolB::inorder(NodoArbol *actual){
         }
 }
 
-void ArbolB::preorder(NodoArbol *actual, int n){
+void BinarySearchTree::preorder(NodoArbol *actual, int n){
         // ROOT - LEFT - RIGHT
         // ROOT = PRINT
         cout << n << ".- " <<actual->nombre << endl;
@@ -149,7 +149,7 @@ void ArbolB::preorder(NodoArbol *actual, int n){
         }
 }
 
-void ArbolB::posorder(NodoArbol *actual, int n){
+void BinarySearchTree::posorder(NodoArbol *actual, int n){
         // left - right  - Rroot
             // left
         if(actual->left != NULL){
@@ -163,22 +163,22 @@ void ArbolB::posorder(NodoArbol *actual, int n){
         cout << n << ".- " <<actual->nombre << endl;
         n++;
 }
-void ArbolB::getinOrder(){
+void BinarySearchTree::getinOrder(){
     int n = 1;
     inorder(raiz);
 }
 
-void ArbolB::getpreOrder(){
+void BinarySearchTree::getpreOrder(){
     int n = 1;
     preorder(raiz,n);
 }
 
-void ArbolB::getposOrder(){
+void BinarySearchTree::getposOrder(){
     int n = 1;
     posorder(raiz,n);
 }
 
-string ArbolB::escribirArbol(NodoArbol *treenode){
+string BinarySearchTree::escribirArbol(NodoArbol *treenode){
         string archivo = "";
         // ROOT - LEFT - RIGHT
         // ROOT = Write the file
@@ -210,7 +210,7 @@ string ArbolB::escribirArbol(NodoArbol *treenode){
         return archivo;
 }
 
-void ArbolB::graficar(){
+void BinarySearchTree::graficar(){
     ofstream archivo;
     archivo.open("Reports/binaryTree.dot");
     archivo << "digraph arbolBinario\n{\n";
@@ -234,7 +234,7 @@ void ArbolB::graficar(){
     system(cmd);
 }
 
-listaEnlazada *ArbolB::escribirInorder(NodoArbol *treenode,listaEnlazada *ls){
+listaEnlazada *BinarySearchTree::escribirInorder(NodoArbol *treenode,listaEnlazada *ls){
         // LEFT - ROOT - RIGHT
 
             // left
@@ -255,7 +255,7 @@ listaEnlazada *ArbolB::escribirInorder(NodoArbol *treenode,listaEnlazada *ls){
         return ls;
 }
 
-listaEnlazada *ArbolB::escribirPreorder(NodoArbol *treenode, listaEnlazada *ls){
+listaEnlazada *BinarySearchTree::escribirPreorder(NodoArbol *treenode, listaEnlazada *ls){
         // ROOT - LEFT - RIGHT
 
          //ROOT
@@ -278,7 +278,7 @@ listaEnlazada *ArbolB::escribirPreorder(NodoArbol *treenode, listaEnlazada *ls){
 }
 
 
-listaEnlazada *ArbolB::escribirPosorder(NodoArbol *treenode, listaEnlazada *ls){
+listaEnlazada *BinarySearchTree::escribirPosorder(NodoArbol *treenode, listaEnlazada *ls){
         // LEFT - RIGHT - ROOT
 
             // left
@@ -298,7 +298,7 @@ listaEnlazada *ArbolB::escribirPosorder(NodoArbol *treenode, listaEnlazada *ls){
         return ls;
 }
 
-void ArbolB::graficarInorder(){
+void BinarySearchTree::graficarInorder(){
     ofstream archivo;
     archivo.open("Reports/inorder_Tree.dot");
     archivo << "digraph arbol_inorder\n{\n";
@@ -337,7 +337,7 @@ void ArbolB::graficarInorder(){
 
 }
 
-void ArbolB::graficarPosorder(){
+void BinarySearchTree::graficarPosorder(){
     ofstream archivo;
     archivo.open("Reports/posorder_Tree.dot");
     archivo << "digraph arbol_inorder\n{\n";
@@ -376,7 +376,7 @@ void ArbolB::graficarPosorder(){
 
 }
 
-void ArbolB::graficarPreorder(){
+void BinarySearchTree::graficarPreorder(){
     ofstream archivo;
     archivo.open("Reports/preorder_Tree.dot");
     archivo << "digraph arbol_inorder\n{\n";
